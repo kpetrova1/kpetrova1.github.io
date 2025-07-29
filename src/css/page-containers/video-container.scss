@@ -1,0 +1,58 @@
+@use "../general/mixins" as *;
+
+.video-container {
+  &__grid {
+    display: grid;
+    align-items: start;
+    margin-top: 57px;
+
+    gap: 28px;
+
+    @include up(lg) {
+      grid-template-columns: 310px 1fr;
+    }
+
+    @include up(xl) {
+      grid-template-columns: 400px 1fr;
+    }
+  }
+
+  &__aside,
+  &__content {
+    display: contents;
+
+    @include up(lg) {
+      display: grid;
+
+      gap: 40px;
+    }
+  }
+
+  &__about-section {
+    display: contents;
+
+    @include up(lg) {
+      display: grid;
+    }
+  }
+
+  &__about-title {
+    order: 0;
+  }
+
+  &__lecture {
+    order: 1;
+  }
+
+  &__about-content {
+    order: 2;
+  }
+
+  &__lectures-list {
+    order: 3;
+  }
+
+  &__poll {
+    order: 4;
+  }
+}

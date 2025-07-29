@@ -1,0 +1,31 @@
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-gray-dark {
+    color: var(--gray-dark)
+}
+
+.text-orange {
+    color: var(--orange)
+}
+
+.text-medium {
+    font-weight: 500;
+}
+
+.ellipsis {
+    position: absolute;
+    right: 0;
+    padding-left: 10px;
+
+    background-color: var(--white);
+}

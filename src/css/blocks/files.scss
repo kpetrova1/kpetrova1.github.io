@@ -1,0 +1,17 @@
+@use "../general/mixins" as *;
+
+.files {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 16px 24px;
+
+  &_two-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}

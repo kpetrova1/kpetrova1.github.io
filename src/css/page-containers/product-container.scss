@@ -1,0 +1,9 @@
+@use "../general/mixins" as *;
+
+.product-container {
+  &__accordions {
+    display: grid;
+
+    gap: 24px;
+  }
+}

@@ -1,0 +1,61 @@
+@use "../general/mixins" as *;
+
+.tabs {
+  $root: &;
+
+  &__actions {
+    display: flex;
+    margin: 0;
+    padding: 11px;
+    overflow-x: auto;
+
+    border-right: 1px solid var(--gray-tech);
+    border-left: 1px solid var(--gray-tech);
+    border-radius: 4px;
+
+    background-color: var(--gray-bg);
+
+    list-style: none;
+
+    gap: 6px;
+  }
+
+  &__button {
+    @include font(16px, 19px, 500);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 8px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background-color: transparent;
+
+    color: var(--gray-main);
+    white-space: nowrap;
+
+    @include hover {
+      background-color: var(--gray-main);
+
+      color: var(--white);
+    }
+
+    &.is-active {
+      background-color: var(--gray-main);
+
+      color: var(--white);
+    }
+  }
+
+  &__content {
+    @include font(16px, 26px, 400);
+    display: none;
+    padding-top: 24px;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
