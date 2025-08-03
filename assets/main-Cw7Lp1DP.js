@@ -1,0 +1,1 @@
+import"./default-CTHvL0BD.js";import"./poll-B8a4OkQV.js";document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector("[data-benchmarks]");t(),window.addEventListener("resize",t);function t(){window.innerWidth<768?e.removeAttribute("open"):e.setAttribute("open","")}});

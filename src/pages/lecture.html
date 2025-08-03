@@ -9,10 +9,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/assets/site-BwHFeIBa.webmanifest" />
     <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
-    <script type="module" crossorigin src="/assets/video-9hHK7YIn.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/default-DT7rmJ1L.js">
-    <link rel="modulepreload" crossorigin href="/assets/tabs-c6dMR6mm.js">
-    <link rel="stylesheet" crossorigin href="/assets/video-BBJ32xGX.css">
+    <script type="module" crossorigin src="/assets/default-CTHvL0BD.js"></script>
+    <script type="module" crossorigin src="/assets/poll-B8a4OkQV.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/lecture-DYAodjDP.css">
   </head>
   <body>
     <!-- Top-bar block start -->
@@ -23,16 +22,16 @@
     </a>
 
     <div class="top-bar__info">
-      <p class="top-bar__current-index">
+      <p class="top-bar__index">
         Индекс Арсагеры
-        <span class="top-bar__current-index-value"> <span class="accent-text">0,62%</span> |+0,37 п.п.</span>
+        <span class="top-bar__index-value"> <span class="text-orange">0,62%</span> |+0,37 п.п.</span>
         на 12.09.2024
       </p>
 
-      <div class="top-bar__connect">
-        <button class="link link_gray link_responsive" type="button">Перезвонить Вам?</button>
-        <a class="top-bar__connect-link" href="tel:88123130530">8 812 313 05 30</a>
-        <button class="link link_gray link_responsive" type="button">Связь с нами</button>
+      <div class="top-bar__contacts">
+        <button class="link link_gray" type="button">Перезвонить Вам?</button>
+        <a class="link link_gray link_large" href="tel:88123130530">8 812 <span class="text-orange">313 05 30</span></a>
+        <button class="link link_gray" type="button">Связь с нами</button>
       </div>
     </div>
 
@@ -49,7 +48,7 @@
             <use href="/sprite.svg#arrow-down-icon" x="0" y="0"></use>
           </svg>
         </button>
-        <ul class="top-bar__dropdown" data-dropdown>
+        <ul class="top-bar__dropdown">
           <li>
             <button class="top-bar__dropdown-button" type="button">На сайт</button>
           </li>
@@ -74,6 +73,7 @@
     <header class="header">
   <div class="container">
     <div class="header__wrapper">
+
       <button class="header__burger-button" type="button" aria-label="Открыть меню">
         <svg viewBox="0 0 43 28" width="43" height="28">
           <use href="/sprite.svg#burger-icon" x="0" y="0"></use>
@@ -81,18 +81,38 @@
       </button>
 
       <div class="header__categories">
+        <button class="header__categories-button button button_white" type="button"
+                data-dropdown-button data-category-button>
+          <span>Клиентам</span>
+
+          <svg class="header__categories-icon" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
+            <use href="/sprite.svg#arrow-down-icon" x="0" y="0"></use>
+          </svg>
+        </button>
         <ul class="header__categories-list">
-          <li>
-            <a class="header__categories-link header__categories-link_active" href="/public">Клиентам</a>
+          <li class="header__categories-item is-hidden">
+            <a class="header__categories-link link link_orange" href="#" data-categories-link>Клиентам</a>
           </li>
-          <li>
-            <a class="header__categories-link" href="#">Акционерам</a>
+          <li class="header__categories-item">
+            <a class="header__categories-link link link_gray-dark" href="#" data-categories-link>Акционерам</a>
           </li>
-          <li>
-            <a class="header__categories-link" href="#">Сотрудникам</a>
+          <li class="header__categories-item ">
+            <a class="header__categories-link link link_gray-dark" href="#" data-categories-link>Сотрудникам</a>
           </li>
         </ul>
       </div>
+
+      <form action="" class="header__search search">
+        <label class="search__label"
+        >Поиск по сайту
+          <input type="text" class="search__field" name="search" placeholder="Поиск по сайту" />
+        </label>
+        <button class="search__btn" type="submit" aria-label="Искать">
+          <svg class="search__icon" viewBox="0 0 21 20" width="24" height="24">
+            <use href="/sprite.svg#search-icon" x="0" y="0"></use>
+          </svg>
+        </button>
+      </form>
 
       <nav class="header__nav">
         <ul class="header__nav-list">
@@ -142,7 +162,7 @@
         </button>
         <button class="header__mobile-action" type="button" aria-label="Открыть поиск">
           <svg viewBox="0 0 32 32" width="32" height="32">
-            <use href="/sprite.svg#search-icon-2" x="0" y="0"></use>
+            <use href="/sprite.svg#search-icon" x="0" y="0"></use>
           </svg>
         </button>
       </div>
@@ -152,9 +172,10 @@
 
     <!-- Header block end -->
 
+    <!-- Main block start -->
     <main class="main">
-      <!-- Video page container start -->
-      <div class="book-container container">
+      <!-- Page container start -->
+      <div class="lecture-page page container">
         <!-- Breadcrumbs start -->
         <ol class="breadcrumbs">
           <li class="breadcrumbs__item">
@@ -166,34 +187,36 @@
         </ol>
         <!-- Breadcrumbs end -->
 
-        <div class="video-container__grid">
-          <!-- Aside container start -->
-          <div class="video-container__aside">
+        <div class="lecture-page__grid page__grid">
+          <!-- Aside start -->
+          <div class="lecture-page__aside page__aside">
             <!-- Side block start -->
-            <div class="video-container__lecture lecture-side">
-              <iframe
-                src="https://www.youtube.com/embed/wOkzbqdyCwA"
-                title="Рынок акций. Хит-парад #303 на 30.06.2025"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-              <p class="lecture-side__info">
+            <section class="lecture-page__video-section side-block side-block_gray">
+              <div class="lecture-page__video-section-iframe side-block__iframe">
+                <iframe
+                  src="https://www.youtube.com/embed/wOkzbqdyCwA"
+                  title="Рынок акций. Хит-парад #303 на 30.06.2025"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p>
                 <span class="text-gray-dark text-medium">Эксперт:</span>
                 Елена Антонова – аналитик по акциям
               </p>
-              <p class="lecture-side__info">
-                <span class="text-gray-dark text-medium">Дата публикации: </span>
-                21.07.2009
+              <p>
+                <span class="text-gray-dark text-medium">Дата публикации:</span>
+                <time datetime="2023-10-03">21.07.2009</time>
               </p>
-              <div class="lecture-side__social social social_horizontal social_small">
-                <h3 class="lecture-side__social-title social__title">Видеоканалы компании:</h3>
-                <ul class="social__list">
+              <div class="side-block__social">
+                <p class="text-gray-dark text-medium">Видеоканалы компании:</p>
+                <ul class="social social_small">
                   <li class="social__item">
                     <a href="#" class="social__link" aria-label="rutube">
                       <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
-                        <use href="/sprite.svg#rutube" x="0" y="0"></use>
+                        <use href="/sprite.svg#rutube-icon" x="0" y="0"></use>
                       </svg>
                     </a>
                   </li>
@@ -220,87 +243,87 @@
                   </li>
                 </ul>
               </div>
-            </div>
+            </section>
             <!-- Side block end -->
 
             <!-- Side block start -->
-            <section class="video-container__lectures-list lectures-list section">
-              <h2 class="section__title">Плейлист: Рынок акций. Хит-парад</h2>
-              <ul class="lectures-list__list">
-                <li class="lectures-list__item">
-                  <a class="link link_gray-dark" href="#"
-                    >Регулярный обзор российского рынка акций от компании «Арсагера» с Хит-Парадом акций с наибольшей
-                    потенциальной доходностью на ближайшее время.</a
-                  >
-                </li>
-                <li class="lectures-list__item">
+            <section class="lecture-page__playlist-section side-block">
+              <h2 class="side-block__title">
+                <span class="text-gray-dark">Плейлист: </span>
+                <span class="text-orange">Рынок акций. Хит-парад</span>
+              </h2>
+              <p>
+                Регулярный обзор российского рынка акций от компании «Арсагера» с Хит-Парадом акций с наибольшей
+                потенциальной доходностью на ближайшее время.
+              </p>
+              <ul class="list">
+                <li>
                   <a class="link link_gray-dark" href="#"> Рынок акций. Хит-парад #283 на 09.09.2024 </a>
                 </li>
-                <li class="lectures-list__item">
+                <li>
                   <a class="link link_gray-dark" href="#">
                     Наши фонды. Арсагера - фонд смешанных инвестиций. 3 квартал 2024 года
                   </a>
                 </li>
-                <li class="lectures-list__item">
+                <li>
                   <a class="link link_gray-dark" href="#">
                     Наши фонды. Арсагера - облигации КР 1.55.  3 квартал 2024 года
                   </a>
                 </li>
-                <li class="lectures-list__item">
+                <li>
                   <a class="link link_gray-dark" href="#"> Рынок акций. Хит-парад #283 на 09.09.2024 </a>
                 </li>
-                <li class="lectures-list__item">
+                <li>
                   <a class="link link_gray-dark" href="#">
                     Наши фонды. Арсагера - облигации КР 1.55.  3 квартал 2024 года
                   </a>
                 </li>
               </ul>
-              <a class="button button_gray button_full-width" href="#">Показать еще </a>
+              <a class="button button_gray" href="#">Показать еще</a>
             </section>
             <!-- Side block end -->
 
             <!-- Side block start -->
-            <section class="video-container__poll poll section">
-              <h2 class="section__title">Опрос</h2>
-              <form class="poll__form" action="/" method="post" data-poll-form>
-                <p class="poll__form-title">
-                  Какая видеоплатформа является для Вас более предпочтительной в связи с замедлением YouTube на
-                  территории РФ?
-                </p>
-
-                <div class="poll__form-items">
-                  <div class="poll__form-item radio">
-                    <input class="radio__input" type="radio" name="media-source" id="media-source-1" required />
+            <section class="lecture-page__poll-section section">
+              <h2 class="section__title text-orange">Опрос</h2>
+              <p class="text-blue">
+                Какая видеоплатформа является для Вас более предпочтительной в связи с замедлением YouTube на территории
+                РФ?
+              </p>
+              <form class="poll" action="/" data-poll-form>
+                <div class="poll__items">
+                  <div class="poll__item control">
+                    <input class="control__input" type="radio" name="media-source" id="media-source-1" required />
                     <label for="media-source-1" style="cursor: pointer">VK видео</label>
-                    <div class="poll__bar">
-                      <div class="poll__bar-progress" style="width: 25%"></div>
+                    <div class="control__bar">
+                      <div class="control__bar-progress" style="width: 25%"></div>
                       <span>25%(192)</span>
                     </div>
                   </div>
 
-                  <div class="poll__form-item radio">
-                    <input class="radio__input" type="radio" name="media-source" id="media-source-2" required />
+                  <div class="poll__item control">
+                    <input class="control__input" type="radio" name="media-source" id="media-source-2" required />
                     <label for="media-source-2" style="cursor: pointer">Дзен</label>
-                    <div class="poll__bar">
-                      <div class="poll__bar-progress" style="width: 9%"></div>
+                    <div class="control__bar">
+                      <div class="control__bar-progress" style="width: 9%"></div>
                       <span>9%(74)</span>
                     </div>
                   </div>
 
-                  <div class="poll__form-item radio">
-                    <input class="radio__input" type="radio" name="media-source" id="media-source-3" required />
+                  <div class="poll__item control">
+                    <input class="control__input" type="radio" name="media-source" id="media-source-3" required />
                     <label for="media-source-3" style="cursor: pointer">Rutube</label>
-                    <div class="poll__bar">
-                      <div class="poll__bar-progress" style="width: 22%"></div>
+                    <div class="control__bar">
+                      <div class="control__bar-progress" style="width: 22%"></div>
                       <span>22%(172)</span>
                     </div>
                   </div>
 
-                  <div class="poll__form-item radio">
-                    <input class="radio__input" type="radio" name="media-source" id="media-source-4" required />
+                  <div class="poll__item control">
+                    <input class="control__input" type="radio" name="media-source" id="media-source-4" required />
                     <label for="media-source-4" style="cursor: pointer">YouTube с ускоряющими настройками</label>
-                    <div class="poll__bar">
-                      <div class="poll__bar-progress" style="width: 44%"></div>
+                    <div class="control__bar">
+                      <div class="control__bar-progress" style="width: 44%"></div>
                       <span>44%(314)</span>
                     </div>
                   </div>
@@ -312,14 +335,33 @@
             </section>
             <!-- Side block end -->
           </div>
-          <!-- Aside container end -->
+          <!-- Aside end -->
 
-          <!-- Content container start -->
-          <div class="video-container__content">
+          <!-- Content start -->
+          <div class="lecture-page__content page__content">
             <!-- Section start -->
-            <section class="video-container__about-section section">
-              <h2 class="video-container__about-title section__title">Рынок акций. Хит-парад #283 на 09.09.2024</h2>
-              <div class="video-container__about-content content">
+            <section class="lecture-page__about-section section">
+              <div class="lecture-page__about-section-header section__header">
+                <h2 class="section__title text-orange">Рынок акций. Хит-парад #283 на 09.09.2024</h2>
+                <div class="section__info">
+                  <div class="post-info">
+                    <span class="post-info__item">
+                      <svg viewBox="0 0 18 13" width="18" height="13">
+                        <use href="/sprite.svg#eye-icon" x="0" y="0"></use>
+                      </svg>
+                      122
+                    </span>
+                    <span class="post-info__item">
+                      <svg viewBox="0 0 18 13" width="18" height="13">
+                        <use href="/sprite.svg#comment-icon" x="0" y="0"></use>
+                      </svg>
+                      122
+                    </span>
+                  </div>
+                  <a class="link link_blue" href="#">Перейти к комментариям</a>
+                </div>
+              </div>
+              <div class="lecture-page__about-section-content section__content">
                 <p>
                   Здравствуйте, уважаемые зрители! С Вами в студии – Елена Антонова. Вашему вниманию предлагается
                   традиционный обзор торгов на российском рынке акций за период с 26 августа по 9 сентября текущего
@@ -375,67 +417,66 @@
                   акции компании Красный октябрь и бумаги ЯТЭКа отметившиеся двузначными темпами падения котировок на
                   фоне отсутствия значимых корпоративных событий.
                 </p>
-                <div class="content__actions">
-                  <a href="#" class="link link_gray" aria-label="share link">
-                    <svg class="social__icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-                      <use href="/sprite.svg#printer-icon" x="0" y="0"></use>
-                    </svg>
-                    <span>Версия для печати</span>
-                  </a>
+              </div>
+              <div class="lecture-page__about-section-actions section__footer">
+                <a href="#" class="link link_gray">
+                  <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+                    <use href="/sprite.svg#printer-icon" x="0" y="0"></use>
+                  </svg>
+                  <span>Версия для печати</span>
+                </a>
 
-                  <div class="social social_horizontal social_small">
-                    <h3 class="social__title">Поделиться:</h3>
-                    <ul class="social__list">
-                      <li class="social__item">
-                        <a href="#" class="social__link" aria-label="share link">
-                          <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
-                            <use href="/sprite.svg#share-icon" x="0" y="0"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a href="#" class="social__link" aria-label="whats-app">
-                          <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
-                            <use href="/sprite.svg#whats-app-icon" x="0" y="0"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a href="#" class="social__link" aria-label="telegram">
-                          <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
-                            <use href="/sprite.svg#telegram-icon" x="0" y="0"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a href="#" class="social__link" aria-label="dzen">
-                          <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30">
-                            <use href="/sprite.svg#social-network-icon" x="0" y="0"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li class="social__item">
-                        <a href="#" class="social__link" aria-label="vkontakte">
-                          <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
-                            <use href="/sprite.svg#vk-icon" x="0" y="0"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                <div class="section__social">
+                  <p>Поделиться:</p>
+                  <ul class="social social_small">
+                    <li class="social__item">
+                      <a href="#" class="social__link" aria-label="share link">
+                        <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
+                          <use href="/sprite.svg#share-icon" x="0" y="0"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link" aria-label="whats-app">
+                        <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
+                          <use href="/sprite.svg#whats-app-icon" x="0" y="0"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link" aria-label="telegram">
+                        <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
+                          <use href="/sprite.svg#telegram-icon" x="0" y="0"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link" aria-label="dzen">
+                        <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30">
+                          <use href="/sprite.svg#social-network-icon" x="0" y="0"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link" aria-label="vkontakte">
+                        <svg class="social__icon" viewBox="0 0 30 30" width="30" height="30" aria-hidden="true">
+                          <use href="/sprite.svg#vk-icon" x="0" y="0"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </section>
             <!-- Section end -->
 
             <!-- Section start -->
-            <!--TODO: добавить комментарии из bf-arsagera -->
             <!-- Section end -->
           </div>
-          <!-- Content container end -->
+          <!-- Content end -->
         </div>
       </div>
-      <!-- Video page container end -->
+      <!-- Page container end -->
     </main>
     <!-- Main block end -->
 
@@ -453,45 +494,8 @@
             <p>Все права защищены законодательством РФ</p>
           </div>
         </div>
-        <div class="footer__social social">
-          <h3 class="social__title">Мы в социальных сетях</h3>
-          <ul class="social__list">
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="telegram">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#telegram-icon" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="youtube">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#youtube-icon" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="dzen">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#social-network-icon" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="vkontakte">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#vk-icon" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="rutube">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#rutube" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="footer__social">
+        <!-- todo add social-->
         </div>
         <a class="footer__link link link_gray weight-500" href="#">Меры защиты фондового рынка</a>
       </div>

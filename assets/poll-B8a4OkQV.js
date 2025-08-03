@@ -1,0 +1,1 @@
+function l(){const t=document.querySelector("[data-poll-form]"),e=document.querySelector("[data-poll-submit]"),o=document.querySelector("[data-poll-result]");t.addEventListener("submit",d=>{d.preventDefault(),t.classList.add("is-voted"),e.setAttribute("hidden",""),o.removeAttribute("hidden")})}l();

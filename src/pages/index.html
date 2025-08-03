@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0" />
@@ -9,9 +9,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/assets/site-BwHFeIBa.webmanifest" />
     <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
-    <script type="module" crossorigin src="/assets/main-CYh4nl1G.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/default-DT7rmJ1L.js">
-    <link rel="stylesheet" crossorigin href="/assets/main-Blwr9SFi.css">
+    <script type="module" crossorigin src="/assets/main-Cw7Lp1DP.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/default-CTHvL0BD.js">
+    <link rel="modulepreload" crossorigin href="/assets/poll-B8a4OkQV.js">
+    <link rel="stylesheet" crossorigin href="/assets/main-BBxhZ5ck.css">
   </head>
   <body>
     <!-- Top-bar block start -->
@@ -22,16 +23,16 @@
     </a>
 
     <div class="top-bar__info">
-      <p class="top-bar__current-index">
+      <p class="top-bar__index">
         Индекс Арсагеры
-        <span class="top-bar__current-index-value"> <span class="accent-text">0,62%</span> |+0,37 п.п.</span>
+        <span class="top-bar__index-value"> <span class="text-orange">0,62%</span> |+0,37 п.п.</span>
         на 12.09.2024
       </p>
 
-      <div class="top-bar__connect">
-        <button class="link link_gray link_responsive" type="button">Перезвонить Вам?</button>
-        <a class="top-bar__connect-link" href="tel:88123130530">8 812 313 05 30</a>
-        <button class="link link_gray link_responsive" type="button">Связь с нами</button>
+      <div class="top-bar__contacts">
+        <button class="link link_gray" type="button">Перезвонить Вам?</button>
+        <a class="link link_gray link_large" href="tel:88123130530">8 812 <span class="text-orange">313 05 30</span></a>
+        <button class="link link_gray" type="button">Связь с нами</button>
       </div>
     </div>
 
@@ -48,7 +49,7 @@
             <use href="/sprite.svg#arrow-down-icon" x="0" y="0"></use>
           </svg>
         </button>
-        <ul class="top-bar__dropdown" data-dropdown>
+        <ul class="top-bar__dropdown">
           <li>
             <button class="top-bar__dropdown-button" type="button">На сайт</button>
           </li>
@@ -73,6 +74,7 @@
     <header class="header">
   <div class="container">
     <div class="header__wrapper">
+
       <button class="header__burger-button" type="button" aria-label="Открыть меню">
         <svg viewBox="0 0 43 28" width="43" height="28">
           <use href="/sprite.svg#burger-icon" x="0" y="0"></use>
@@ -80,18 +82,38 @@
       </button>
 
       <div class="header__categories">
+        <button class="header__categories-button button button_white" type="button"
+                data-dropdown-button data-category-button>
+          <span>Клиентам</span>
+
+          <svg class="header__categories-icon" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
+            <use href="/sprite.svg#arrow-down-icon" x="0" y="0"></use>
+          </svg>
+        </button>
         <ul class="header__categories-list">
-          <li>
-            <a class="header__categories-link header__categories-link_active" href="/public">Клиентам</a>
+          <li class="header__categories-item is-hidden">
+            <a class="header__categories-link link link_orange" href="#" data-categories-link>Клиентам</a>
           </li>
-          <li>
-            <a class="header__categories-link" href="#">Акционерам</a>
+          <li class="header__categories-item">
+            <a class="header__categories-link link link_gray-dark" href="#" data-categories-link>Акционерам</a>
           </li>
-          <li>
-            <a class="header__categories-link" href="#">Сотрудникам</a>
+          <li class="header__categories-item ">
+            <a class="header__categories-link link link_gray-dark" href="#" data-categories-link>Сотрудникам</a>
           </li>
         </ul>
       </div>
+
+      <form action="" class="header__search search">
+        <label class="search__label"
+        >Поиск по сайту
+          <input type="text" class="search__field" name="search" placeholder="Поиск по сайту" />
+        </label>
+        <button class="search__btn" type="submit" aria-label="Искать">
+          <svg class="search__icon" viewBox="0 0 21 20" width="24" height="24">
+            <use href="/sprite.svg#search-icon" x="0" y="0"></use>
+          </svg>
+        </button>
+      </form>
 
       <nav class="header__nav">
         <ul class="header__nav-list">
@@ -141,7 +163,7 @@
         </button>
         <button class="header__mobile-action" type="button" aria-label="Открыть поиск">
           <svg viewBox="0 0 32 32" width="32" height="32">
-            <use href="/sprite.svg#search-icon-2" x="0" y="0"></use>
+            <use href="/sprite.svg#search-icon" x="0" y="0"></use>
           </svg>
         </button>
       </div>
@@ -151,152 +173,154 @@
 
     <!-- Header block end -->
 
-    <!-- Main block start -->
     <main class="main">
-      <!-- Index page container start -->
-      <div class="index-container container">
+      <!-- Page container start -->
+      <div class="index-page page container">
         <!-- Desktop table start -->
-        <div class="index-container__table table-scrollable">
-          <table class="table table_no-body-padding">
-            <thead class="table__head">
-              <tr class="table__row">
-                <th class="table__cell table__cell_sticky">
-                  <a class="button button_gray button_fixed-height" href="#">Помощь с выбором фонда</a>
-                </th>
-                <th class="table__cell">Отчет</th>
-                <th class="table__cell">Дата</th>
-                <th class="table__cell">Пай, ₽</th>
-                <th class="table__cell">% 1 мес.</th>
-                <th class="table__cell">3 мес.</th>
-                <th class="table__cell">6 мес.</th>
-                <th class="table__cell">1 год</th>
-                <th class="table__cell">3 года</th>
-                <th class="table__cell">5 лет</th>
-                <th class="table__cell">10 лет</th>
-                <th class="table__cell">15 лет</th>
-                <th class="table__cell">20 лет</th>
-              </tr>
-            </thead>
-            <tbody class="table__body">
-              <tr class="table__row">
-                <td class="table__cell table__cell_sticky">
-                  <a class="index-container__table-link link link_blue" href="#">
-                    <span class="index-container__table-link-icon">
-                      <svg viewBox="0 0 34 36" width="34" height="36">
-                        <use href="/sprite.svg#best-offer-icon" x="0" y="0"></use>
-                      </svg>
-                    </span>
-                    Арсагера – ФА
-                  </a>
-                </td>
-                <td class="table__cell">
-                  <a class="link link_blue" href="#">2 кв.</a>
-                </td>
-                <td class="table__cell">12.09.2024</td>
-                <td class="table__cell">13 904,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+5 000</td>
-                <td class="table__cell">+5 000</td>
-                <td class="table__cell">+5 000</td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell table__cell_sticky">
-                  <a class="index-container__table-link link link_blue" href="#">
-                    <span class="index-container__table-link-icon">
-                      <svg viewBox="0 0 38 37" width="38" height="37">
-                        <use href="/sprite.svg#star-growth-icon" x="0" y="0"></use>
-                      </svg>
-                    </span>
-                    Арсагера – СИ
-                  </a>
-                </td>
-                <td class="table__cell">
-                  <a class="link link_blue" href="#">2 кв.</a>
-                </td>
-                <td class="table__cell">12.09.2024</td>
-                <td class="table__cell">8 918,75</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+5 000</td>
-                <td class="table__cell">+5 000</td>
-                <td class="table__cell">+5 000</td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell table__cell_sticky">
-                  <a class="index-container__table-link link link_blue" href="#">
-                    <span class="index-container__table-link-icon">
-                      <svg viewBox="0 0 30 30" width="30" height="30">
-                        <use href="/sprite.svg#top-deal-icon" x="0" y="0"></use>
-                      </svg>
-                    </span>
-                    Арсагера – КР 1.55
-                  </a>
-                </td>
-                <td class="table__cell">
-                  <a class="link link_blue" href="#">2 кв.</a>
-                </td>
-                <td class="table__cell">12.09.2024</td>
-                <td class="table__cell">2 159,49</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+5 000</td>
-                <td class="table__cell">+5 000</td>
-                <td class="table__cell">+5 000</td>
-              </tr>
-              <tr class="table__row">
-                <td class="table__cell table__cell_sticky">
-                  <a class="index-container__table-link link link_blue" href="#">
-                    <span class="index-container__table-link-icon">
-                      <svg viewBox="0 0 31 30" width="31" height="30">
-                        <use href="/sprite.svg#top-rated-icon" x="0" y="0"></use>
-                      </svg>
-                    </span>
-                    Арсагера - А 6.4
-                  </a>
-                </td>
-                <td class="table__cell">
-                  <a class="link link_blue" href="#">2 кв.</a>
-                </td>
-                <td class="table__cell">12.09.2024</td>
-                <td class="table__cell">11 249,04</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+500,00</td>
-                <td class="table__cell">+5 000</td>
-                <td class="table__cell">+5 000</td>
-                <td class="table__cell">+5 000</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="index-page__table">
+          <div class="table-scrollable">
+            <table class="table">
+              <thead class="table__head">
+                <tr class="table__row">
+                  <th class="table__cell table__cell_sticky">
+                    <a class="button button_gray" href="#">Помощь с выбором фонда</a>
+                  </th>
+                  <th class="table__cell">Отчет</th>
+                  <th class="table__cell">Дата</th>
+                  <th class="table__cell">Пай, ₽</th>
+                  <th class="table__cell">% 1 мес.</th>
+                  <th class="table__cell">3 мес.</th>
+                  <th class="table__cell">6 мес.</th>
+                  <th class="table__cell">1 год</th>
+                  <th class="table__cell">3 года</th>
+                  <th class="table__cell">5 лет</th>
+                  <th class="table__cell">10 лет</th>
+                  <th class="table__cell">15 лет</th>
+                  <th class="table__cell">20 лет</th>
+                </tr>
+              </thead>
+              <tbody class="table__body">
+                <tr class="table__row">
+                  <td class="table__cell table__cell_sticky">
+                    <a class="index-page__table-link link link_blue" href="#">
+                      <span class="index-page__table-link-icon">
+                        <svg viewBox="0 0 34 36" width="34" height="36">
+                          <use href="/sprite.svg#star-up-icon" x="0" y="0"></use>
+                        </svg>
+                      </span>
+                      Арсагера – ФА
+                    </a>
+                  </td>
+                  <td class="table__cell">
+                    <a class="link link_blue" href="#">2 кв.</a>
+                  </td>
+                  <td class="table__cell">12.09.2024</td>
+                  <td class="table__cell">13 904,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+5 000</td>
+                  <td class="table__cell">+5 000</td>
+                  <td class="table__cell">+5 000</td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell_sticky">
+                    <a class="index-page__table-link link link_blue" href="#">
+                      <span class="index-page__table-link-icon">
+                        <svg viewBox="0 0 38 37" width="38" height="37">
+                          <use href="/sprite.svg#star-growth-icon" x="0" y="0"></use>
+                        </svg>
+                      </span>
+                      Арсагера – СИ
+                    </a>
+                  </td>
+                  <td class="table__cell">
+                    <a class="link link_blue" href="#">2 кв.</a>
+                  </td>
+                  <td class="table__cell">12.09.2024</td>
+                  <td class="table__cell">8 918,75</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+5 000</td>
+                  <td class="table__cell">+5 000</td>
+                  <td class="table__cell">+5 000</td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell_sticky">
+                    <a class="index-page__table-link link link_blue" href="#">
+                      <span class="index-page__table-link-icon">
+                        <svg viewBox="0 0 30 30" width="30" height="30">
+                          <use href="/sprite.svg#percent-up-icon" x="0" y="0"></use>
+                        </svg>
+                      </span>
+                      Арсагера – КР 1.55
+                    </a>
+                  </td>
+                  <td class="table__cell">
+                    <a class="link link_blue" href="#">2 кв.</a>
+                  </td>
+                  <td class="table__cell">12.09.2024</td>
+                  <td class="table__cell">2 159,49</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+5 000</td>
+                  <td class="table__cell">+5 000</td>
+                  <td class="table__cell">+5 000</td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell_sticky">
+                    <a class="index-page__table-link link link_blue" href="#">
+                      <span class="index-page__table-link-icon">
+                        <svg viewBox="0 0 31 30" width="31" height="30">
+                          <use href="/sprite.svg#stars-up-icon" x="0" y="0"></use>
+                        </svg>
+                      </span>
+                      Арсагера - А 6.4
+                    </a>
+                  </td>
+                  <td class="table__cell">
+                    <a class="link link_blue" href="#">2 кв.</a>
+                  </td>
+                  <td class="table__cell">12.09.2024</td>
+                  <td class="table__cell">11 249,04</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+500,00</td>
+                  <td class="table__cell">+5 000</td>
+                  <td class="table__cell">+5 000</td>
+                  <td class="table__cell">+5 000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <a class="index-page__link link link_gray" href="#">Порядок определения доходности</a>
         </div>
         <!-- Desktop table end -->
 
         <!-- Mobile accordions start -->
-        <div class="index-container__accordions" data-index-mobile-accordions>
-          <a class="button button_gray" href="#">Помощь с выбором фонда</a>
+        <div class="index-page__accordions">
+          <a class="button button_gray button_full-width" href="#">Помощь с выбором фонда</a>
 
           <!-- Mobile accordion 1 start -->
           <details class="accordion">
-            <summary class="accordion__summary" data-summary>
+            <summary class="accordion__summary">
               <span class="accordion__summary-title">
                 <svg viewBox="0 0 22 22" width="22" height="22">
-                  <use href="/sprite.svg#best-offer-icon" x="0" y="0"></use>
+                  <use href="/sprite.svg#star-up-icon" x="0" y="0"></use>
                 </svg>
                 Арсагера – ФА
               </span>
@@ -304,73 +328,75 @@
                 <use href="/sprite.svg#arrow-down-icon" x="0" y="0"></use>
               </svg>
             </summary>
-            <div class="index-container__accordion-content accordion__content">
-              <table class="table table_two-columns">
-                <tbody class="table__body">
-                  <tr class="table__row">
-                    <th class="table__cell text-right">Отчет</th>
-                    <td class="table__cell text-left">
-                      <a class="link link_blue" href="#">2 кв.</a>
-                    </td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">Дата</th>
-                    <td class="table__cell text-left">12.09.2024</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">Пай, руб.</th>
-                    <td class="table__cell text-left">13 904,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-center" colspan="2">Изменение стоимости пая</th>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 1 мес.</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 3 мес.</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 6 мес.</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 1 год</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 3 года</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 5 лет</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 10 лет</th>
-                    <td class="table__cell text-left">+5 000</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 15 лет</th>
-                    <td class="table__cell text-left">+5 000</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 20 лет</th>
-                    <td class="table__cell text-left">+5 000</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="accordion__content">
+              <section class="section">
+                <table class="table">
+                  <tbody class="table__body">
+                    <tr class="table__row">
+                      <th class="table__cell text-right">Отчет</th>
+                      <td class="table__cell text-left">
+                        <a class="link link_blue" href="#">2 кв.</a>
+                      </td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">Дата</th>
+                      <td class="table__cell text-left">12.09.2024</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">Пай, руб.</th>
+                      <td class="table__cell text-left">13 904,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-center" colspan="2">Изменение стоимости пая</th>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 1 мес.</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 3 мес.</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 6 мес.</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 1 год</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 3 года</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 5 лет</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 10 лет</th>
+                      <td class="table__cell text-left">+5 000</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 15 лет</th>
+                      <td class="table__cell text-left">+5 000</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 20 лет</th>
+                      <td class="table__cell text-left">+5 000</td>
+                    </tr>
+                  </tbody>
+                </table>
 
-              <a class="button button_gray" href="#">Перейти на страницу фонда</a>
+                <a class="button button_gray button_full-width" href="#">Перейти на страницу фонда</a>
+              </section>
             </div>
           </details>
           <!-- Mobile accordion 1 end -->
 
           <!-- Mobile accordion 2 start -->
           <details class="accordion">
-            <summary class="accordion__summary" data-summary>
+            <summary class="accordion__summary">
               <span class="accordion__summary-title">
                 <svg viewBox="0 0 22 22" width="22" height="22">
                   <use href="/sprite.svg#star-growth-icon" x="0" y="0"></use>
@@ -382,75 +408,77 @@
               </svg>
             </summary>
             <div class="index-container__accordion-content accordion__content">
-              <table class="table table_two-columns">
-                <tbody class="table__body">
-                  <tr class="table__row">
-                    <th class="table__cell text-right">Отчет</th>
-                    <td class="table__cell text-left">
-                      <a class="link link_blue" href="#">2 кв.</a>
-                    </td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">Дата</th>
-                    <td class="table__cell text-left">12.09.2024</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">Пай, руб.</th>
-                    <td class="table__cell text-left">13 904,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-center" colspan="2">Изменение стоимости пая</th>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 1 мес.</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 3 мес.</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 6 мес.</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 1 год</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 3 года</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 5 лет</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 10 лет</th>
-                    <td class="table__cell text-left">+5 000</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 15 лет</th>
-                    <td class="table__cell text-left">+5 000</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 20 лет</th>
-                    <td class="table__cell text-left">+5 000</td>
-                  </tr>
-                </tbody>
-              </table>
+              <section class="section">
+                <table class="table">
+                  <tbody class="table__body">
+                    <tr class="table__row">
+                      <th class="table__cell text-right">Отчет</th>
+                      <td class="table__cell text-left">
+                        <a class="link link_blue" href="#">2 кв.</a>
+                      </td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">Дата</th>
+                      <td class="table__cell text-left">12.09.2024</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">Пай, руб.</th>
+                      <td class="table__cell text-left">13 904,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-center" colspan="2">Изменение стоимости пая</th>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 1 мес.</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 3 мес.</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 6 мес.</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 1 год</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 3 года</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 5 лет</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 10 лет</th>
+                      <td class="table__cell text-left">+5 000</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 15 лет</th>
+                      <td class="table__cell text-left">+5 000</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 20 лет</th>
+                      <td class="table__cell text-left">+5 000</td>
+                    </tr>
+                  </tbody>
+                </table>
 
-              <a class="button button_gray" href="#">Перейти на страницу фонда</a>
+                <a class="button button_gray button_full-width" href="#">Перейти на страницу фонда</a>
+              </section>
             </div>
           </details>
           <!-- Mobile accordion 2 end -->
 
           <!-- Mobile accordion 3 start -->
           <details class="accordion">
-            <summary class="accordion__summary" data-summary>
+            <summary class="accordion__summary">
               <span class="accordion__summary-title">
                 <svg viewBox="0 0 22 22" width="22" height="22">
-                  <use href="/sprite.svg#top-deal-icon" x="0" y="0"></use>
+                  <use href="/sprite.svg#percent-up-icon" x="0" y="0"></use>
                 </svg>
                 Арсагера – КР 1.55
               </span>
@@ -459,75 +487,77 @@
               </svg>
             </summary>
             <div class="index-container__accordion-content accordion__content">
-              <table class="table table_two-columns">
-                <tbody class="table__body">
-                  <tr class="table__row">
-                    <th class="table__cell text-right">Отчет</th>
-                    <td class="table__cell text-left">
-                      <a class="link link_blue" href="#">2 кв.</a>
-                    </td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">Дата</th>
-                    <td class="table__cell text-left">12.09.2024</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">Пай, руб.</th>
-                    <td class="table__cell text-left">13 904,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-center" colspan="2">Изменение стоимости пая</th>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 1 мес.</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 3 мес.</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 6 мес.</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 1 год</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 3 года</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 5 лет</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 10 лет</th>
-                    <td class="table__cell text-left">+5 000</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 15 лет</th>
-                    <td class="table__cell text-left">+5 000</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 20 лет</th>
-                    <td class="table__cell text-left">+5 000</td>
-                  </tr>
-                </tbody>
-              </table>
+              <section class="section">
+                <table class="table">
+                  <tbody class="table__body">
+                    <tr class="table__row">
+                      <th class="table__cell text-right">Отчет</th>
+                      <td class="table__cell text-left">
+                        <a class="link link_blue" href="#">2 кв.</a>
+                      </td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">Дата</th>
+                      <td class="table__cell text-left">12.09.2024</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">Пай, руб.</th>
+                      <td class="table__cell text-left">13 904,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-center" colspan="2">Изменение стоимости пая</th>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 1 мес.</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 3 мес.</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 6 мес.</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 1 год</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 3 года</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 5 лет</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 10 лет</th>
+                      <td class="table__cell text-left">+5 000</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 15 лет</th>
+                      <td class="table__cell text-left">+5 000</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 20 лет</th>
+                      <td class="table__cell text-left">+5 000</td>
+                    </tr>
+                  </tbody>
+                </table>
 
-              <a class="button button_gray" href="#">Перейти на страницу фонда</a>
+                <a class="button button_gray button_full-width" href="#">Перейти на страницу фонда</a>
+              </section>
             </div>
           </details>
           <!-- Mobile accordion 3 end -->
 
           <!-- Mobile accordion 4 start -->
           <details class="accordion">
-            <summary class="accordion__summary" data-summary>
+            <summary class="accordion__summary">
               <span class="accordion__summary-title">
                 <svg viewBox="0 0 22 22" width="22" height="22">
-                  <use href="/sprite.svg#top-rated-icon" x="0" y="0"></use>
+                  <use href="/sprite.svg#stars-up-icon" x="0" y="0"></use>
                 </svg>
                 Арсагера - А 6.4
               </span>
@@ -536,203 +566,207 @@
               </svg>
             </summary>
             <div class="index-container__accordion-content accordion__content">
-              <table class="table table_two-columns">
-                <tbody class="table__body">
-                  <tr class="table__row">
-                    <th class="table__cell text-right">Отчет</th>
-                    <td class="table__cell text-left">
-                      <a class="link link_blue" href="#">2 кв.</a>
-                    </td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">Дата</th>
-                    <td class="table__cell text-left">12.09.2024</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">Пай, руб.</th>
-                    <td class="table__cell text-left">13 904,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-center" colspan="2">Изменение стоимости пая</th>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 1 мес.</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 3 мес.</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 6 мес.</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 1 год</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 3 года</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 5 лет</th>
-                    <td class="table__cell text-left">+500,00</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 10 лет</th>
-                    <td class="table__cell text-left">+5 000</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 15 лет</th>
-                    <td class="table__cell text-left">+5 000</td>
-                  </tr>
-                  <tr class="table__row">
-                    <th class="table__cell text-right">%, 20 лет</th>
-                    <td class="table__cell text-left">+5 000</td>
-                  </tr>
-                </tbody>
-              </table>
+              <section>
+                <table class="table">
+                  <tbody class="table__body">
+                    <tr class="table__row">
+                      <th class="table__cell text-right">Отчет</th>
+                      <td class="table__cell text-left">
+                        <a class="link link_blue" href="#">2 кв.</a>
+                      </td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">Дата</th>
+                      <td class="table__cell text-left">12.09.2024</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">Пай, руб.</th>
+                      <td class="table__cell text-left">13 904,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-center" colspan="2">Изменение стоимости пая</th>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 1 мес.</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 3 мес.</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 6 мес.</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 1 год</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 3 года</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 5 лет</th>
+                      <td class="table__cell text-left">+500,00</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 10 лет</th>
+                      <td class="table__cell text-left">+5 000</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 15 лет</th>
+                      <td class="table__cell text-left">+5 000</td>
+                    </tr>
+                    <tr class="table__row">
+                      <th class="table__cell text-right">%, 20 лет</th>
+                      <td class="table__cell text-left">+5 000</td>
+                    </tr>
+                  </tbody>
+                </table>
 
-              <a class="button button_gray" href="#">Перейти на страницу фонда</a>
+                <a class="button button_gray button_full-width" href="#">Перейти на страницу фонда</a>
+              </section>
             </div>
           </details>
           <!-- Mobile accordion 4 end -->
+
+          <a class="index-page__link link link_gray" href="#">Порядок определения доходности</a>
         </div>
         <!-- Mobile accordions end -->
 
         <!-- Benchmarks start -->
-        <div class="index-container__benchmarks" data-benchmarks>
-          <details class="exchange-benchmarks" open>
-            <summary class="exchange-benchmarks__title" data-summary>
+        <div class="index-page__benchmarks">
+          <details class="index-page__benchmarks-accordion" data-benchmarks>
+            <summary class="index-page__benchmarks-title">
               Биржевые <br />
               ориентиры:
-              <svg
-                class="exchange-benchmarks__title-icon"
-                viewBox="0 0 20 10"
-                width="20"
-                height="10"
-                aria-hidden="true"
-              >
+              <svg class="index-page__benchmarks-icon" viewBox="0 0 20 10" width="20" height="10" aria-hidden="true">
                 <use href="/sprite.svg#arrow-down-icon" x="0" y="0"></use>
               </svg>
             </summary>
-            <div class="exchange-benchmarks__details">
-              <p class="exchange-benchmarks__cell exchange-benchmarks__cell_date">
+            <div class="index-page__benchmarks-details">
+              <p class="index-page__benchmarks-cell index-page__benchmarks-cell_date">
                 <span>20.09.2024</span>
                 <span>17:34:28</span>
               </p>
-              <p class="exchange-benchmarks__cell">
+              <p class="index-page__benchmarks-cell">
                 <a class="link link_blue" href="#">Арсагера ФА</a>
                 <span>14 000,00 ₽</span>
               </p>
-              <p class="exchange-benchmarks__cell">
+              <p class="index-page__benchmarks-cell">
                 <a class="link link_blue" href="#">ПИФАрсСИ</a>
                 <span>14 000,00 ₽</span>
               </p>
-              <p class="exchange-benchmarks__cell">
+              <p class="index-page__benchmarks-cell">
                 <a class="link link_blue" href="#">ПИФАрсКР1.55</a>
                 <span>14 000,00 ₽</span>
               </p>
-              <p class="exchange-benchmarks__cell">
+              <p class="index-page__benchmarks-cell">
                 <a class="link link_blue" href="#">ПИФАрс6.4</a>
                 <span>14 000,00 ₽</span>
               </p>
             </div>
           </details>
+
+          <a class="index-page__link link link_gray" href="#">Порядок расчета биржевых ориентиров</a>
         </div>
         <!-- Benchmarks end -->
 
-        <div class="index-container__grid">
-          <!-- Aside container start -->
-          <div class="index-container__aside">
-            <!-- Lectures list start -->
-            <section class="index-container__lectures-list lectures-list section">
-              <h2 class="section__title">Лекции и видео</h2>
-              <ul class="lectures-list__list">
-                <li class="lectures-list__item">
-                  <div class="lectures-list__video">
+        <div class="index-page__grid page__grid">
+          <!-- Aside start -->
+          <div class="index-page__aside page__aside">
+            <!-- Side block start -->
+            <section class="index-page__lectures-section side-block section">
+              <h2 class="section__title text-orange">Лекции и видео</h2>
+              <ul class="list">
+                <li>
+                  <div class="side-block__gray-box">
                     <a class="link link_gray-dark" href="">Рынок акций. Хит-парад #283 на 09.09.2024</a>
-                    <iframe
-                      src="https://www.youtube.com/embed/wOkzbqdyCwA"
-                      title="Рынок акций. Хит-парад #303 на 30.06.2025"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                    ></iframe>
+                    <div class="side-block__iframe">
+                      <iframe
+                        src="https://www.youtube.com/embed/wOkzbqdyCwA"
+                        title="Рынок акций. Хит-парад #303 на 30.06.2025"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
                   </div>
                 </li>
-                <li class="lectures-list__item">
-                  <a class="link link_gray-dark" href="#">Рынок акций. Хит-парад #282 на 01.09.2024</a>
+                <li>
+                  <a class="link link_gray-dark" href="#"> Рынок акций. Хит-парад #283 на 09.09.2024 </a>
                 </li>
-                <li class="lectures-list__item">
+                <li>
                   <a class="link link_gray-dark" href="#">
                     Наши фонды. Арсагера – фонд смешанных инвестиций. #363 с 16.08.2024 по 30.08.2024
                   </a>
                 </li>
-                <li class="lectures-list__item">
+                <li>
                   <a class="link link_gray-dark" href="#">
                     Наши фонды. Арсагера – фонд смешанных инвестиций. #363 с 16.08.2024 по 30.08.2024
                   </a>
                 </li>
-                <li class="lectures-list__item">
+                <li>
                   <a class="link link_gray-dark" href="#">
                     Наши фонды. Арсагера – фонд смешанных инвестиций. #363 с 16.08.2024 по 30.08.2024
                   </a>
                 </li>
-                <li class="lectures-list__item">
+                <li>
+                  <a class="link link_gray-dark" href="#"> Рынок акций. Хит-парад #283 на 09.09.2024 </a>
+                </li>
+                <li>
                   <a class="link link_gray-dark" href="#">
-                    Наши фонды. Арсагера – фонд смешанных инвестиций. #363 с 16.08.2024 по 30.08.2024
+                    Наши фонды. Арсагера - облигации КР 1.55.  3 квартал 2024 года
                   </a>
                 </li>
               </ul>
-              <a class="button button_gray button_full-width" href="#">Показать еще </a>
+              <a class="button button_gray button_full-width" href="#">Показать еще</a>
             </section>
-            <!-- Lectures list end -->
+            <!-- Side block end -->
 
-            <!-- Poll start -->
-            <section class="index-container__poll poll section">
-              <h2 class="section__title">Опрос</h2>
-              <form class="poll__form" action="/" method="post" data-poll-form>
-                <p class="poll__form-title">
-                  Какая видеоплатформа является для Вас более предпочтительной в связи с замедлением YouTube на
-                  территории РФ?
-                </p>
-
-                <div class="poll__form-items">
-                  <div class="poll__form-item radio">
-                    <input class="radio__input" type="radio" name="media-source" id="media-source-1" required />
+            <!-- Side block start -->
+            <section class="index-page__poll-section section">
+              <h2 class="section__title text-orange">Опрос</h2>
+              <p class="text-blue">
+                Какая видеоплатформа является для Вас более предпочтительной в связи с замедлением YouTube на территории
+                РФ?
+              </p>
+              <form class="poll" action="/" data-poll-form>
+                <div class="poll__items">
+                  <div class="poll__item control">
+                    <input class="control__input" type="radio" name="media-source" id="media-source-1" required />
                     <label for="media-source-1" style="cursor: pointer">VK видео</label>
-                    <div class="poll__bar">
-                      <div class="poll__bar-progress" style="width: 25%"></div>
+                    <div class="control__bar">
+                      <div class="control__bar-progress" style="width: 25%"></div>
                       <span>25%(192)</span>
                     </div>
                   </div>
 
-                  <div class="poll__form-item radio">
-                    <input class="radio__input" type="radio" name="media-source" id="media-source-2" required />
+                  <div class="poll__item control">
+                    <input class="control__input" type="radio" name="media-source" id="media-source-2" required />
                     <label for="media-source-2" style="cursor: pointer">Дзен</label>
-                    <div class="poll__bar">
-                      <div class="poll__bar-progress" style="width: 9%"></div>
+                    <div class="control__bar">
+                      <div class="control__bar-progress" style="width: 9%"></div>
                       <span>9%(74)</span>
                     </div>
                   </div>
 
-                  <div class="poll__form-item radio">
-                    <input class="radio__input" type="radio" name="media-source" id="media-source-3" required />
+                  <div class="poll__item control">
+                    <input class="control__input" type="radio" name="media-source" id="media-source-3" required />
                     <label for="media-source-3" style="cursor: pointer">Rutube</label>
-                    <div class="poll__bar">
-                      <div class="poll__bar-progress" style="width: 22%"></div>
+                    <div class="control__bar">
+                      <div class="control__bar-progress" style="width: 22%"></div>
                       <span>22%(172)</span>
                     </div>
                   </div>
 
-                  <div class="poll__form-item radio">
-                    <input class="radio__input" type="radio" name="media-source" id="media-source-4" required />
+                  <div class="poll__item control">
+                    <input class="control__input" type="radio" name="media-source" id="media-source-4" required />
                     <label for="media-source-4" style="cursor: pointer">YouTube с ускоряющими настройками</label>
-                    <div class="poll__bar">
-                      <div class="poll__bar-progress" style="width: 44%"></div>
+                    <div class="control__bar">
+                      <div class="control__bar-progress" style="width: 44%"></div>
                       <span>44%(314)</span>
                     </div>
                   </div>
@@ -742,23 +776,35 @@
                 <p data-poll-result hidden>Всего голосов: 782</p>
               </form>
             </section>
-            <!-- Poll end -->
-          </div>
-          <!-- Aside container end -->
+            <!-- Side block end -->
 
-          <!-- Content container start -->
-          <div class="index-container__content">
-            <!-- Articles start -->
-            <div class="index-container__last-articles">
+            <!-- Side block start -->
+            <section class="index-page__info-section section">
+              <p class="text-gray-medium">
+                Управляющая компания «Арсагера» – доверительное управление капиталом. УК «Арсагера» – это инвестиции в
+                ценные бумаги: акции и облигации. На нашем сайте вы найдете информацию про фондовый рынок, ПИФ,
+                доверительное управление (индивидуальное ДУ), инвестиции в ценные бумаги (акции и облигации) и многое
+                другое. Присоединяйтесь к дискуссии – вы можете оставлять комментарии на страницах с информационными
+                статьями. Инвестиции сегодня – это Ваша Забота о Будущем!
+              </p>
+            </section>
+            <!-- Side block end -->
+          </div>
+          <!-- Aside end -->
+
+          <!-- Content start -->
+          <div class="index-page__content page__content">
+            <div class="index-page__articles-section page__sections-group">
+              <!-- Section start -->
               <section class="section">
-                <h2 class="section__title">Информационный дайджест</h2>
-                <div class="last-article">
-                  <div class="last-article__date-box">
-                    <p class="last-article__number">#756</p>
-                    <p class="last-article__date-large">от 12.09.2024</p>
+                <h2 class="section__title text-orange">Информационный дайджест</h2>
+                <div class="post">
+                  <div class="post__date-box">
+                    <p class="post__number">#756</p>
+                    <p class="post__date-large">от <time class="post__date" datetime="2023-10-03">21.07.2009</time></p>
                   </div>
-                  <div class="last-article__content">
-                    <ul>
+                  <div class="post__content">
+                    <ul class="list list_dots">
                       <li>Осторожно: звонки от мошенников!</li>
                       <li>Информация по платежам для клиентов</li>
                       <li>
@@ -770,25 +816,27 @@
                         <a class="link link_blue" href="#">642-й материал акции</a>
                       </li>
                     </ul>
-                  </div>
-                  <div class="last-article__footer">
-                    <div class="last-article__actions">
-                      <a class="link link_gray" href="#">Архив дайджестов</a>
+                    <div class="post__footer">
+                      <div class="post__actions">
+                        <a class="link link_gray" href="#">Архив дайджестов</a>
 
-                      <button class="button button_gray button_fixed-height" type="button">Подписаться</button>
+                        <button class="button button_gray" type="button">Подписаться</button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </section>
+              <!-- Section end -->
 
+              <!-- Section start -->
               <section class="section">
-                <h2 class="section__title">Статья акции «Призы любознательным»</h2>
-                <div class="last-article">
-                  <div class="last-article__media">
-                    <img class="last-article__image" src="/image1.jpg" alt="" loading="lazy" />
+                <h2 class="section__title text-orange">Статья акции «Призы любознательным»</h2>
+                <div class="post">
+                  <div class="post__media">
+                    <img class="post__image" src="/image1.jpg" alt="" loading="lazy" />
                   </div>
-                  <div class="last-article__content">
-                    <h3 class="last-article__title">
+                  <div class="post__content">
+                    <h3 class="post__title">
                       Взаимосвязь доходов семьи, условий ипотечного кредита (ставка и срок) и стоимости недвижимости
                     </h3>
                     <p>
@@ -796,26 +844,28 @@
                       вопроса к тексту статьи, стать владельцем паев фондов под управлением нашей компании на 1000
                       рублей.
                     </p>
-                  </div>
-                  <div class="last-article__footer">
-                    <p class="last-article__date">12 сентября 2024</p>
-                    <div class="last-article__actions">
-                      <a class="link link_gray" href="#">Правила акции</a>
+                    <div class="post__footer">
+                      <time class="post__date" datetime="2023-10-03">12 сентября 2024</time>
+                      <div class="post__actions">
+                        <a class="link link_gray" href="#">Правила акции</a>
 
-                      <a class="button button_gray button_fixed-height" href="#">Принять участие</a>
+                        <a class="button button_gray" href="#">Принять участие</a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </section>
+              <!-- Section end -->
 
+              <!-- Section start -->
               <section class="section">
-                <h2 class="section__title">Статья недели</h2>
-                <div class="last-article">
-                  <div class="last-article__media">
-                    <img class="last-article__image" src="/image1.jpg" alt="" loading="lazy" />
+                <h2 class="section__title text-orange">Статья недели</h2>
+                <div class="post">
+                  <div class="post__media">
+                    <img class="post__image" src="/image1.jpg" alt="" loading="lazy" />
                   </div>
-                  <div class="last-article__content">
-                    <h3 class="last-article__title">Кто выигрывает на фондовом рынке?</h3>
+                  <div class="post__content">
+                    <h3 class="post__title">Кто выигрывает на фондовом рынке?</h3>
                     <p>
                       В данном материале приводится исследование по влиянию условий ипотечного кредитования на стоимость
                       жилья и его доступность. Данный материал был подготовлен в 2017 году, поэтому в расчетах
@@ -823,85 +873,83 @@
                       проведенных расчетов не зависят от конкретных параметров стоимости квартир и могут рассматриваться
                       как условные единицы
                     </p>
-                  </div>
-                  <div class="last-article__footer">
-                    <p class="last-article__date">12 сентября 2024</p>
-                    <div class="last-article__actions">
-                      <a class="link link_gray" href="#">Статьи</a>
+                    <div class="post__footer">
+                      <time class="post__date" datetime="2023-10-03">12 сентября 2024</time>
+                      <div class="post__actions">
+                        <a class="link link_gray" href="#">Статьи</a>
 
-                      <a class="button button_gray button_fixed-height" href="#">Читать статью</a>
+                        <a class="button button_gray" href="#">Читать статью</a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </section>
+              <!-- Section end -->
             </div>
-            <!-- Articles end -->
 
-            <!-- Messages start -->
-            <section class="index-container__messages messages section">
-              <h2 class="section__title">Важные сообщения</h2>
-              <ul class="messages__list">
-                <li class="messages__item">
-                  <svg class="messages__item-icon" viewBox="0 0 36 33" width="36" height="33" aria-hidden="true">
-                    <use href="/sprite.svg#info-icon" x="0" y="0"></use>
-                  </svg>
-                  <div class="messages__item-content">
-                    <time class="messages__item-date" datetime="2023-10-20">20.10.2023</time>
-                    <h3 class="messages__item-title">Загрузка данных о стоимости паев и СЧА фондов (API)</h3>
-                    <p class="messages__item-text">
-                      Загрузка стоимости паев и СЧА паевых инвестиционных фондов с сайта arsagera.ru теперь доступна
-                      через API. 
-                    </p>
-                  </div>
-                </li>
-                <li class="messages__item">
-                  <svg class="messages__item-icon" viewBox="0 0 36 33" width="36" height="33" aria-hidden="true">
-                    <use href="/sprite.svg#info-icon" x="0" y="0"></use>
-                  </svg>
-                  <div class="messages__item-content">
-                    <time class="messages__item-date" datetime="2023-10-20">20.10.2023</time>
-                    <h3 class="messages__item-title">Загрузка данных о стоимости паев и СЧА фондов (API)</h3>
-                    <p class="messages__item-text">
-                      Загрузка стоимости паев и СЧА паевых инвестиционных фондов с сайта arsagera.ru теперь доступна
-                      через API. 
-                    </p>
-                  </div>
-                </li>
-                <li class="messages__item">
-                  <svg class="messages__item-icon" viewBox="0 0 36 33" width="36" height="33" aria-hidden="true">
-                    <use href="/sprite.svg#info-icon" x="0" y="0"></use>
-                  </svg>
-                  <div class="messages__item-content">
-                    <time class="messages__item-date" datetime="2023-10-20">20.10.2023</time>
-                    <h3 class="messages__item-title">Загрузка данных о стоимости паев и СЧА фондов (API)</h3>
-                    <p class="messages__item-text">
-                      Загрузка стоимости паев и СЧА паевых инвестиционных фондов с сайта arsagera.ru теперь доступна
-                      через API. 
-                    </p>
-                  </div>
-                </li>
-                <li class="messages__item">
-                  <svg class="messages__item-icon" viewBox="0 0 36 33" width="36" height="33" aria-hidden="true">
-                    <use href="/sprite.svg#info-icon" x="0" y="0"></use>
-                  </svg>
-                  <div class="messages__item-content">
-                    <time class="messages__item-date" datetime="2023-10-20">20.10.2023</time>
-                    <h3 class="messages__item-title">Загрузка данных о стоимости паев и СЧА фондов (API)</h3>
-                    <p class="messages__item-text">
-                      Загрузка стоимости паев и СЧА паевых инвестиционных фондов с сайта arsagera.ru теперь доступна
-                      через API. 
-                    </p>
-                  </div>
-                </li>
-              </ul>
-              <a class="button button_gray button_fixed-height" href="#">Все сообщения</a>
+            <!-- Section start -->
+            <section class="index-page__messages-section section">
+              <h2 class="section__title text-orange">Важные сообщения</h2>
+              <div class="post">
+                <svg class="post__icon" viewBox="0 0 36 33" width="36" height="33" aria-hidden="true">
+                  <use href="/sprite.svg#info-icon" x="0" y="0"></use>
+                </svg>
+                <div class="post__content">
+                  <time class="text-gray-main text-medium" datetime="2023-10-20">20.10.2023</time>
+                  <h3 class="post__title">Загрузка данных о стоимости паев и СЧА фондов (API)</h3>
+                  <p class="text-gray-medium">
+                    Загрузка стоимости паев и СЧА паевых инвестиционных фондов с сайта arsagera.ru теперь доступна через
+                    API. 
+                  </p>
+                </div>
+              </div>
+              <div class="post">
+                <svg class="post__icon" viewBox="0 0 36 33" width="36" height="33" aria-hidden="true">
+                  <use href="/sprite.svg#info-icon" x="0" y="0"></use>
+                </svg>
+                <div class="post__content">
+                  <time class="text-gray-main text-medium" datetime="2023-10-20">20.10.2023</time>
+                  <h3 class="post__title">Загрузка данных о стоимости паев и СЧА фондов (API)</h3>
+                  <p class="text-gray-medium">
+                    Загрузка стоимости паев и СЧА паевых инвестиционных фондов с сайта arsagera.ru теперь доступна через
+                    API. 
+                  </p>
+                </div>
+              </div>
+              <div class="post">
+                <svg class="post__icon" viewBox="0 0 36 33" width="36" height="33" aria-hidden="true">
+                  <use href="/sprite.svg#info-icon" x="0" y="0"></use>
+                </svg>
+                <div class="post__content">
+                  <time class="text-gray-main text-medium" datetime="2023-10-20">20.10.2023</time>
+                  <h3 class="post__title">Загрузка данных о стоимости паев и СЧА фондов (API)</h3>
+                  <p class="text-gray-medium">
+                    Загрузка стоимости паев и СЧА паевых инвестиционных фондов с сайта arsagera.ru теперь доступна через
+                    API. 
+                  </p>
+                </div>
+              </div>
+              <div class="post">
+                <svg class="post__icon" viewBox="0 0 36 33" width="36" height="33" aria-hidden="true">
+                  <use href="/sprite.svg#info-icon" x="0" y="0"></use>
+                </svg>
+                <div class="post__content">
+                  <time class="text-gray-main text-medium" datetime="2023-10-20">20.10.2023</time>
+                  <h3 class="post__title">Загрузка данных о стоимости паев и СЧА фондов (API)</h3>
+                  <p class="text-gray-medium">
+                    Загрузка стоимости паев и СЧА паевых инвестиционных фондов с сайта arsagera.ru теперь доступна через
+                    API. 
+                  </p>
+                </div>
+              </div>
+              <a class="button button_gray" href="#">Все сообщения</a>
             </section>
-            <!-- Messages end -->
+            <!-- Section end -->
           </div>
-          <!-- Content container end -->
+          <!-- Content end -->
         </div>
       </div>
-      <!-- Index page container end -->
+      <!-- Page container end -->
     </main>
     <!-- Main block end -->
 
@@ -919,45 +967,8 @@
             <p>Все права защищены законодательством РФ</p>
           </div>
         </div>
-        <div class="footer__social social">
-          <h3 class="social__title">Мы в социальных сетях</h3>
-          <ul class="social__list">
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="telegram">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#telegram-icon" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="youtube">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#youtube-icon" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="dzen">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#social-network-icon" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="vkontakte">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#vk-icon" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="rutube">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#rutube" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="footer__social">
+        <!-- todo add social-->
         </div>
         <a class="footer__link link link_gray weight-500" href="#">Меры защиты фондового рынка</a>
       </div>

@@ -9,10 +9,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/assets/site-BwHFeIBa.webmanifest" />
     <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
-    <script type="module" crossorigin src="/assets/book-BprAYKLZ.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/default-DT7rmJ1L.js">
-    <link rel="modulepreload" crossorigin href="/assets/tabs-c6dMR6mm.js">
-    <link rel="stylesheet" crossorigin href="/assets/book-BJMuwd16.css">
+    <script type="module" crossorigin src="/assets/book-3DvOIOFC.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/default-CTHvL0BD.js">
+    <link rel="stylesheet" crossorigin href="/assets/book-CoAtp133.css">
   </head>
   <body>
     <!-- Top-bar block start -->
@@ -23,16 +22,16 @@
     </a>
 
     <div class="top-bar__info">
-      <p class="top-bar__current-index">
+      <p class="top-bar__index">
         Индекс Арсагеры
-        <span class="top-bar__current-index-value"> <span class="accent-text">0,62%</span> |+0,37 п.п.</span>
+        <span class="top-bar__index-value"> <span class="text-orange">0,62%</span> |+0,37 п.п.</span>
         на 12.09.2024
       </p>
 
-      <div class="top-bar__connect">
-        <button class="link link_gray link_responsive" type="button">Перезвонить Вам?</button>
-        <a class="top-bar__connect-link" href="tel:88123130530">8 812 313 05 30</a>
-        <button class="link link_gray link_responsive" type="button">Связь с нами</button>
+      <div class="top-bar__contacts">
+        <button class="link link_gray" type="button">Перезвонить Вам?</button>
+        <a class="link link_gray link_large" href="tel:88123130530">8 812 <span class="text-orange">313 05 30</span></a>
+        <button class="link link_gray" type="button">Связь с нами</button>
       </div>
     </div>
 
@@ -49,7 +48,7 @@
             <use href="/sprite.svg#arrow-down-icon" x="0" y="0"></use>
           </svg>
         </button>
-        <ul class="top-bar__dropdown" data-dropdown>
+        <ul class="top-bar__dropdown">
           <li>
             <button class="top-bar__dropdown-button" type="button">На сайт</button>
           </li>
@@ -74,6 +73,7 @@
     <header class="header">
   <div class="container">
     <div class="header__wrapper">
+
       <button class="header__burger-button" type="button" aria-label="Открыть меню">
         <svg viewBox="0 0 43 28" width="43" height="28">
           <use href="/sprite.svg#burger-icon" x="0" y="0"></use>
@@ -81,18 +81,38 @@
       </button>
 
       <div class="header__categories">
+        <button class="header__categories-button button button_white" type="button"
+                data-dropdown-button data-category-button>
+          <span>Клиентам</span>
+
+          <svg class="header__categories-icon" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
+            <use href="/sprite.svg#arrow-down-icon" x="0" y="0"></use>
+          </svg>
+        </button>
         <ul class="header__categories-list">
-          <li>
-            <a class="header__categories-link header__categories-link_active" href="/public">Клиентам</a>
+          <li class="header__categories-item is-hidden">
+            <a class="header__categories-link link link_orange" href="#" data-categories-link>Клиентам</a>
           </li>
-          <li>
-            <a class="header__categories-link" href="#">Акционерам</a>
+          <li class="header__categories-item">
+            <a class="header__categories-link link link_gray-dark" href="#" data-categories-link>Акционерам</a>
           </li>
-          <li>
-            <a class="header__categories-link" href="#">Сотрудникам</a>
+          <li class="header__categories-item ">
+            <a class="header__categories-link link link_gray-dark" href="#" data-categories-link>Сотрудникам</a>
           </li>
         </ul>
       </div>
+
+      <form action="" class="header__search search">
+        <label class="search__label"
+        >Поиск по сайту
+          <input type="text" class="search__field" name="search" placeholder="Поиск по сайту" />
+        </label>
+        <button class="search__btn" type="submit" aria-label="Искать">
+          <svg class="search__icon" viewBox="0 0 21 20" width="24" height="24">
+            <use href="/sprite.svg#search-icon" x="0" y="0"></use>
+          </svg>
+        </button>
+      </form>
 
       <nav class="header__nav">
         <ul class="header__nav-list">
@@ -142,7 +162,7 @@
         </button>
         <button class="header__mobile-action" type="button" aria-label="Открыть поиск">
           <svg viewBox="0 0 32 32" width="32" height="32">
-            <use href="/sprite.svg#search-icon-2" x="0" y="0"></use>
+            <use href="/sprite.svg#search-icon" x="0" y="0"></use>
           </svg>
         </button>
       </div>
@@ -153,8 +173,8 @@
     <!-- Header block end -->
 
     <main class="main">
-      <!-- Book page container start -->
-      <div class="book-container container">
+      <!-- Page container start -->
+      <div class="book-page page container">
         <!-- Breadcrumbs start -->
         <ol class="breadcrumbs">
           <li class="breadcrumbs__item">
@@ -166,18 +186,31 @@
         </ol>
         <!-- Breadcrumbs end -->
 
-        <div class="book-container__grid">
-          <!-- Aside container start -->
-          <div class="book-container__aside">
+        <div class="page__grid">
+          <!-- Aside start -->
+          <div class="book-page__aside page__aside">
             <!-- Side block start -->
-            <div class="book-container__side-book side-book">
-              <div class="side-book__info">
-                <img src="/book-cover.png" alt="Заметки в инвестировании" loading="lazy" width="179" height="256" />
-                <a class="podcast__button button button_gray" href="#">Купить на ОЗОН</a>
-                <a class="podcast__button button button_gray" href="#">Купить на Wildberries</a>
-                <a class="podcast__button button button_gray" href="#">Получить по акции</a>
+            <section class="book-page__book">
+              <div class="book-page__book-info">
+                <img
+                  class="book-page__book-cover"
+                  src="/book-cover.jpg"
+                  alt="Заметки в инвестировании"
+                  loading="lazy"
+                />
+                <ul class="book-page__book-stores">
+                  <li>
+                    <a class="button button_gray button_full-width" href="#">Купить на ОЗОН</a>
+                  </li>
+                  <li>
+                    <a class="button button_gray button_full-width" href="#">Купить на Wildberries</a>
+                  </li>
+                  <li>
+                    <a class="button button_gray button_full-width" href="#">Получить по акции</a>
+                  </li>
+                </ul>
               </div>
-              <ul class="side-book__links">
+              <ul class="book-page__book-links">
                 <li>
                   <a class="file-link" href="#">
                     <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
@@ -233,74 +266,96 @@
                     </span>
                   </a>
                 </li>
+                <li>
+                  <a class="file-link" href="#">
+                    <svg class="file-link__icon" viewBox="0 0 37 40" width="37" height="40" fill="none">
+                      <use href="/sprite.svg#headphones-icon" x="0" y="0"></use>
+                    </svg>
+                    <span class="file-link__info">
+                      <span
+                        >Скачать в <br />
+                        аудиоформате</span
+                      >
+                    </span>
+                  </a>
+                </li>
               </ul>
-            </div>
+            </section>
             <!-- Side block end -->
 
             <!-- Side block start -->
-            <div class="book-container__podcast podcast">
-              <h2 class="podcast__title">
-                <svg viewBox="0 0 37 40" width="37" height="40" fill="none">
+            <section class="book-page__podcast">
+              <h2 class="book-page__podcast-title">
+                <svg class="book-page__podcast-title-icon" viewBox="0 0 37 40" width="37" height="40" fill="none">
                   <use href="/sprite.svg#headphones-icon" x="0" y="0"></use>
                 </svg>
-                <span class="podcast__title-text">Подкаст «Заметки в инвестировании»</span>
+                <span class="book-page__podcast-title-text">Подкаст «Заметки в инвестировании»</span>
               </h2>
-              <a class="podcast__button button button_gray" href="#">Яндекс.Музыка</a>
-              <a class="podcast__button button button_gray" href="#">Soundcloud</a>
-              <a class="podcast__button button button_gray" href="#">Telegram</a>
-              <a class="podcast__button button button_gray" href="#">ITunes</a>
-            </div>
+              <a class="button button_gray" href="#">Яндекс.Музыка</a>
+              <a class="button button_gray" href="#">Soundcloud</a>
+              <a class="button button_gray" href="#">Telegram</a>
+              <a class="button button_gray" href="#">ITunes</a>
+            </section>
             <!-- Side block end -->
 
             <!-- Side block start -->
-            <div class="book-container__course side-block">
-              <h2 class="side-block__title">Дополнителнительные знания</h2>
-              <h3 class="side-block__subtitle">Курс по основам инвестирования</h3>
-              <iframe
-                src="https://www.youtube.com/embed/wOkzbqdyCwA"
-                title="Рынок акций. Хит-парад #303 на 30.06.2025"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
+            <section class="book-page__course-section side-block side-block_gray-border">
+              <h2 class="side-block__title text-orange">Дополнителнительные знания</h2>
+              <div class="side-block__divider"></div>
+              <h3 class="side-block__title text-gray-dark">Курс по основам инвестирования</h3>
+              <div class="side-block__iframe">
+                <iframe
+                  src="https://www.youtube.com/embed/wOkzbqdyCwA"
+                  title="Рынок акций. Хит-парад #303 на 30.06.2025"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
               <p>
                 Видеокурс лекций не просто поможет понять написанное в книге. но и расскажет о том, как применять эти
                 знания на практике. наглядные примеры и живое общение позволят лучше разобраться в том, что и как нужно
                 делать, чтобы достичь своих финансовых целей.
               </p>
-              <a class="button button_gray" hrerf="#">Перейти к курсу</a>
-            </div>
+              <a class="button button_gray" href="#">Перейти к курсу</a>
+            </section>
             <!-- Side block end -->
 
             <!-- Side block start -->
-            <div class="book-container__test side-block">
-              <h2 class="side-block__title">Проверить знания</h2>
-              <h3 class="side-block__subtitle">Тест Основы инвестирования</h3>
-              <p>
-                Прочли книгу? Проверьте свои знания и попробуйте пройти наш
-                <a class="link link_blue" href="#">тест «Основы инвестирования»</a>. Тест содержит 111 вопросов на
-                базовые знания об инвестициях. Для начала Вы можете попробовать пройти
-                <a class="link link_blue" href="#">мини-тест</a>, а уже потом приступать к полному варианту.  
-              </p>
-              <p>
-                Вознаграждение за успешное прохождение теста (95% и более) - 1 000 руб. Вознаграждение выдается
-                однократно. За повторную сдачу теста вознаграждение не выдается.
-              </p>
-              <a class="button button_gray" hrerf="#">Пройти тест</a>
-            </div>
+            <section class="book-page__test-section side-block side-block_gray-border">
+              <h2 class="side-block__title text-orange">Проверить знания</h2>
+              <div class="side-block__divider"></div>
+              <h3 class="side-block__title text-gray-dark">Тест Основы инвестирования</h3>
+              <div>
+                <p>
+                  Прочли книгу? Проверьте свои знания и попробуйте пройти наш
+                  <a class="link link_blue" href="#">тест «Основы инвестирования»</a>. Тест содержит 111 вопросов на
+                  базовые знания об инвестициях. Для начала Вы можете попробовать пройти
+                  <a class="link link_blue" href="#">мини-тест</a>, а уже потом приступать к полному варианту.  
+                </p>
+                <p>
+                  Вознаграждение за успешное прохождение теста (95% и более) - 1 000 руб. Вознаграждение выдается
+                  однократно. За повторную сдачу теста вознаграждение не выдается.
+                </p>
+              </div>
+              <a class="button button_gray" href="#">Пройти тест</a>
+            </section>
             <!-- Side block end -->
           </div>
-          <!-- Aside container end -->
+          <!-- Aside end -->
 
-          <!-- Content container start -->
-          <div class="book-container__content">
+          <!-- Content start -->
+          <div class="book-page__content page__content">
             <!-- Section start -->
-            <section class="book-container__about-section section">
-              <h2 class="book-container__about-title section__title">
-                Заметки в инвестировании. Книга об инвестициях и управлении капиталом
-              </h2>
-              <div class="book-container__about-content content">
+            <section class="book-page__about-section section">
+              <div class="book-page__about-section-header section__header">
+                <h2 class="section__title">
+                  <span class="text-orange">Заметки в инвестировании.</span>
+                  <span class="text-gray-dark">Книга об инвестициях и управлении капиталом</span>
+                </h2>
+              </div>
+              <div class="book-page__about-section-content section__content">
                 <p>
                   В этой книге представлена квинтэссенция более чем 30-летнего опыта инвестиций целой команды
                   профессионалов, их знаний и практики. Большинство материалов появилось как ответы на наиболее часто
@@ -317,119 +372,177 @@
             <!-- Section end -->
 
             <!-- Section start -->
-            <section class="book-container__school-section section-blue">
-              <h3 class="section-blue__title">Курс «Школа»</h3>
-              <div class="book-container__school">
-                <div class="book-container__school-image">
-                  <img src="/school.jpg" alt="" loading="lazy" width="357" height="222" />
+            <section class="book-page__school-section section">
+              <h3 class="section__title-blue">Курс «Школа»</h3>
+              <div class="section__content">
+                <div class="book-page__school">
+                  <div class="book-page__school-image">
+                    <img src="/school.jpg" alt="" loading="lazy" width="357" height="222" />
+                  </div>
+                  <ul class="book-page__school-links">
+                    <li>
+                      <a class="file-link" href="#">
+                        <svg class="file-link__icon" viewBox="0 0 37 40" width="37" height="40">
+                          <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                        </svg>
+                        <span class="file-link__info">
+                          <span>Загрузок: 647 359</span>
+                          <span class="file-link__meta">PDF, 12,1 Мб</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="file-link" href="#">
+                        <svg class="file-link__icon" viewBox="0 0 37 40" width="37" height="40">
+                          <use href="/sprite.svg#fb2-color-icon" x="0" y="0"></use>
+                        </svg>
+                        <span class="file-link__info">
+                          <span>Загрузок: 647 359</span>
+                          <span class="file-link__meta">PDF, 12,1 Мб</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="file-link" href="#">
+                        <svg class="file-link__icon" viewBox="0 0 37 40" width="37" height="40">
+                          <use href="/sprite.svg#epub-color-icon" x="0" y="0"></use>
+                        </svg>
+                        <span class="file-link__info">
+                          <span>Загрузок: 647 359</span>
+                          <span class="file-link__meta">PDF, 12,1 Мб</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="file-link" href="#">
+                        <svg class="file-link__icon" viewBox="0 0 37 40" width="37" height="40" fill="none">
+                          <use href="/sprite.svg#headphones-icon" x="0" y="0"></use>
+                        </svg>
+                        <span class="file-link__info">
+                          <span
+                            >Скачать в <br />
+                            аудиоформате</span
+                          >
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-                <ul class="book-container__school-links">
-                  <li>
-                    <a class="file-link" href="#">
-                      <svg class="file-link__icon" viewBox="0 0 37 40" width="37" height="40">
-                        <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                      </svg>
-                      <span class="file-link__info">
-                        <span>Загрузок: 647 359</span>
-                        <span class="file-link__meta">PDF, 12,1 Мб</span>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="file-link" href="#">
-                      <svg class="file-link__icon" viewBox="0 0 37 40" width="37" height="40">
-                        <use href="/sprite.svg#fb2-color-icon" x="0" y="0"></use>
-                      </svg>
-                      <span class="file-link__info">
-                        <span>Загрузок: 647 359</span>
-                        <span class="file-link__meta">PDF, 12,1 Мб</span>
-                      </span>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="file-link" href="#">
-                      <svg class="file-link__icon" viewBox="0 0 37 40" width="37" height="40">
-                        <use href="/sprite.svg#epub-color-icon" x="0" y="0"></use>
-                      </svg>
-                      <span class="file-link__info">
-                        <span>Загрузок: 647 359</span>
-                        <span class="file-link__meta">PDF, 12,1 Мб</span>
-                      </span>
-                    </a>
-                  </li>
-                </ul>
+                <p>
+                  Для удобства читателей в рамках книги составлено 4 курса по уровню сложности. В данный сборник вошли
+                  материалы из базового курса «Школа», который позволяет за 4 часа получить начальные знания о смысле и
+                  общих правилах инвестирования (нумерация глав и материалов совпадает с книгой).
+                </p>
               </div>
-              <p>
-                Для удобства читателей в рамках книги составлено 4 курса по уровню сложности. В данный сборник вошли
-                материалы из базового курса «Школа», который позволяет за 4 часа получить начальные знания о смысле и
-                общих правилах инвестирования (нумерация глав и материалов совпадает с книгой).
-              </p>
             </section>
             <!-- Section end -->
 
             <!-- Section start -->
-            <section class="book-container__share section-blue">
-              <h3 class="section-blue__title">Поделись с друзьями</h3>
-              <p>
-                Любите читать книги в печатном виде? Тогда примите участие в акции «Расскажи друзьям о книге»  и
-                получите бесплатный экземпляр по почте (только по России) или в офисе компании.
-              </p>
-              <p>Для этого нужно:</p>
-              <ol>
-                <li>
-                  <span class="text-orange">Опубликовать запись в любой социальной сети</span> с пометкой
-                  <a class="link link_blue" href="#">#заметкивинвестировании</a> со своим ответом «Хочу прочитать книгу,
-                  потому что...».
-                </li>
-                <li>
-                  <span class="text-orange">Указать в публикации</span>, что сейчас для всех желающих книга
-                  распространяется бесплатно в удобных форматах (pdf, doc, epub, fb2). 
-                </li>
-                <li>
-                  <span class="text-orange">Добавить ссылку</span> на страницу книги, где ее можно скачать
-                  (arsagera.ru/kniga/), а также ссылку на видеокурс лекций от УК «Арсагера» (arsagera.ru/course/). А
-                  затем отправить ссылку на публикацию вместе со своим почтовым адресом и Вашими полными ФИО нам на
-                  электронную почту clients@arsagera.ru или заполнить
-                  <a class="link link_blue" href="#">форму участника акции</a>. 
-                </li>
-                <li>
-                  <span class="text-orange">Дождаться результатов конкурсного отбора постов</span>, который мы проводим
-                  один раз в две недели (примерно в 15-ых и 30-ых числах месяца).
-                </li>
-              </ol>
-              <p class="notification">
-                Хотим обратить внимание, что мы не считаем правильным высылать 6-ое издание книги тем, кто ранее уже
-                получал бумажный экземпляр «Заметок в инвестировании». Поскольку, отправив книгу повторно, мы лишим этих
-                знаний кого-то, кто еще ни разу не получал книгу. Мы стремимся к тому, чтобы в России стало как можно
-                больше финансово грамотных граждан. Мы очень благодарны всем, кто поддержал нас в стремлении к этой цели
-                и уже принял участие в акции «Расскажи друзьям о книге». С изменениями и обновлениями 6-го издания Вы
-                легко можете ознакомиться в <a class="link link_blue" href="#">электронном формате</a>. Спасибо за
-                понимание! 
-              </p>
+            <section class="book-page__share-section section">
+              <h3 class="section__title-blue">Поделись с друзьями</h3>
+              <div class="section__content">
+                <p>
+                  Любите читать книги в печатном виде? Тогда примите участие в акции «Расскажи друзьям о книге»  и
+                  получите бесплатный экземпляр по почте (только по России) или в офисе компании.
+                </p>
+                <p>Для этого нужно:</p>
+                <ol class="list-ordered">
+                  <li>
+                    <span class="text-orange">Опубликовать запись в любой социальной сети</span> с пометкой
+                    <a class="link link_blue" href="#">#заметкивинвестировании</a> со своим ответом «Хочу прочитать
+                    книгу, потому что...».
+                  </li>
+                  <li>
+                    <span class="text-orange">Указать в публикации</span>, что сейчас для всех желающих книга
+                    распространяется бесплатно в удобных форматах (pdf, doc, epub, fb2). 
+                  </li>
+                  <li>
+                    <span class="text-orange">Добавить ссылку</span> на страницу книги, где ее можно скачать
+                    (arsagera.ru/kniga/), а также ссылку на видеокурс лекций от УК «Арсагера» (arsagera.ru/course/). А
+                    затем отправить ссылку на публикацию вместе со своим почтовым адресом и Вашими полными ФИО нам на
+                    электронную почту clients@arsagera.ru или заполнить
+                    <a class="link link_blue" href="#">форму участника акции</a>. 
+                  </li>
+                  <li>
+                    <span class="text-orange">Дождаться результатов конкурсного отбора постов</span>, который мы
+                    проводим один раз в две недели (примерно в 15-ых и 30-ых числах месяца).
+                  </li>
+                </ol>
+                <p class="quote">
+                  Хотим обратить внимание, что мы не считаем правильным высылать 6-ое издание книги тем, кто ранее уже
+                  получал бумажный экземпляр «Заметок в инвестировании». Поскольку, отправив книгу повторно, мы лишим
+                  этих знаний кого-то, кто еще ни разу не получал книгу. Мы стремимся к тому, чтобы в России стало как
+                  можно больше финансово грамотных граждан. Мы очень благодарны всем, кто поддержал нас в стремлении к
+                  этой цели и уже принял участие в акции «Расскажи друзьям о книге». С изменениями и обновлениями 6-го
+                  издания Вы легко можете ознакомиться в <a class="link link_blue" href="#">электронном формате</a>.
+                  Спасибо за понимание! 
+                </p>
+              </div>
             </section>
             <!-- Section end -->
 
             <!-- Section start -->
-            <section class="book-container__books section-blue">
-              <h3 class="section-blue__title">Литература по теме</h3>
+            <section class="book-page__slider-section section">
+              <h3 class="section__title-blue">Литература по теме</h3>
+              <div id="slider" class="slider splide">
+                <div class="splide__arrows">
+                  <button class="slider__arrow splide__arrow splide__arrow--prev" aria-label="предыдущий слайд">
+                    <svg viewBox="0 0 11 30" width="11" height="30" fill="none">
+                      <use href="/sprite.svg#slider-arrow-icon" x="0" y="0"></use>
+                    </svg>
+                  </button>
+                  <button class="slider__arrow splide__arrow splide__arrow--next" aria-label="следующий слайд">
+                    <svg viewBox="0 0 11 30" width="11" height="30" fill="none">
+                      <use href="/sprite.svg#slider-arrow-icon" x="0" y="0"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="slider__item splide__slide">
+                      <img class="slider__image" src="/book1.jpg" alt="" loading="lazy" />
+                      <p class="slider__author">Джон С. Богл</p>
+                      <p class="slider__name">
+                        Руководство разумного инвестора. <br />
+                        Единственный надежный способ инвестировать на рынке ценных бумаг
+                      </p>
+                    </li>
+                    <li class="slider__item splide__slide">
+                      <img class="slider__image" src="/book2.jpg" alt="" loading="lazy" />
+                      <p class="slider__author">Бенджамин Грэхем</p>
+                      <p class="slider__name">Разумный инвестор</p>
+                    </li>
+                    <li class="slider__item splide__slide">
+                      <img class="slider__image" src="/book3.jpg" alt="" loading="lazy" />
+                      <p class="slider__author">Питер Линч, Джон Ротчайлд</p>
+                      <p class="slider__name">Переиграть Уолл-стрит</p>
+                    </li>
+                    <li class="slider__item splide__slide">
+                      <img class="slider__image" src="/book4.jpg" alt="" loading="lazy" />
+                      <p class="slider__author">Макс Исаакман</p>
+                      <p class="slider__name">Как инвестировать в индексы</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </section>
             <!-- Section end -->
 
             <!-- Tabs start -->
-            <div class="book-container__tabs tabs" data-tabs>
+            <div class="book-page__tabs-section tabs">
               <!-- Tab buttons start -->
-              <ul class="tabs__actions">
+              <ul class="tabs__buttons">
                 <li>
-                  <button class="tabs__button is-active" type="button" data-tab="tab1">Рецензии</button>
+                  <button class="tabs__button is-active" type="button">Рецензии</button>
                 </li>
                 <li>
-                  <button class="tabs__button" type="button" data-tab="tab2">Комментарии</button>
+                  <button class="tabs__button" type="button">Комментарии</button>
                 </li>
               </ul>
               <!-- Tab buttons end -->
 
               <!-- Tab 1 start -->
-              <div id="tab1" class="tabs__content is-active" data-tab-content>
+              <div class="tabs__content is-active">
                 <div class="reviews">
                   <div class="reviews__item">
                     <div class="reviews__item-author">
@@ -472,10 +585,10 @@
             </div>
             <!-- Tabs end -->
           </div>
-          <!-- Content container end -->
+          <!-- Content end -->
         </div>
       </div>
-      <!-- Book page container end -->
+      <!-- Page container end -->
     </main>
     <!-- Main block end -->
 
@@ -493,45 +606,8 @@
             <p>Все права защищены законодательством РФ</p>
           </div>
         </div>
-        <div class="footer__social social">
-          <h3 class="social__title">Мы в социальных сетях</h3>
-          <ul class="social__list">
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="telegram">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#telegram-icon" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="youtube">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#youtube-icon" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="dzen">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#social-network-icon" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="vkontakte">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#vk-icon" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link" aria-label="rutube">
-                <svg class="social__icon" viewBox="0 0 35 35" width="35" height="35" aria-hidden="true">
-                  <use href="/sprite.svg#rutube" x="0" y="0"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="footer__social">
+        <!-- todo add social-->
         </div>
         <a class="footer__link link link_gray weight-500" href="#">Меры защиты фондового рынка</a>
       </div>

@@ -1,1 +1,0 @@
-import"./default-DT7rmJ1L.js";import{t as a}from"./tabs-c6dMR6mm.js";document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll("[data-tabs]").forEach(t=>{const o=!!t.closest("details");a(t,o)})});
