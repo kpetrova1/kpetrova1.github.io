@@ -9,9 +9,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/assets/site-BwHFeIBa.webmanifest" />
     <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
-    <script type="module" crossorigin src="/assets/default-CTHvL0BD.js"></script>
-    <script type="module" crossorigin src="/assets/tabs-C2AXQt6h.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/about-reports-cGe2GH03.css">
+    <script type="module" crossorigin src="/assets/about-reports-CwiwDdyZ.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/default-DMm93GeC.js">
+    <link rel="modulepreload" crossorigin href="/assets/tabs-COQn59q7.js">
+    <link rel="stylesheet" crossorigin href="/assets/about-reports-zIoK0fAL.css">
   </head>
   <body>
     <!-- Top-bar block start -->
@@ -29,14 +30,14 @@
       </p>
 
       <div class="top-bar__contacts">
-        <button class="link link_gray" type="button">Перезвонить Вам?</button>
+        <button class="link link_gray" type="button" data-modal-button="modal-callback">Перезвонить Вам?</button>
         <a class="link link_gray link_large" href="tel:88123130530">8 812 <span class="text-orange">313 05 30</span></a>
-        <button class="link link_gray" type="button">Связь с нами</button>
+        <button class="link link_gray" type="button" data-modal-button="modal-contacts">Связь с нами</button>
       </div>
     </div>
 
     <div class="top-bar__actions">
-      <a class="button button_blue" href="#">Стать клиентом</a>
+      <a class="button button_blue button_full-width" href="#">Стать клиентом</a>
       <div class="top-bar__dropdown-box">
         <button
           class="top-bar__dropdown-action button button_orange button_full-width"
@@ -50,7 +51,7 @@
         </button>
         <ul class="top-bar__dropdown">
           <li>
-            <button class="top-bar__dropdown-button" type="button">На сайт</button>
+            <button class="top-bar__dropdown-button" type="button" data-modal-button="modal-auth">На сайт</button>
           </li>
           <li>
             <a class="top-bar__dropdown-button" href="#">В Личный кабинет</a>
@@ -73,16 +74,19 @@
     <header class="header">
   <div class="container">
     <div class="header__wrapper">
-
-      <button class="header__burger-button" type="button" aria-label="Открыть меню">
+      <button class="header__burger-button" type="button" aria-label="Открыть меню" data-nav-button>
         <svg viewBox="0 0 43 28" width="43" height="28">
           <use href="/sprite.svg#burger-icon" x="0" y="0"></use>
         </svg>
       </button>
 
       <div class="header__categories">
-        <button class="header__categories-button button button_white" type="button"
-                data-dropdown-button data-category-button>
+        <button
+          class="header__categories-button button button_white"
+          type="button"
+          data-dropdown-button
+          data-category-button
+        >
           <span>Клиентам</span>
 
           <svg class="header__categories-icon" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
@@ -96,7 +100,7 @@
           <li class="header__categories-item">
             <a class="header__categories-link link link_gray-dark" href="#" data-categories-link>Акционерам</a>
           </li>
-          <li class="header__categories-item ">
+          <li class="header__categories-item">
             <a class="header__categories-link link link_gray-dark" href="#" data-categories-link>Сотрудникам</a>
           </li>
         </ul>
@@ -104,7 +108,7 @@
 
       <form action="" class="header__search search">
         <label class="search__label"
-        >Поиск по сайту
+          >Поиск по сайту
           <input type="text" class="search__field" name="search" placeholder="Поиск по сайту" />
         </label>
         <button class="search__btn" type="submit" aria-label="Искать">
@@ -114,53 +118,68 @@
         </button>
       </form>
 
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li>
-            <a class="header__nav-link header__nav-link_active" href="/public">
-              <svg class="header__nav-link-home-icon" viewBox="0 0 31 30" width="31" height="30" aria-hidden="true">
-                <use href="/sprite.svg#home-icon" x="0" y="0"></use>
-              </svg>
-              <span class="header__nav-link-home-text">Клиентам</span>
-            </a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">О компании</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Аналитика</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Лекции и&nbsp;видео</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Книга</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Статьи</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Блогофорум</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Ответы на&nbsp;вопросы</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Конкурсы и&nbsp;акциии</a>
-          </li>
-          <li>
-            <a class="header__nav-link" href="#">Раскрытие информации</a>
-          </li>
-        </ul>
+      <nav class="header__nav" data-header-nav>
+        <div class="modal__backdrop" data-nav-button></div>
+
+        <div class="header__nav-inner">
+          <button class="header__close-button" type="button" aria-label="закрыть окно" data-nav-button>
+            <svg viewBox="0 0 39 38" width="26" height="26">
+              <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+            </svg>
+          </button>
+
+          <ul class="header__nav-list">
+            <li>
+              <a class="header__nav-link header__nav-link_active" href="/" aria-label="на главную страницу">
+                <svg class="header__nav-link-home-icon" viewBox="0 0 31 30" width="31" height="30" aria-hidden="true">
+                  <use href="/sprite.svg#home-icon" x="0" y="0"></use>
+                </svg>
+                <span class="header__nav-link-home-text">Клиентам</span>
+              </a>
+            </li>
+            <li>
+              <a class="header__nav-link" href="#">О компании</a>
+            </li>
+            <li>
+              <a class="header__nav-link" href="#">Аналитика</a>
+            </li>
+            <li>
+              <a class="header__nav-link" href="#">Лекции и&nbsp;видео</a>
+            </li>
+            <li>
+              <a class="header__nav-link" href="#">Книга</a>
+            </li>
+            <li>
+              <a class="header__nav-link" href="#">Статьи</a>
+            </li>
+            <li>
+              <a class="header__nav-link" href="#">Блогофорум</a>
+            </li>
+            <li>
+              <a class="header__nav-link" href="#">Ответы на&nbsp;вопросы</a>
+            </li>
+            <li>
+              <a class="header__nav-link" href="#">Конкурсы и&nbsp;акциии</a>
+            </li>
+            <li>
+              <a class="header__nav-link" href="#">Раскрытие информации</a>
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <div class="header__mobile-actions">
-        <button class="header__mobile-action" type="button" aria-label="Связь с нами">
+        <button
+          class="header__mobile-action"
+          type="button"
+          aria-label="Связь с нами"
+          data-modal-button="modal-contacts"
+        >
           <svg viewBox="0 0 33 35" width="33" height="35">
             <use href="/sprite.svg#phone-icon" x="0" y="0"></use>
           </svg>
         </button>
-        <button class="header__mobile-action" type="button" aria-label="Открыть поиск">
+        <button class="header__mobile-action" type="button" aria-label="Открыть поиск" data-modal-button="modal-search">
           <svg viewBox="0 0 32 32" width="32" height="32">
             <use href="/sprite.svg#search-icon" x="0" y="0"></use>
           </svg>
@@ -228,286 +247,578 @@
           <div class="about-page__content">
             <!-- Section start -->
             <section class="section">
-              <h2 class="section__title text-orange">Отчетность и размер собственных средств</h2>
+              <h1 class="section__title text-orange">Отчетность и размер собственных средств</h1>
               <p>
                 На данной странице содержится информация об управляющей компании, которая должна раскрываться в
                 соответствии с законодательством РФ.
               </p>
-              <div class="section__content">
-                <!-- Accordion item 1 start -->
-                <details class="accordion accordion_bordered">
-                  <summary class="accordion__summary">
-                    <span class="accordion__summary-title">Расчет размера собственных средств</span>
 
-                    <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
-                      <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
-                    </svg>
-                  </summary>
+              <!-- Accordion item 1 start -->
+              <details class="accordion accordion_bordered">
+                <summary class="accordion__summary">
+                  <span class="accordion__summary-title">Расчет размера собственных средств</span>
 
-                  <div class="accordion__content" data-accordion-content>
-                    <ul class="list">
-                      <li>
-                        <a class="file-link" href="#">
-                          <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
-                            <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                          </svg>
-                          <span class="file-link__info">
-                            <span>Расчет размера собственных средств на 31.03.2025</span>
-                            <span class="file-link__meta"
-                              >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
-                            >
-                            <span class="file-link__meta">256,81 Кб</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="file-link" href="#">
-                          <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
-                            <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                          </svg>
-                          <span class="file-link__info">
-                            <span
-                              >Расчет размера собственных средств на 31.12.2024, произведенный после утверждения
-                              бухгалтерского баланса</span
-                            >
-                            <span class="file-link__meta"
-                              >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
-                            >
-                            <span class="file-link__meta">256,81 Кб</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="file-link" href="#">
-                          <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
-                            <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                          </svg>
-                          <span class="file-link__info">
-                            <span>Расчет размера собственных средств на 31.03.2025</span>
-                            <span class="file-link__meta"
-                              >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
-                            >
-                            <span class="file-link__meta">256,81 Кб</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="file-link" href="#">
-                          <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
-                            <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                          </svg>
-                          <span class="file-link__info">
-                            <span>Расчет размера собственных средств на 31.03.2025</span>
-                            <span class="file-link__meta"
-                              >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
-                            >
-                            <span class="file-link__meta">256,81 Кб</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="file-link" href="#">
-                          <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
-                            <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                          </svg>
-                          <span class="file-link__info">
-                            <span>Расчет размера собственных средств на 31.03.2025</span>
-                            <span class="file-link__meta"
-                              >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
-                            >
-                            <span class="file-link__meta">256,81 Кб</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="file-link" href="#">
-                          <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
-                            <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                          </svg>
-                          <span class="file-link__info">
-                            <span>Расчет размера собственных средств на 31.03.2025</span>
-                            <span class="file-link__meta"
-                              >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
-                            >
-                            <span class="file-link__meta">256,81 Кб</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="file-link" href="#">
-                          <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
-                            <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                          </svg>
-                          <span class="file-link__info">
-                            <span>Расчет размера собственных средств на 31.03.2025</span>
-                            <span class="file-link__meta"
-                              >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
-                            >
-                            <span class="file-link__meta">256,81 Кб</span>
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </details>
-                <!-- Accordions item 1 end -->
+                  <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+                    <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
+                  </svg>
+                </summary>
 
-                <!-- Accordion item 2 start -->
-                <details class="accordion accordion_bordered">
-                  <summary class="accordion__summary">
-                    <span class="accordion__summary-title">Бухгалтерская (финансовая) отчетность</span>
+                <div class="accordion__content" data-accordion-content>
+                  <ul class="list">
+                    <li>
+                      <a class="file-link" href="#">
+                        <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                          <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                        </svg>
+                        <span class="file-link__info">
+                          <span>Расчет размера собственных средств на 31.03.2025</span>
+                          <span class="file-link__meta"
+                            >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                          >
+                          <span class="file-link__meta">256,81 Кб</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="file-link" href="#">
+                        <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                          <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                        </svg>
+                        <span class="file-link__info">
+                          <span
+                            >Расчет размера собственных средств на 31.12.2024, произведенный после утверждения
+                            бухгалтерского баланса</span
+                          >
+                          <span class="file-link__meta"
+                            >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                          >
+                          <span class="file-link__meta">256,81 Кб</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="file-link" href="#">
+                        <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                          <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                        </svg>
+                        <span class="file-link__info">
+                          <span>Расчет размера собственных средств на 31.03.2025</span>
+                          <span class="file-link__meta"
+                            >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                          >
+                          <span class="file-link__meta">256,81 Кб</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="file-link" href="#">
+                        <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                          <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                        </svg>
+                        <span class="file-link__info">
+                          <span>Расчет размера собственных средств на 31.03.2025</span>
+                          <span class="file-link__meta"
+                            >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                          >
+                          <span class="file-link__meta">256,81 Кб</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="file-link" href="#">
+                        <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                          <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                        </svg>
+                        <span class="file-link__info">
+                          <span>Расчет размера собственных средств на 31.03.2025</span>
+                          <span class="file-link__meta"
+                            >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                          >
+                          <span class="file-link__meta">256,81 Кб</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="file-link" href="#">
+                        <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                          <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                        </svg>
+                        <span class="file-link__info">
+                          <span>Расчет размера собственных средств на 31.03.2025</span>
+                          <span class="file-link__meta"
+                            >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                          >
+                          <span class="file-link__meta">256,81 Кб</span>
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="file-link" href="#">
+                        <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                          <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                        </svg>
+                        <span class="file-link__info">
+                          <span>Расчет размера собственных средств на 31.03.2025</span>
+                          <span class="file-link__meta"
+                            >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                          >
+                          <span class="file-link__meta">256,81 Кб</span>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </details>
+              <!-- Accordions item 1 end -->
 
-                    <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
-                      <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
-                    </svg>
-                  </summary>
+              <!-- Accordion item 2 start -->
+              <details class="accordion accordion_bordered">
+                <summary class="accordion__summary">
+                  <span class="accordion__summary-title">Бухгалтерская (финансовая) отчетность</span>
 
-                  <div class="accordion__content" data-accordion-content>
-                    <section class="section">
-                      <div class="tabs" data-tabs>
-                        <ul class="tabs__buttons">
+                  <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+                    <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
+                  </svg>
+                </summary>
+
+                <div class="accordion__content" data-accordion-content>
+                  <section class="section">
+                    <div class="tabs" data-tabs>
+                      <ul class="tabs__buttons">
+                        <li>
+                          <button class="tabs__button is-active" type="button" data-tab="tab2024-1">2024</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2023-1">2023</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2022-1">2022</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2021-1">2021</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2020-1">2020</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2020-1-1">2020</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2020-2-1">2020</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2020-3-1">2020</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2020-4-1">2020</button>
+                        </li>
+                      </ul>
+
+                      <div id="tab2024-1" class="tabs__content is-active" data-tab-content>
+                        <ul class="list">
                           <li>
-                            <button class="tabs__button is-active" type="button" data-tab="tab2024-1">2024</button>
+                            <a class="file-link" href="#">
+                              <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                              </svg>
+                              <span class="file-link__info">
+                                <span>Бухгалтерская отчетность за 2024 год</span>
+                                <span class="file-link__meta"
+                                  >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                >
+                                <span class="file-link__meta">256,81 Кб</span>
+                              </span>
+                            </a>
                           </li>
                           <li>
-                            <button class="tabs__button" type="button" data-tab="tab2023-1">2023</button>
+                            <a class="file-link" href="#">
+                              <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                              </svg>
+                              <span class="file-link__info">
+                                <span>Аудиторское заключение по бухгалтерской (финансовой) отчетности за 2024 год</span>
+                                <span class="file-link__meta"
+                                  >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                >
+                                <span class="file-link__meta">256,81 Кб</span>
+                              </span>
+                            </a>
                           </li>
                           <li>
-                            <button class="tabs__button" type="button" data-tab="tab2022-1">2022</button>
+                            <a class="file-link" href="#">
+                              <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                              </svg>
+                              <span class="file-link__info">
+                                <span>Бухгалтерская отчетность за 9 месяцев 2024 года</span>
+                                <span class="file-link__meta"
+                                  >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                >
+                                <span class="file-link__meta">256,81 Кб</span>
+                              </span>
+                            </a>
                           </li>
                           <li>
-                            <button class="tabs__button" type="button" data-tab="tab2021-1">2021</button>
+                            <a class="file-link" href="#">
+                              <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                              </svg>
+                              <span class="file-link__info">
+                                <span>Бухгалтерская отчетность за 6 месяцев 2024 года</span>
+                                <span class="file-link__meta"
+                                  >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                >
+                                <span class="file-link__meta">256,81 Кб</span>
+                              </span>
+                            </a>
                           </li>
                           <li>
-                            <button class="tabs__button" type="button" data-tab="tab2020-1">2020</button>
-                          </li>
-                          <li>
-                            <button class="tabs__button" type="button" data-tab="tab2020-1-1">2020</button>
-                          </li>
-                          <li>
-                            <button class="tabs__button" type="button" data-tab="tab2020-2-1">2020</button>
-                          </li>
-                          <li>
-                            <button class="tabs__button" type="button" data-tab="tab2020-3-1">2020</button>
-                          </li>
-                          <li>
-                            <button class="tabs__button" type="button" data-tab="tab2020-4-1">2020</button>
+                            <a class="file-link" href="#">
+                              <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                              </svg>
+                              <span class="file-link__info">
+                                <span>Бухгалтерская отчетность за 1 квартал 2024 года</span>
+                                <span class="file-link__meta"
+                                  >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                >
+                                <span class="file-link__meta">256,81 Кб</span>
+                              </span>
+                            </a>
                           </li>
                         </ul>
-
-                        <div id="tab2024-1" class="tabs__content is-active" data-tab-content>
-                          <ul class="list">
-                            <li>
-                              <a class="file-link" href="#">
-                                <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
-                                  <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                                </svg>
-                                <span class="file-link__info">
-                                  <span>Бухгалтерская отчетность за 2024 год</span>
-                                  <span class="file-link__meta"
-                                    >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
-                                  >
-                                  <span class="file-link__meta">256,81 Кб</span>
-                                </span>
-                              </a>
-                            </li>
-                            <li>
-                              <a class="file-link" href="#">
-                                <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
-                                  <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                                </svg>
-                                <span class="file-link__info">
-                                  <span
-                                    >Аудиторское заключение по бухгалтерской (финансовой) отчетности за 2024 год</span
-                                  >
-                                  <span class="file-link__meta"
-                                    >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
-                                  >
-                                  <span class="file-link__meta">256,81 Кб</span>
-                                </span>
-                              </a>
-                            </li>
-                            <li>
-                              <a class="file-link" href="#">
-                                <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
-                                  <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                                </svg>
-                                <span class="file-link__info">
-                                  <span>Бухгалтерская отчетность за 9 месяцев 2024 года</span>
-                                  <span class="file-link__meta"
-                                    >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
-                                  >
-                                  <span class="file-link__meta">256,81 Кб</span>
-                                </span>
-                              </a>
-                            </li>
-                            <li>
-                              <a class="file-link" href="#">
-                                <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
-                                  <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                                </svg>
-                                <span class="file-link__info">
-                                  <span>Бухгалтерская отчетность за 6 месяцев 2024 года</span>
-                                  <span class="file-link__meta"
-                                    >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
-                                  >
-                                  <span class="file-link__meta">256,81 Кб</span>
-                                </span>
-                              </a>
-                            </li>
-                            <li>
-                              <a class="file-link" href="#">
-                                <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
-                                  <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
-                                </svg>
-                                <span class="file-link__info">
-                                  <span>Бухгалтерская отчетность за 1 квартал 2024 года</span>
-                                  <span class="file-link__meta"
-                                    >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
-                                  >
-                                  <span class="file-link__meta">256,81 Кб</span>
-                                </span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
                       </div>
-                    </section>
-                  </div>
-                </details>
-                <!-- Accordions item 2 end -->
+                    </div>
+                  </section>
+                </div>
+              </details>
+              <!-- Accordions item 2 end -->
 
-                <!-- Accordion item 3 start -->
-                <details class="accordion accordion_bordered">
-                  <summary class="accordion__summary">
-                    <span class="accordion__summary-title"
-                      >Противодействие неправомерному использованию инсайдерской информации и манипулированию
-                      рынком</span
-                    >
+              <!-- Accordion item 3 start -->
+              <details class="accordion accordion_bordered">
+                <summary class="accordion__summary">
+                  <span class="accordion__summary-title"
+                    >Противодействие неправомерному использованию инсайдерской информации и манипулированию рынком</span
+                  >
 
-                    <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
-                      <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
-                    </svg>
-                  </summary>
+                  <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+                    <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
+                  </svg>
+                </summary>
 
-                  <div class="accordion__content" data-accordion-content></div>
-                </details>
-                <!-- Accordions item 3 end -->
+                <div class="accordion__content" data-accordion-content>
+                  <section class="section">
+                    <div class="tabs" data-tabs>
+                      <ul class="tabs__buttons">
+                        <li>
+                          <button class="tabs__button is-active" type="button" data-tab="tab2024-2">
+                            Документы, принятые в соответствии с Федеральным законом № 224-ФЗ от 27.07.2010
+                          </button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2023-2">
+                            Типовые формы уведомления инсайдера об операциях по видам ЦБ
+                          </button>
+                        </li>
+                      </ul>
 
-                <!-- Accordion item 4 start -->
-                <details class="accordion accordion_bordered">
-                  <summary class="accordion__summary">
-                    <span class="accordion__summary-title">Тройной уровень/двойной в спойлере</span>
+                      <div id="tab2024-2" class="tabs__content is-active" data-tab-content>
+                        <ul class="list">
+                          <li>
+                            <a class="file-link" href="#">
+                              <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                              </svg>
+                              <span class="file-link__info">
+                                <span
+                                  >Положение о мерах по недопущению использования инсайдерской информации и
+                                  манипулирования рынком (редакц. от 10.11.2021)</span
+                                >
+                                <span class="file-link__meta"
+                                  >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                >
+                                <span class="file-link__meta">256,81 Кб</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="file-link" href="#">
+                              <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                              </svg>
+                              <span class="file-link__info">
+                                <span
+                                  >Положение о мерах по недопущению использования инсайдерской информации и
+                                  манипулирования рынком (редакц. от 10.11.2021)</span
+                                >
+                                <span class="file-link__meta"
+                                  >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                >
+                                <span class="file-link__meta">256,81 Кб</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="file-link" href="#">
+                              <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                              </svg>
+                              <span class="file-link__info">
+                                <span
+                                  >Положение о мерах по недопущению использования инсайдерской информации и
+                                  манипулирования рынком (редакц. от 10.11.2021)</span
+                                >
+                                <span class="file-link__meta"
+                                  >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                >
+                                <span class="file-link__meta">256,81 Кб</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="file-link" href="#">
+                              <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                              </svg>
+                              <span class="file-link__info">
+                                <span
+                                  >Положение о мерах по недопущению использования инсайдерской информации и
+                                  манипулирования рынком (редакц. от 10.11.2021)</span
+                                >
+                                <span class="file-link__meta"
+                                  >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                >
+                                <span class="file-link__meta">256,81 Кб</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="file-link" href="#">
+                              <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                              </svg>
+                              <span class="file-link__info">
+                                <span
+                                  >Положение о мерах по недопущению использования инсайдерской информации и
+                                  манипулирования рынком (редакц. от 10.11.2021)</span
+                                >
+                                <span class="file-link__meta"
+                                  >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                >
+                                <span class="file-link__meta">256,81 Кб</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="file-link" href="#">
+                              <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                              </svg>
+                              <span class="file-link__info">
+                                <span
+                                  >Положение о мерах по недопущению использования инсайдерской информации и
+                                  манипулирования рынком (редакц. от 10.11.2021)</span
+                                >
+                                <span class="file-link__meta"
+                                  >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                >
+                                <span class="file-link__meta">256,81 Кб</span>
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </details>
+              <!-- Accordions item 3 end -->
 
-                    <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
-                      <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
-                    </svg>
-                  </summary>
+              <!-- Accordion item 4 start -->
+              <details class="accordion accordion_bordered">
+                <summary class="accordion__summary">
+                  <span class="accordion__summary-title">Тройной уровень/двойной в спойлере</span>
 
-                  <div class="accordion__content" data-accordion-content></div>
-                </details>
-                <!-- Accordions item 4 end -->
-              </div>
+                  <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+                    <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
+                  </svg>
+                </summary>
+
+                <div class="accordion__content" data-accordion-content>
+                  <section class="section">
+                    <div class="tabs" data-tabs>
+                      <ul class="tabs__buttons">
+                        <li>
+                          <button class="tabs__button is-active" type="button" data-tab="tab2024-3">2024</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2023-3">2023</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2022-3">2022</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2021-3">2021</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2020-3">2020</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2020-1-3">2020</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2020-2-3">2020</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2020-3-3">2020</button>
+                        </li>
+                        <li>
+                          <button class="tabs__button" type="button" data-tab="tab2020-4-3">2020</button>
+                        </li>
+                      </ul>
+
+                      <div id="tab2024-3" class="tabs__content is-active" data-tab-content>
+                        <section class="section">
+                          <div class="tabs" data-tabs>
+                            <ul class="tabs__buttons">
+                              <li>
+                                <button class="tabs__button is-active" type="button" data-tab="dec">Декабрь</button>
+                              </li>
+                              <li>
+                                <button class="tabs__button" type="button" data-tab="nov">Ноябрь</button>
+                              </li>
+                              <li>
+                                <button class="tabs__button" type="button" data-tab="oct">Октябрь</button>
+                              </li>
+                              <li>
+                                <button class="tabs__button" type="button" data-tab="sep">Сентябрь</button>
+                              </li>
+                              <li>
+                                <button class="tabs__button" type="button" data-tab="aug">Август</button>
+                              </li>
+                              <li>
+                                <button class="tabs__button" type="button" data-tab="jul">Июль</button>
+                              </li>
+                              <li>
+                                <button class="tabs__button" type="button" data-tab="jun">Июнь</button>
+                              </li>
+                              <li>
+                                <button class="tabs__button" type="button" data-tab="may">Май</button>
+                              </li>
+                              <li>
+                                <button class="tabs__button" type="button" data-tab="apr">Апрель</button>
+                              </li>
+                              <li>
+                                <button class="tabs__button" type="button" data-tab="mar">Март</button>
+                              </li>
+                              <li>
+                                <button class="tabs__button" type="button" data-tab="feb">Февраль</button>
+                              </li>
+                              <li>
+                                <button class="tabs__button" type="button" data-tab="jan">Январь</button>
+                              </li>
+                            </ul>
+
+                            <div id="dec" class="tabs__content is-active" data-tab-content>
+                              <ul class="list">
+                                <li>
+                                  <a class="file-link" href="#">
+                                    <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                      <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                                    </svg>
+                                    <span class="file-link__info">
+                                      <span>Бухгалтерская отчетность за 2024 год</span>
+                                      <span class="file-link__meta"
+                                        >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                      >
+                                      <span class="file-link__meta">256,81 Кб</span>
+                                    </span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="file-link" href="#">
+                                    <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                      <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                                    </svg>
+                                    <span class="file-link__info">
+                                      <span
+                                        >Аудиторское заключение по бухгалтерской (финансовой) отчетности за 2024
+                                        год</span
+                                      >
+                                      <span class="file-link__meta"
+                                        >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                      >
+                                      <span class="file-link__meta">256,81 Кб</span>
+                                    </span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="file-link" href="#">
+                                    <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                      <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                                    </svg>
+                                    <span class="file-link__info">
+                                      <span>Бухгалтерская отчетность за 9 месяцев 2024 года</span>
+                                      <span class="file-link__meta"
+                                        >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                      >
+                                      <span class="file-link__meta">256,81 Кб</span>
+                                    </span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="file-link" href="#">
+                                    <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                      <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                                    </svg>
+                                    <span class="file-link__info">
+                                      <span>Бухгалтерская отчетность за 6 месяцев 2024 года</span>
+                                      <span class="file-link__meta"
+                                        >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                      >
+                                      <span class="file-link__meta">256,81 Кб</span>
+                                    </span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="file-link" href="#">
+                                    <svg class="file-link__icon" viewBox="0 0 46 49" width="46" height="49">
+                                      <use href="/sprite.svg#pdf-color-icon" x="0" y="0"></use>
+                                    </svg>
+                                    <span class="file-link__info">
+                                      <span>Бухгалтерская отчетность за 1 квартал 2024 года</span>
+                                      <span class="file-link__meta"
+                                        >Опубликовано: <time datetime="2023-10-03">03.10.2024</time></span
+                                      >
+                                      <span class="file-link__meta">256,81 Кб</span>
+                                    </span>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div id="nov" class="tabs__content" data-tab-content>nov</div>
+                            <div id="oct" class="tabs__content" data-tab-content>oct</div>
+                            <div id="sep" class="tabs__content" data-tab-content>sep</div>
+                            <div id="aug" class="tabs__content" data-tab-content>aug</div>
+                            <div id="jul" class="tabs__content" data-tab-content>jul</div>
+                            <div id="jun" class="tabs__content" data-tab-content>jun</div>
+                            <div id="may" class="tabs__content" data-tab-content>may</div>
+                            <div id="apr" class="tabs__content" data-tab-content>apr</div>
+                            <div id="mar" class="tabs__content" data-tab-content>mar</div>
+                            <div id="feb" class="tabs__content" data-tab-content>feb</div>
+                            <div id="jan" class="tabs__content" data-tab-content>jan</div>
+                          </div>
+                        </section>
+                      </div>
+
+                      <div id="tab2023-3" class="tabs__content" data-tab-content>tab2023-3</div>
+                      <div id="tab2022-3" class="tabs__content" data-tab-content>tab2022-3</div>
+                    </div>
+                  </section>
+                </div>
+              </details>
+              <!-- Accordions item 4 end -->
             </section>
             <!-- Section end -->
           </div>
@@ -645,6 +956,395 @@
 </footer>
 
     <!-- Footer block end -->
+
+    <!-- Modal contacts start -->
+    <!-- Modal contacts start -->
+<div class="modal is-hidden" id="modal-contacts" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-button="modal-contacts"></div>
+  <div class="modal__box modal-contacts">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-contacts">
+      <svg viewBox="0 0 39 38" width="39" height="38">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+    <div class="modal-contacts__item">
+      <h2 class="modal-contacts__title">Написать</h2>
+      <div class="modal-contacts__chats">
+        <a class="link link_gray" href="#">
+          <svg viewBox="0 0 16 16" width="16" height="16">
+            <use href="/sprite.svg#headphones-icon-2" x="0" y="0"></use>
+          </svg>
+          <span class="link__text">Онлайн</span>
+        </a>
+        <a class="link link_gray" href="#">
+          <svg viewBox="0 0 16 16" width="16" height="16">
+            <use href="/sprite.svg#whats-app-icon-2" x="0" y="0"></use>
+          </svg>
+          <span class="link__text">Whatsapp</span>
+        </a>
+        <button class="link link_gray" type="button" data-modal-button="modal-feedback">
+          <svg viewBox="0 0 16 16" width="16" height="16">
+            <use href="/sprite.svg#mail-icon" x="0" y="0"></use>
+          </svg>
+          <span class="link__text">Обращение</span>
+        </button>
+        <a class="link link_gray" href="#">
+          <svg viewBox="0 0 16 16" width="16" height="16">
+            <use href="/sprite.svg#telegram-icon-2" x="0" y="0"></use>
+          </svg>
+          <span class="link__text">Telegram</span>
+        </a>
+      </div>
+    </div>
+    <div class="modal-contacts__item">
+      <h2 class="modal-contacts__title">Позвонить</h2>
+      <div class="modal-contacts__phones">
+        <a class="link link_gray" href="tel:+78123130530">
+          <svg viewBox="0 0 16 16" width="16" height="16">
+            <use href="/sprite.svg#phone-icon-2" x="0" y="0"></use>
+          </svg>
+          <span class="link__text">+7(812) 313-05-30</span>
+        </a>
+        <a class="link link_gray" href="tel:+79816827501">
+          <svg viewBox="0 0 16 16" width="16" height="16">
+            <use href="/sprite.svg#phone-icon-3" x="0" y="0"></use>
+          </svg>
+          <span class="link__text">+7 (981) 682-75-01</span>
+        </a>
+        <button class="link link_gray" data-modal-button="modal-callback">
+          <svg viewBox="0 0 18 16" width="18" height="16">
+            <use href="/sprite.svg#phone-icon-4" x="0" y="0"></use>
+          </svg>
+          <span class="link__text">Перезвонить Вам?</span>
+        </button>
+      </div>
+    </div>
+    <div class="modal-contacts__item">
+      <h2 class="modal-contacts__title">Почитать о нас</h2>
+      <ul class="social social_large">
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="vkontakte">
+            <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40">
+              <use href="/sprite.svg#vk-icon" x="0" y="0"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="vkontakte">
+            <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40">
+              <use href="/sprite.svg#telegram-icon" x="0" y="0"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="youtube">
+            <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40">
+              <use href="/sprite.svg#youtube-icon" x="0" y="0"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="dzen">
+            <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40">
+              <use href="/sprite.svg#social-network-icon" x="0" y="0"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" aria-label="rutube">
+            <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40">
+              <use href="/sprite.svg#rutube-icon" x="0" y="0"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Modal contacts end -->
+
+<!-- Modal callback start -->
+<div class="modal is-hidden" id="modal-callback" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-button="modal-callback"></div>
+  <div class="modal__box modal-callback">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-callback">
+      <svg viewBox="0 0 39 38" width="39" height="38">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+
+    <form class="modal-callback__form" data-modal-form>
+      <div class="field">
+        <label class="field__label" for="name-callback">Представьтесь*</label>
+        <input class="field__input" type="text" id="name-callback" required />
+      </div>
+      <div class="field">
+        <label class="field__label" for="phone-callback">Телефон*</label>
+        <input class="field__input" type="text" id="phone-callback" />
+      </div>
+      <div class="field">
+        <label class="field__label" for="email-callback">Электронная почта*</label>
+        <input class="field__input" type="email" id="email-callback" required />
+      </div>
+      <div class="field">
+        <label class="field__label" for="comment-callback">Комментарий</label>
+        <input class="field__input" type="text" id="comment-callback" />
+      </div>
+      <div class="control">
+        <input class="control__input" type="checkbox" name="control" id="control" />
+        <label for="control"
+          >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</label
+        >
+      </div>
+      <div class="modal-callback__submit">
+        <p class="field-hint">* поля, обязательные к заполнению</p>
+        <button class="button button_orange button_full-width" type="submit">Отправить</button>
+      </div>
+    </form>
+    <div class="modal-callback__feedback is-hidden" data-modal-feedback>
+      <p>Ваше обращение отправлено!</p>
+      <p>Благодарим за обратную связь.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal callback end -->
+
+<!-- Modal feedback start -->
+<div class="modal is-hidden" id="modal-feedback" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-button="modal-feedback"></div>
+  <div class="modal__box modal-feedback">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-feedback">
+      <svg viewBox="0 0 39 38" width="39" height="38">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+
+    <form class="modal-feedback__form" data-modal-form>
+      <h2 class="modal-feedback__title">Обратная связь</h2>
+      <div class="modal-feedback__text">
+        <p>Ваше мнение очень важно для нас!</p>
+        <p>
+          Если Вы хотите оставить сообщение, выберите в выпадающем списке «Оставить сообщение». Наши менеджеры свяжутся
+          с Вами в ближайшее время. 
+        </p>
+        <p>
+          Если Вы хотите оставить пожелание к работе нашей компании, пожаловаться или выразить благодарность, выберите в
+          выпадающем списке «Оставить пожелание» или «Пожаловаться», и Ваше обращение будет напрямую получено
+          Председателем Правления компании, а также Зам. Председателя Правления.
+        </p>
+        <p>
+          Указывайте, пожалуйста, актуальный адрес  электронной почты для того, чтобы мы смогли отправить Вам ответ.
+        </p>
+      </div>
+      <div class="field">
+        <label class="field__label" for="type-feedback">Представьтесь*</label>
+        <select class="field__input" id="type-feedback">
+          <option value="">Пожелание</option>
+          <option value="">Пожелание</option>
+          <option value="">Пожелание</option>
+          <option value="">Пожелание</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="name-feedback">Представьтесь*</label>
+        <input class="field__input" type="text" id="name-feedback" required />
+      </div>
+      <div class="field">
+        <label class="field__label" for="phone-feedback">Телефон*</label>
+        <input class="field__input" type="text" id="phone-feedback" />
+      </div>
+      <div class="field">
+        <label class="field__label" for="email-feedback">Электронная почта*</label>
+        <input class="field__input" type="email" id="email-feedback" required />
+      </div>
+      <div class="field">
+        <label class="field__label" for="comment-feedback">Сообщение*</label>
+        <textarea class="modal-feedback__textarea field__input" id="comment-feedback" required></textarea>
+      </div>
+      <div class="control">
+        <input class="control__input" type="checkbox" name="control" id="control-feedback" />
+        <label for="control-feedback"
+          >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</label
+        >
+      </div>
+      <div class="modal-feedback__submit">
+        <p class="field-hint">* поля, обязательные к заполнению</p>
+        <button class="modal-feedback__button button button_orange" type="submit">Отправить</button>
+      </div>
+    </form>
+    <div class="modal-callback__feedback is-hidden">
+      <p>Благодарим за обращение!</p>
+      <p>В ближайшее время сотрудники нашей компании свяжутся с Вами.</p>
+      <p>
+        Напоминаем, что компания работает по будним дням с 10 до 19:00. Если Вы заказали звонок в выходной или
+        праздничный день, то наш сотрудник свяжется с Вами в первый рабочий день.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal feedback end -->
+
+<!-- Modal search start -->
+<div class="modal is-hidden" id="modal-search" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-button="modal-search"></div>
+  <div class="modal__box modal-search">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-search">
+      <svg viewBox="0 0 39 38" width="39" height="38">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+    <form class="modal-search__form">
+      <div class="field">
+        <label class="field__label visually-hidden" for="seacrh">Введите слово для поиска</label>
+        <input class="field__input" type="text" id="seacrh" placeholder="Введите слово для поиска" />
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal search end -->
+
+<!-- Modal auth start -->
+<div class="modal is-hidden" id="modal-auth" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-button="modal-auth"></div>
+  <div class="modal__box modal-login">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-auth">
+      <svg viewBox="0 0 39 38" width="39" height="38">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+
+    <h2 class="modal-login__title">Авторизация на сайте</h2>
+    <form class="modal-login__form">
+      <div class="field">
+        <label class="field__label" for="email-auth">Электронная почта или логин</label>
+        <input class="field__input" type="email" id="email-auth" required />
+      </div>
+      <div class="field">
+        <label class="field__label" for="password-auth">Пароль</label>
+        <input class="field__input" type="password" id="password-auth" required />
+      </div>
+      <div class="modal-login__submit">
+        <button class="button button_orange button_full-width" type="submit">Войти</button>
+        <button class="modal-login__button link link_gray-dark" type="button" data-modal-button="modal-password">
+          Забыли пароль?
+        </button>
+      </div>
+      <p class="modal-login__text">
+        Фактом входа Вы даете согласие на получение, хранение и обработку персональных данных.
+      </p>
+
+      <button class="button button_gray button_full-width" type="button" data-modal-button="modal-registration">
+        Зарегистрироваться
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal auth end -->
+
+<!-- Modal password start -->
+<div class="modal is-hidden" id="modal-password" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-button="modal-password"></div>
+  <div class="modal__box modal-login">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-password">
+      <svg viewBox="0 0 39 38" width="39" height="38">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+
+    <h2 class="modal-login__title">Восстановление пароля</h2>
+    <form class="modal-login__form">
+      <div class="field">
+        <label class="field__label" for="email-password">Электронная почта или логин</label>
+        <input class="field__input" type="email" id="email-password" required />
+      </div>
+      <div class="modal-login__code">
+        <div class="field">
+          <label class="field__label" for="code-password">Защитный код</label>
+          <input class="field__input" type="text" id="code-password" required />
+        </div>
+        <div class="modal-login__captcha">captcha</div>
+      </div>
+
+      <button class="button button_orange button_full-width" type="submit">Выслать пароль</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal password end -->
+
+<!-- Modal registration start -->
+<div class="modal is-hidden" id="modal-registration" aria-hidden="true">
+  <div class="modal__backdrop" data-modal-button="modal-registration"></div>
+  <div class="modal__box modal-login">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-registration">
+      <svg viewBox="0 0 39 38" width="39" height="38">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+
+    <form class="modal-login__form" data-modal-form>
+      <h2 class="modal-login__title">Регистрация на сайте</h2>
+      <div class="field">
+        <label class="field__label" for="login-registration"
+          >Логин (только латинские буквы и цифры, без пробелов)*</label
+        >
+        <input class="field__input" type="text" id="login-registration" required />
+      </div>
+      <div class="field">
+        <label class="field__label" for="password-registration">Пароль*</label>
+        <input class="field__input" type="password" id="password-registration" required />
+      </div>
+      <div class="field">
+        <label class="field__label" for="passwordConfirm-registration">Подтверждение пароля*</label>
+        <input class="field__input" type="password" id="passwordConfirm-registration" required />
+      </div>
+      <div class="field">
+        <label class="field__label" for="email-registration">Электронная почта или логин</label>
+        <input class="field__input" type="email" id="email-registration" required />
+      </div>
+      <div class="field">
+        <label class="field__label" for="name-registration">Имя*</label>
+        <input class="field__input" type="text" id="name-registration" required />
+      </div>
+      <div class="field">
+        <label class="field__label" for="lastName-registration">Фамилия</label>
+        <input class="field__input" type="text" id="lastName-registration" />
+      </div>
+      <div class="modal-login__code">
+        <div class="field">
+          <label class="field__label" for="code-registration">Защитный код</label>
+          <input class="field__input" type="text" id="code-registration" required />
+        </div>
+        <div class="modal-login__captcha">captcha</div>
+      </div>
+      <div class="control">
+        <input class="control__input" type="checkbox" name="control" id="control-registration" required />
+        <label for="control-registration"
+          >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</label
+        >
+      </div>
+
+      <button class="button button_orange button_full-width" type="submit">Зарегистрироваться</button>
+    </form>
+    <div class="modal-login__feedback is-hidden">
+      <h2 class="modal-login__title">Регистрация на сайте</h2>
+      <p class="modal-login__text">
+        В личном кабинете пользователя сайта arsagera.ru. Вы можете принять участие в акциях, проводимых компанией,
+        комментировать материалы, публикуемые на сайте
+      </p>
+      <a class="button button_orange button_full-width" href="#">Перейти в Профиль</a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal registration end -->
+
+    <!-- Modal contacts end -->
 
   </body>
 </html>

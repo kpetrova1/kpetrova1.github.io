@@ -1,0 +1,1 @@
+function e(){document.querySelectorAll("[data-scrollable-table]").forEach(s=>{const l=s.querySelector("table");s.scrollWidth>s.clientWidth&&l.classList.add("has-scroll"),window.addEventListener("resize",function(){s.scrollWidth>s.clientWidth?l.classList.add("has-scroll"):l.classList.remove("has-scroll")})})}export{e as t};

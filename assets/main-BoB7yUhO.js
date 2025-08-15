@@ -1,0 +1,1 @@
+import"./default-DMm93GeC.js";import{p as n}from"./poll-YHTWgEGy.js";import{t as o}from"./table-BaiIlmB4.js";document.addEventListener("DOMContentLoaded",function(){n(),o();const e=document.querySelector("[data-benchmarks]");t(),window.addEventListener("resize",t);function t(){window.innerWidth<768?e.removeAttribute("open"):e.setAttribute("open","")}});
