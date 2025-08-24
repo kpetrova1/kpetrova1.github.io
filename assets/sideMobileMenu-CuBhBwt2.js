@@ -1,0 +1,1 @@
+function s(){const t=document.querySelector("[data-nav-side-button]"),e=document.querySelector("[data-nav-side]");t.addEventListener("click",()=>{t.classList.toggle("is-active"),e.classList.toggle("is-active")})}export{s};

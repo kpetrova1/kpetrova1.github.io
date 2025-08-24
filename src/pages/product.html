@@ -9,63 +9,88 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/assets/site-BwHFeIBa.webmanifest" />
     <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
-    <script type="module" crossorigin src="/assets/product-hg1PzoeX.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/default-DMm93GeC.js">
-    <link rel="modulepreload" crossorigin href="/assets/tabs-COQn59q7.js">
-    <link rel="modulepreload" crossorigin href="/assets/table-BaiIlmB4.js">
-    <link rel="stylesheet" crossorigin href="/assets/product-CBt4Qg0y.css">
+    <script type="module" crossorigin src="/assets/product-C-levs-3.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/assets/default-B31wzApy.js">
+    <link rel="modulepreload" crossorigin href="/assets/checkTableScroll-BUhdxDMt.js">
+    <link rel="modulepreload" crossorigin href="/assets/utils-BrGEwKc5.js">
+    <link rel="modulepreload" crossorigin href="/assets/tabs-DVtkJby_.js">
+    <link rel="modulepreload" crossorigin href="/assets/accordion-Zv8bo0fZ.js">
+    <link rel="stylesheet" crossorigin href="/assets/product-Bv8qG_br.css">
   </head>
   <body>
     <!-- Top-bar block start -->
     <div class="top-bar">
-  <div class="top-bar__container container">
-    <a class="top-bar__logo" href="/public" aria-label="Перейти на главную страницу">
-      <img class="" src="/logo.svg" alt="Арсагера логотип" />
-    </a>
+  <div class="container">
+    <div class="top-bar__wrapper">
+      <!-- Логотип -->
+      <a class="top-bar__logo" href="/" aria-label="Перейти на главную страницу">
+        <img class="top-bar__logo-image" src="/logo.svg" alt="Логотип Арсагера" />
+      </a>
 
-    <div class="top-bar__info">
-      <p class="top-bar__index">
-        Индекс Арсагеры
-        <span class="top-bar__index-value"> <span class="text-orange">0,62%</span> |+0,37 п.п.</span>
-        на 12.09.2024
-      </p>
+      <!-- Информационный блок -->
+      <div class="top-bar__info">
+        <div class="top-bar__index">
+          <a class="top-bar__index-link link link_gray" href="#">Индекс Арсагеры</a>
+          <span class="top-bar__index-value">
+            <span class="top-bar__index-change">0,62%</span>
+            | <span class="top-bar__index-points">+0,37 п.п.</span>
+          </span>
+          <span class="top-bar__index-date">на <time datetime="2024-09-12">12.09.2024</time></span>
+        </div>
 
-      <div class="top-bar__contacts">
-        <button class="link link_gray" type="button" data-modal-button="modal-callback">Перезвонить Вам?</button>
-        <a class="link link_gray link_large" href="tel:88123130530">8 812 <span class="text-orange">313 05 30</span></a>
-        <button class="link link_gray" type="button" data-modal-button="modal-contacts">Связь с нами</button>
+        <div class="top-bar__contacts">
+          <button class="top-bar__callback link link_gray" type="button" data-modal-button="modal-callback">
+            Перезвонить Вам?
+          </button>
+          <a class="top-bar__phone link link_gray link_size-large" href="tel:88123130530">
+            8 812 <span class="top-bar__phone-highlight">313 05 30</span>
+          </a>
+          <button class="top-bar__contact link link_gray" type="button" data-modal-button="modal-contacts">
+            Связь с нами
+          </button>
+        </div>
       </div>
-    </div>
 
-    <div class="top-bar__actions">
-      <a class="button button_blue button_full-width" href="#">Стать клиентом</a>
-      <div class="top-bar__dropdown-box">
-        <button
-          class="top-bar__dropdown-action button button_orange button_full-width"
-          type="button"
-          data-dropdown-button
-        >
-          Войти
-          <svg class="top-bar__dropdown-icon" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
-            <use href="/sprite.svg#arrow-down-icon" x="0" y="0"></use>
-          </svg>
-        </button>
-        <ul class="top-bar__dropdown">
-          <li>
-            <button class="top-bar__dropdown-button" type="button" data-modal-button="modal-auth">На сайт</button>
-          </li>
-          <li>
-            <a class="top-bar__dropdown-button" href="#">В Личный кабинет</a>
-          </li>
-        </ul>
+      <!-- Действия -->
+      <div class="top-bar__actions">
+        <a class="button button_blue button_full-width" href="#"> Стать клиентом </a>
+
+        <div class="top-bar__auth">
+          <button
+            class="top-bar__auth-toggle button button_orange button_full-width"
+            type="button"
+            aria-expanded="false"
+            aria-controls="auth-dropdown"
+            data-auth-toggle
+          >
+            Войти
+            <svg class="top-bar__auth-arrow" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
+              <use href="/sprite.svg#arrow-down-icon"></use>
+            </svg>
+          </button>
+
+          <ul class="top-bar__auth-dropdown" id="auth-dropdown" aria-hidden="true" role="menu">
+            <li class="top-bar__auth-item" role="none">
+              <button class="top-bar__auth-option" type="button" role="menuitem" data-modal-button="modal-auth">
+                На сайт
+              </button>
+            </li>
+            <li class="top-bar__auth-item" role="none">
+              <a class="top-bar__auth-option" href="#" role="menuitem"> В Личный кабинет </a>
+            </li>
+          </ul>
+        </div>
+
+        <a class="top-bar__info-link link link_orange" href="#">
+          Мы не работаем<br />
+          с Клиентом, если...
+        </a>
       </div>
-      <a class="top-bar__action-link link link_orange" href="#"
-        >Мы не работаем <br />
-        с Клиентом, если...</a
-      >
-    </div>
 
-    <img class="top-bar__slogan" src="/slogan.svg" alt="Забота о будущем с 2004 года" />
+      <!-- Слоган -->
+      <img class="top-bar__slogan" src="/slogan.svg" alt="Забота о будущем с 2004 года" width="200" height="40" />
+    </div>
   </div>
 </div>
 
@@ -75,28 +100,31 @@
     <header class="header">
   <div class="container">
     <div class="header__wrapper">
-      <button class="header__burger-button" type="button" aria-label="Открыть меню" data-nav-button>
-        <svg viewBox="0 0 43 28" width="43" height="28">
-          <use href="/sprite.svg#burger-icon" x="0" y="0"></use>
+      <!-- Бургер-меню -->
+      <button class="header__burger" type="button" aria-label="Открыть меню" data-nav-toggle>
+        <svg class="header__burger-icon" viewBox="0 0 43 28" width="43" height="28" aria-hidden="true">
+          <use href="/sprite.svg#burger-icon"></use>
         </svg>
       </button>
 
+      <!-- Категории -->
       <div class="header__categories">
         <button
-          class="header__categories-button button button_white"
+          class="header__categories-toggle button button_white"
           type="button"
-          data-dropdown-button
-          data-category-button
+          aria-expanded="false"
+          aria-controls="categories-dropdown"
+          data-categories-toggle
         >
-          <span>Клиентам</span>
-
-          <svg class="header__categories-icon" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
-            <use href="/sprite.svg#arrow-down-icon" x="0" y="0"></use>
+          <span class="header__categories-text">Клиентам</span>
+          <svg class="header__categories-arrow" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
+            <use href="/sprite.svg#arrow-down-icon"></use>
           </svg>
         </button>
-        <ul class="header__categories-list">
+
+        <ul class="header__categories-list" id="categories-dropdown" role="menu" aria-hidden="true">
           <li class="header__categories-item is-hidden">
-            <a class="header__categories-link link link_orange" href="#" data-categories-link>Клиентам</a>
+            <a class="header__categories-link link link_gray-dark is-active" href="#" data-categories-link>Клиентам</a>
           </li>
           <li class="header__categories-item">
             <a class="header__categories-link link link_gray-dark" href="#" data-categories-link>Акционерам</a>
@@ -107,82 +135,81 @@
         </ul>
       </div>
 
-      <form action="" class="header__search search">
-        <label class="search__label"
-          >Поиск по сайту
-          <input type="text" class="search__field" name="search" placeholder="Поиск по сайту" />
-        </label>
-        <button class="search__btn" type="submit" aria-label="Искать">
-          <svg class="search__icon" viewBox="0 0 21 20" width="24" height="24">
-            <use href="/sprite.svg#search-icon" x="0" y="0"></use>
+      <!-- Поиск -->
+      <form class="header__search search" action="#" method="get" role="search">
+        <label class="search__label visually-hidden" for="search-input">Поиск по сайту</label>
+        <input
+          class="search__input"
+          id="search-input"
+          type="search"
+          name="q"
+          placeholder="Поиск по сайту"
+          aria-label="Поиск по сайту"
+        />
+        <button class="search__submit" type="submit" aria-label="Выполнить поиск">
+          <svg class="search__icon" viewBox="0 0 21 20" width="24" height="24" aria-hidden="true">
+            <use href="/sprite.svg#search-icon"></use>
           </svg>
         </button>
       </form>
 
-      <nav class="header__nav" data-header-nav>
-        <div class="modal__backdrop" data-nav-button></div>
+      <!-- Основная навигация -->
+      <nav class="header__nav nav" aria-label="Основное меню" data-header-nav>
+        <div class="nav__backdrop" data-nav-toggle></div>
 
-        <div class="header__nav-inner">
-          <button class="header__close-button" type="button" aria-label="закрыть окно" data-nav-button>
-            <svg viewBox="0 0 39 38" width="26" height="26">
-              <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+        <div class="nav__container">
+          <button class="nav__close" type="button" aria-label="Закрыть меню" data-nav-toggle>
+            <svg class="nav__close-icon" viewBox="0 0 39 38" width="26" height="26" aria-hidden="true">
+              <use href="/sprite.svg#cross-icon"></use>
             </svg>
           </button>
 
-          <ul class="header__nav-list">
-            <li>
-              <a class="header__nav-link header__nav-link_active" href="/" aria-label="на главную страницу">
-                <svg class="header__nav-link-home-icon" viewBox="0 0 31 30" width="31" height="30" aria-hidden="true">
-                  <use href="/sprite.svg#home-icon" x="0" y="0"></use>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link nav__link_home is-active" href="/">
+                <svg class="nav__home-icon" viewBox="0 0 31 30" width="31" height="30" aria-hidden="true">
+                  <use href="/sprite.svg#home-icon"></use>
                 </svg>
-                <span class="header__nav-link-home-text">Клиентам</span>
+                <span class="nav__home-text">Клиентам</span>
               </a>
             </li>
-            <li>
-              <a class="header__nav-link" href="#">О компании</a>
+
+            <li class="nav__item">
+              <a class="nav__link" href="#" aria-expanded="false" data-about-link>
+                О компании
+                <svg class="nav__dropdown-icon" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
+                  <use href="/sprite.svg#arrow-down-icon"></use>
+                </svg>
+              </a>
+              <ul class="nav__dropdown" aria-hidden="true">
+                <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">История</a></li>
+                <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Миссия</a></li>
+                <li class="nav__dropdown-item"><a class="nav__dropdown-link" href="#">Общая информация</a></li>
+              </ul>
             </li>
-            <li>
-              <a class="header__nav-link" href="#">Аналитика</a>
-            </li>
-            <li>
-              <a class="header__nav-link" href="#">Лекции и&nbsp;видео</a>
-            </li>
-            <li>
-              <a class="header__nav-link" href="#">Книга</a>
-            </li>
-            <li>
-              <a class="header__nav-link" href="#">Статьи</a>
-            </li>
-            <li>
-              <a class="header__nav-link" href="#">Блогофорум</a>
-            </li>
-            <li>
-              <a class="header__nav-link" href="#">Ответы на&nbsp;вопросы</a>
-            </li>
-            <li>
-              <a class="header__nav-link" href="#">Конкурсы и&nbsp;акциии</a>
-            </li>
-            <li>
-              <a class="header__nav-link" href="#">Раскрытие информации</a>
-            </li>
+
+            <li class="nav__item"><a class="nav__link" href="#">Аналитика</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Лекции и видео</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Книга</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Статьи</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Блогофорум</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Ответы на вопросы</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Конкурсы и акции</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Раскрытие информации</a></li>
           </ul>
         </div>
       </nav>
 
-      <div class="header__mobile-actions">
-        <button
-          class="header__mobile-action"
-          type="button"
-          aria-label="Связь с нами"
-          data-modal-button="modal-contacts"
-        >
-          <svg viewBox="0 0 33 35" width="33" height="35">
-            <use href="/sprite.svg#phone-icon" x="0" y="0"></use>
+      <!-- Мобильные действия -->
+      <div class="header__actions">
+        <button class="header__action" type="button" aria-label="Связь с нами" data-modal-button="contacts">
+          <svg class="header__action-icon" viewBox="0 0 33 35" width="33" height="35" aria-hidden="true">
+            <use href="/sprite.svg#phone-icon"></use>
           </svg>
         </button>
-        <button class="header__mobile-action" type="button" aria-label="Открыть поиск" data-modal-button="modal-search">
-          <svg viewBox="0 0 32 32" width="32" height="32">
-            <use href="/sprite.svg#search-icon" x="0" y="0"></use>
+        <button class="header__action" type="button" aria-label="Открыть поиск" data-modal-button="search">
+          <svg class="header__action-icon" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+            <use href="/sprite.svg#search-icon"></use>
           </svg>
         </button>
       </div>
@@ -195,91 +222,98 @@
     <!-- Main block start -->
     <main class="main">
       <!-- Page container start -->
-      <div class="product-page page container">
+      <div class="page container">
         <!-- Breadcrumbs start -->
-        <ol class="breadcrumbs">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link link link_blue" href="#">Клиентам</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link link link_blue" href="#">Главная</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link link link_blue" href="#">Арсагера – фонд акций</a>
-          </li>
-        </ol>
+        <nav class="breadcrumbs">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link link link_blue" href="#">Клиентам</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link link link_blue" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link link link_blue" href="#">Арсагера – фонд акций</a>
+            </li>
+          </ol>
+        </nav>
         <!-- Breadcrumbs end -->
 
-        <section class="section">
-          <div class="section__header text-orange">
-            <h2 class="section__title">
-              <svg viewBox="0 0 34 36" width="34" height="36" aria-hidden="true">
-                <use href="/sprite.svg#star-up-icon" x="0" y="0"></use>
-              </svg>
+        <!-- Content start -->
+        <div class="block block_24">
+          <h1 class="block__title text-orange">
+            <svg class="block__title-icon" viewBox="0 0 34 36" width="34" height="36">
+              <use href="/sprite.svg#star-up-icon"></use>
+            </svg>
+            Открытый паевой инвестиционный фонд рыночных финансовых инструментов «Арсагера — фонд акций»
+          </h1>
 
-              Открытый паевой инвестиционный фонд рыночных финансовых инструментов «Арсагера — фонд акций»
-            </h2>
-          </div>
-
-          <!-- Accordion item 1 start -->
-          <details class="accordion accordion_bordered">
-            <summary class="accordion__summary">
-              <span class="accordion__summary-title">Описание и условия инвестирования</span>
+          <!-- Accordion 1 start -->
+          <div class="accordion accordion_bordered" id="accordion1" data-accordion>
+            <div class="accordion__header">
+              <a class="accordion__anchor" data-accordion-anchor href="#accordion1"
+                >Описание и условия инвестирования</a
+              >
+              <span class="accordion__title">Описание и условия инвестирования</span>
 
               <!-- Accordion tab buttons start -->
-              <div class="accordion__summary-tabs">
-                <div class="accordion__summary-tabs-inner">
-                  <button class="accordion__summary-tab" type="button" data-tab="tab1">
+              <div class="accordion__tabs" data-accordion-tabs>
+                <div class="accordion__tabs-inner">
+                  <a class="accordion__tab" href="#accordion1-tab1" data-tab="accordion1-tab1">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Условия инвестирования
-                  </button>
+                  </a>
 
-                  <button class="accordion__summary-tab" type="button" data-tab="tab2">
+                  <a class="accordion__tab" href="#accordion1-tab2" data-tab="accordion1-tab2">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Описание
-                  </button>
+                  </a>
 
-                  <button class="accordion__summary-tab" type="button" data-tab="tab3">
+                  <a class="accordion__tab" href="#accordion1-tab3" data-tab="accordion1-tab3">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Инфраструктура фонда
-                  </button>
+                  </a>
                 </div>
               </div>
               <!-- Accordion tab buttons end -->
 
-              <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+              <svg class="accordion__arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
                 <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
               </svg>
-            </summary>
+            </div>
 
             <div class="accordion__content" data-accordion-content>
               <div class="tabs" data-tabs>
                 <!-- Tab buttons start -->
-                <ul class="tabs__buttons">
+                <ul class="tabs__nav" data-tab-buttons>
                   <li>
-                    <button class="tabs__button is-active" type="button" data-tab="tab1">Условия инвестирования</button>
+                    <a class="tabs__nav-button is-active" href="#accordion1-tab1" data-tab="accordion1-tab1"
+                      >Условия инвестирования</a
+                    >
                   </li>
                   <li>
-                    <button class="tabs__button" type="button" data-tab="tab2">Описание</button>
+                    <a class="tabs__nav-button" href="#accordion1-tab2" data-tab="accordion1-tab2">Описание</a>
                   </li>
                   <li>
-                    <button class="tabs__button" type="button" data-tab="tab3">Инфраструктура фонда</button>
+                    <a class="tabs__nav-button" href="#accordion1-tab3" data-tab="accordion1-tab3"
+                      >Инфраструктура фонда</a
+                    >
                   </li>
                 </ul>
                 <!-- Tab buttons end -->
 
                 <!-- Tab 1 start -->
-                <div id="tab1" class="tabs__content is-active" data-tab-content>
-                  <section class="section">
-                    <div class="section__content">
-                      <h3 class="section__content-title text-gray-dark">Общая информация</h3>
-                      <table class="product-page-table table">
+                <div id="accordion1-tab1" class="tabs__content is-active" data-tab-content>
+                  <div class="block block_40">
+                    <div class="block block_16">
+                      <h3 class="block__title-small text-gray-dark">Общая информация</h3>
+                      <table class="table table_product">
                         <tbody class="table__body">
                           <tr class="table__row">
                             <th class="table__cell">Полное наименование фонда</th>
@@ -316,11 +350,11 @@
                       </table>
                     </div>
 
-                    <div class="section__content">
-                      <h3 class="section__content-title text-gray-dark">
+                    <div class="block block_16">
+                      <h3 class="block__title-small text-gray-dark">
                         Расходы фонда (в % от среднегодовой СЧА фонда с учетом НДС)
                       </h3>
-                      <table class="product-page-table table">
+                      <table class="table table_product">
                         <tbody class="table__body">
                           <tr class="table__row">
                             <th class="table__cell">Вознаграждение управляющей компании</th>
@@ -346,9 +380,9 @@
                       </table>
                     </div>
 
-                    <div class="section__content">
-                      <h3 class="section__content-title text-gray-dark">Условия инвестирования</h3>
-                      <table class="product-page-table table">
+                    <div class="block block_16">
+                      <h3 class="block__title-small text-gray-dark">Условия инвестирования</h3>
+                      <table class="table table_product">
                         <tbody class="table__body">
                           <tr class="table__row">
                             <th class="table__cell">Прием заявок на приобретение, погашение и обмен паев</th>
@@ -394,9 +428,9 @@
                       </table>
                     </div>
 
-                    <div class="section__content">
-                      <h3 class="section__content-title text-gray-dark">Платежные реквизиты для приобретения паев</h3>
-                      <table class="product-page-table table">
+                    <div class="block block_16">
+                      <h3 class="block__title-small text-gray-dark">Платежные реквизиты для приобретения паев</h3>
+                      <table class="table table_product">
                         <tbody class="table__body">
                           <tr class="table__row">
                             <th class="table__cell">Получатель платежа</th>
@@ -426,13 +460,13 @@
                         </tbody>
                       </table>
                     </div>
-                  </section>
+                  </div>
                 </div>
                 <!-- Tab 1 end -->
 
                 <!-- Tab 2 start -->
-                <div id="tab2" class="tabs__content" data-tab-content>
-                  <section class="section">
+                <div id="accordion1-tab2" class="tabs__content" data-tab-content>
+                  <div class="block block_16">
                     <p>
                       Фонды акций, как правило, занимают центральное место в линейке инвестиционных фондов управляющих
                       компаний, вкладывающих в ценные бумаги. По результатам управления этими фондами оценивается
@@ -478,108 +512,119 @@
                       Более подробную информацию о налогообложении физических и юридических лиц по операциям с паями
                       инвестиционных фондов Вы можете найти в разделе «Налогообложение».
                     </p>
-                  </section>
+                  </div>
                 </div>
                 <!-- Tab 2 end -->
 
                 <!-- Tab 3 start -->
-                <div id="tab3" class="tabs__content" data-tab-content>
-                  <section class="section">
+                <div id="accordion1-tab3" class="tabs__content" data-tab-content>
+                  <div class="block block_24">
                     <p>
                       Для обеспечения работы паевого инвестиционного фонда недостаточно усилий одной Управляющей
                       Компании. В соответствии с законодательством, в деятельности фонда должны принимать участие и
                       другие организации.
                     </p>
-                    <div class="section__content">
-                      <h3 class="section__content-title text-orange">Управляющая компания</h3>
-                      <div class="message">
-                        <h4 class="message__title">Публичное акционерное общество «Управляющая компания «Арсагера»</h4>
+                    <div class="block block_12">
+                      <h3 class="block__title-small text-orange">Управляющая компания</h3>
+                      <article class="message">
+                        <h4 class="message__title text-gray-dark">
+                          Публичное акционерное общество «Управляющая компания «Арсагера»
+                        </h4>
                         <p class="message__text">
                           Осуществляет доверительное управление имуществом фонда с целью его прироста в соответствии с
                           инвестиционной декларацией.
                         </p>
-                        <p class="message__text message__text_sub">
+                        <p class="message__text text-gray-tech">
                           Лицензия ФСФР России на осуществление деятельности по управлению инвестиционными фондами,
                           паевыми инвестиционными фондами и негосударственными пенсионными фондами № 21-000-1-00714 от 6
                           апреля 2010 года, бессрочная.
                         </p>
                         <a class="message__link link link_blue" href="#">На сайт организации >></a>
-                      </div>
+                      </article>
                     </div>
-                    <div class="section__content">
-                      <h3 class="section__content-title text-orange">Специализированный депозитарий</h3>
-                      <div class="message">
-                        <h4 class="message__title">Акционерное общество «Специализированный депозитарий «ИНФИНИТУМ»</h4>
+
+                    <div class="block block_12">
+                      <h3 class="block__title-small text-orange">Специализированный депозитарий</h3>
+                      <article class="message">
+                        <h4 class="message__title text-gray-dark">
+                          Акционерное общество «Специализированный депозитарий «ИНФИНИТУМ»
+                        </h4>
                         <p class="message__text">
                           Организация, которая несет в интересах пайщиков обязанности по хранению имущества,
                           составляющего фонд, и контролю за распоряжением этим имуществом в соответствии с договором с
                           управляющей компанией.
                         </p>
-                        <p class="message__text message__text_sub">
+                        <p class="message__text text-gray-tech">
                           Лицензия на осуществление деятельности специализированного депозитария инвестиционных фондов,
                           паевых инвестиционных фондов и негосударственных пенсионных фондов от 04 октября 2000 года №
                           22-000-1-00013 выдана ФКЦБ России, бессрочная.
                         </p>
                         <a class="message__link link link_blue" href="#">На сайт организации >></a>
-                      </div>
+                      </article>
                     </div>
-                    <div class="section__content">
-                      <h3 class="section__content-title text-orange">Регистратор</h3>
-                      <div class="message">
-                        <h4 class="message__title">Акционерное общество «Специализированный депозитарий «ИНФИНИТУМ»</h4>
+
+                    <div class="block block_12">
+                      <h3 class="block__title-small text-orange">Регистратор</h3>
+                      <article class="message">
+                        <h4 class="message__title text-gray-dark">
+                          Акционерное общество «Специализированный депозитарий «ИНФИНИТУМ»
+                        </h4>
                         <p class="message__text">
                           Регистрирует права собственности пайщиков на приобретенные паи и ведет учет всех операций с
                           паями.
                         </p>
-                        <p class="message__text message__text_sub">
+                        <p class="message__text text-gray-tech">
                           Лицензия на осуществление деятельности специализированного депозитария инвестиционных фондов,
                           паевых инвестиционных фондов и негосударственных пенсионных фондов от 04 октября 2000 года №
                           22-000-1-00013 выдана ФКЦБ России, бессрочная.
                         </p>
                         <a class="message__link link link_blue" href="#">На сайт организации >></a>
-                      </div>
+                      </article>
                     </div>
-                    <div class="section__content">
-                      <h3 class="section__content-title text-orange">Банк России</h3>
-                      <div class="message">
-                        <h4 class="message__title">Банк России</h4>
+
+                    <div class="block block_12">
+                      <h3 class="block__title-small text-orange">Банк России</h3>
+                      <article class="message">
+                        <h4 class="message__title text-gray-dark">Банк России</h4>
                         <p class="message__text">
                           Осуществляет принятие нормативных правовых актов, контроль и надзор в сфере финансовых рынков.
                         </p>
-                        <p class="message__text message__text_sub">
+                        <p class="message__text text-gray-tech">
                           Северо-Западное главное управление Центрального банка Российской Федерации
                         </p>
                         <a class="message__link link link_blue" href="#">На сайт организации >></a>
-                      </div>
+                      </article>
                     </div>
-                  </section>
+                  </div>
                 </div>
                 <!-- Tab 3 end -->
               </div>
             </div>
-          </details>
-          <!-- Accordions item 1 end -->
+          </div>
+          <!-- Accordion 1 end -->
 
-          <!-- Accordion item 2 start -->
-          <details class="accordion accordion_bordered">
-            <summary class="accordion__summary">
-              <span class="accordion__summary-title">Динамика стоимости пая и СЧА</span>
+          <!-- Accordion 2 start -->
+          <div class="accordion accordion_bordered" id="accordion2" data-accordion>
+            <div class="accordion__header">
+              <a class="accordion__anchor" data-accordion-anchor href="#accordion2">Динамика стоимости пая и СЧА</a>
+              <span class="accordion__title">Динамика стоимости пая и СЧА</span>
 
-              <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+              <svg class="accordion__arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
                 <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
               </svg>
-            </summary>
+            </div>
 
             <div class="accordion__content" data-accordion-content>
-              <section class="section">
+              <div class="block block_40">
                 <img src="/charts1.jpg" alt="" loading="lazy" />
-                <div class="product-page-price">
-                  <div class="product-page-price__table">
-                    <div class="table-scrollable" data-scrollable-table>
-                      <table class="table">
-                        <thead class="table__head">
+
+                <div class="product-price">
+                  <div class="product-price__table-box">
+                    <div class="table-scroll" data-table-scroll>
+                      <table class="product-price__table table">
+                        <thead class="product-price__table-head table__head">
                           <tr class="table__row">
-                            <th class="table__cell table__cell_sticky"></th>
+                            <th class="table__cell is-sticky"></th>
                             <th class="table__cell">на 04.10.2024</th>
                             <th class="table__cell">на 07.10.2024</th>
                             <th class="table__cell">Изменение за период, %</th>
@@ -587,13 +632,13 @@
                         </thead>
                         <tbody class="table__body">
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">Стоимость пая, руб.</td>
+                            <td class="table__cell is-sticky">Стоимость пая, руб.</td>
                             <td class="table__cell">14 899,43</td>
                             <td class="table__cell">14 838,28</td>
                             <td class="table__cell">– 0,41</td>
                           </tr>
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">СЧА, руб.</td>
+                            <td class="table__cell is-sticky">СЧА, руб.</td>
                             <td class="table__cell">2 382 047 135,80</td>
                             <td class="table__cell">2 375 170 558,27</td>
                             <td class="table__cell">– 0,29</td>
@@ -601,96 +646,97 @@
                         </tbody>
                       </table>
                     </div>
-                    <p class="product-page-price__date">
-                      Дата публикации: <time datetime="2024-10-03">03.10.2024</time>
-                    </p>
+                    <p class="product-price__date">Дата публикации: <time datetime="2024-10-03">03.10.2024</time></p>
                   </div>
 
-                  <p class="product-page-price__message">
+                  <p class="product-price__message">
                     Загрузка стоимости паев и СЧА фонда доступна через API. С документацией можно ознакомиться по
                     <a class="link link_orange" href="#">ссылке</a>.
                   </p>
 
-                  <div class="product-page-price__table">
-                    <div class="table-scrollable" data-scrollable-table>
-                      <p class="product-page-price__info">
+                  <div class="product-price__table-box">
+                    <div class="table-scroll" data-table-scroll>
+                      <p class="product-price__info">
                         Величина отклонения прироста (в процентах) расчетной стоимости инвестиционного пая от прироста
                         (в процентах) значения индекса, предусмотренного инвестиционной декларацией паевого
                         инвестиционного фонда
                       </p>
-                      <table class="table">
-                        <thead class="table__head">
+                      <table class="product-price__table table">
+                        <thead class="product-price__table-head table__head">
                           <tr class="table__row">
-                            <th class="table__cell table__cell_sticky"></th>
+                            <th class="table__cell is-sticky"></th>
                             <th class="table__cell">за 20 рабочих дней</th>
                             <th class="table__cell">за 250 рабочих дней</th>
                           </tr>
                         </thead>
                         <tbody class="table__body">
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">на 07.10.2024</td>
+                            <td class="table__cell is-sticky">на 07.10.2024</td>
                             <td class="table__cell">0,42</td>
                             <td class="table__cell">9,25</td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
-                    <p class="product-page-price__date">
-                      Дата публикации: <time datetime="2024-10-03">03.10.2024</time>
-                    </p>
+                    <p class="product-price__date">Дата публикации: <time datetime="2024-10-03">03.10.2024</time></p>
                   </div>
                 </div>
-              </section>
+              </div>
             </div>
-          </details>
-          <!-- Accordions item 2 end -->
+          </div>
+          <!-- Accordion 2 end -->
 
-          <!-- Accordion item 3 start -->
-          <details class="accordion accordion_bordered">
-            <summary class="accordion__summary">
-              <span class="accordion__summary-title">Биржевое обращение паев</span>
+          <!-- Accordion 3 start -->
+          <div class="accordion accordion_bordered" id="accordion3" data-accordion>
+            <div class="accordion__header">
+              <a class="accordion__anchor" data-accordion-anchor href="#accordion3">Биржевое обращение паев</a>
+              <span class="accordion__title">Биржевое обращение паев</span>
 
               <!-- Accordion tab buttons start -->
-              <div class="accordion__summary-tabs">
-                <div class="accordion__summary-tabs-inner">
-                  <button class="accordion__summary-tab" type="button" data-tab="tab4">
+              <div class="accordion__tabs" data-accordion-tabs>
+                <div class="accordion__tabs-inner">
+                  <a class="accordion__tab" href="#accordion3-tab1" data-tab="accordion3-tab1">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Биржевые ориентиры
-                  </button>
+                  </a>
 
-                  <button class="accordion__summary-tab" type="button" data-tab="tab5">
+                  <a class="accordion__tab" href="#accordion3-tab2" data-tab="accordion3-tab2">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Параметры ценной бумаги
-                  </button>
+                  </a>
                 </div>
               </div>
               <!-- Accordion tab buttons end -->
 
-              <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+              <svg class="accordion__arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
                 <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
               </svg>
-            </summary>
+            </div>
 
             <div class="accordion__content" data-accordion-content>
               <div class="tabs" data-tabs>
                 <!-- Tab buttons start -->
-                <ul class="tabs__buttons">
+                <ul class="tabs__nav" data-tab-buttons>
                   <li>
-                    <button class="tabs__button is-active" type="button" data-tab="tab4">Биржевые ориентиры</button>
+                    <a class="tabs__nav-button is-active" href="#accordion3-tab1" data-tab="accordion3-tab1"
+                      >Биржевые ориентиры</a
+                    >
                   </li>
                   <li>
-                    <button class="tabs__button" type="button" data-tab="tab5">Параметры ценной бумаги</button>
+                    <a class="tabs__nav-button" href="#accordion3-tab2" data-tab="accordion3-tab2"
+                      >Параметры ценной бумаги</a
+                    >
                   </li>
                 </ul>
                 <!-- Tab buttons end -->
 
-                <!-- Tab 4 start -->
-                <div id="tab4" class="tabs__content is-active" data-tab-content>
-                  <section class="section">
+                <!-- Tab 1 start -->
+                <div id="accordion3-tab1" class="tabs__content is-active" data-tab-content>
+                  <div class="block block_24">
                     <img src="/charts1.jpg" alt="" loading="lazy" />
 
                     <p>
@@ -712,11 +758,11 @@
                       Вы можете обратиться к нашим специалистам.
                     </p>
 
-                    <div class="table-scrollable text-center" data-scrollable-table>
-                      <table class="table table_blue">
+                    <div class="table-scroll text-center" data-table-scroll>
+                      <table class="table table_blue table_full-width table_nowrap">
                         <thead class="table__head">
                           <tr class="table__row">
-                            <th class="table__cell table__cell_sticky"></th>
+                            <th class="table__cell is-sticky"></th>
                             <th class="table__cell">БО1</th>
                             <th class="table__cell">БО3</th>
                             <th class="table__cell">БО4</th>
@@ -725,35 +771,35 @@
                         </thead>
                         <tbody class="table__body">
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">15:39:13</td>
+                            <td class="table__cell is-sticky">15:39:13</td>
                             <td class="table__cell text-nowrap">14 672,85</td>
                             <td class="table__cell text-nowrap">14 676,97</td>
                             <td class="table__cell text-nowrap">14 656,00</td>
                             <td class="table__cell text-nowrap">14 700,00</td>
                           </tr>
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">15:39:13</td>
+                            <td class="table__cell is-sticky">15:39:13</td>
                             <td class="table__cell text-nowrap">14 672,85</td>
                             <td class="table__cell text-nowrap">14 676,97</td>
                             <td class="table__cell text-nowrap">14 656,00</td>
                             <td class="table__cell text-nowrap">14 700,00</td>
                           </tr>
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">15:39:13</td>
+                            <td class="table__cell is-sticky">15:39:13</td>
                             <td class="table__cell text-nowrap">14 672,85</td>
                             <td class="table__cell text-nowrap">14 676,97</td>
                             <td class="table__cell text-nowrap">14 656,00</td>
                             <td class="table__cell text-nowrap">14 700,00</td>
                           </tr>
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">15:39:13</td>
+                            <td class="table__cell is-sticky">15:39:13</td>
                             <td class="table__cell text-nowrap">14 672,85</td>
                             <td class="table__cell text-nowrap">14 676,97</td>
                             <td class="table__cell text-nowrap">14 656,00</td>
                             <td class="table__cell text-nowrap">14 700,00</td>
                           </tr>
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">15:39:13</td>
+                            <td class="table__cell is-sticky">15:39:13</td>
                             <td class="table__cell text-nowrap">14 672,85</td>
                             <td class="table__cell text-nowrap">14 676,97</td>
                             <td class="table__cell text-nowrap">14 656,00</td>
@@ -762,13 +808,13 @@
                         </tbody>
                       </table>
                     </div>
-                  </section>
+                  </div>
                 </div>
-                <!-- Tab 4 end -->
+                <!-- Tab 1 end -->
 
-                <!-- Tab 5 start -->
-                <div id="tab5" class="tabs__content" data-tab-content>
-                  <section class="product-page-security section">
+                <!-- Tab 2 start -->
+                <div id="accordion3-tab2" class="tabs__content" data-tab-content>
+                  <div class="block block_24 block_column-2">
                     <table class="table">
                       <tbody class="table__body">
                         <tr class="table__row">
@@ -808,7 +854,7 @@
                         </tr>
                       </tbody>
                     </table>
-                    <div class="section__content">
+                    <div class="block block_16">
                       <p>
                         <span class="text-orange">Внимание!</span> Во избежание возможных ошибок при совершении сделок
                         на бирже настоятельно рекомендуем проводить операции только по лимитным заявкам (указывайте в
@@ -824,153 +870,175 @@
                         на лицевой счет в реестре пайщиков Вы можете обратиться к нашим специалистам.
                       </p>
                     </div>
-                  </section>
+                  </div>
                 </div>
-                <!-- Tab 5 end -->
+                <!-- Tab 2 end -->
               </div>
             </div>
-          </details>
-          <!-- Accordions item 3 end -->
+          </div>
+          <!-- Accordion 3 end -->
 
-          <!-- Accordion item 4 start -->
-          <details class="accordion accordion_bordered">
-            <summary class="accordion__summary">
-              <span class="accordion__summary-title">Сравнение с бенчмарком (Альфа)</span>
+          <!-- Accordion 4 start -->
+          <div class="accordion accordion_bordered" id="accordion4" data-accordion>
+            <div class="accordion__header">
+              <a class="accordion__anchor" data-accordion-anchor href="#accordion4">Сравнение с бенчмарком (Альфа)</a>
+              <span class="accordion__title">Сравнение с бенчмарком (Альфа)</span>
 
               <!-- Accordion tab buttons start -->
-              <div class="accordion__summary-tabs">
-                <div class="accordion__summary-tabs-inner">
-                  <button class="accordion__summary-tab" type="button" data-tab="tab6">
+              <div class="accordion__tabs" data-accordion-tabs>
+                <div class="accordion__tabs-inner">
+                  <a class="accordion__tab" href="#accordion4-tab1" data-tab="accordion4-tab1">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Изменение альфы
-                  </button>
+                  </a>
 
-                  <button class="accordion__summary-tab" type="button" data-tab="tab7">
+                  <a class="accordion__tab" href="#accordion4-tab2" data-tab="accordion4-tab2">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Альфа по итогам года
-                  </button>
+                  </a>
                 </div>
               </div>
               <!-- Accordion tab buttons end -->
 
-              <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+              <svg class="accordion__arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
                 <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
               </svg>
-            </summary>
+            </div>
 
             <div class="accordion__content" data-accordion-content>
-              <section class="product-page-benchmark section">
-                <p class="text-medium">
-                  Альфа – разница между изменением стоимости пая «Арсагера – фонд акций» и индексного фонда с начала
-                  текущего года по дату расчета.
-                </p>
-                <p>В качестве начальной даты для расчета альфы с начала 2024 года берется 29.12.2023 года.</p>
-
-                <div class="product-page-benchmark__grid">
-                  <table class="table">
-                    <tbody class="table__body">
-                      <tr class="table__row">
-                        <td class="table__cell">Дата расчета</td>
-                        <td class="table__cell">Альфа</td>
-                      </tr>
-                      <tr class="table__row">
-                        <td class="table__cell"><time datetime="2024-10-03">03.10.2024</time></td>
-                        <td class="table__cell">0,37%</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p>
-                    Расчет альфы производится в процентах по следующей формуле: <br />
-                    Альфа = (СПФАтек/СПФАнач) – (СПИФтек/СПИФнач), где <br />
-                    СПФАтек – стоимость пая «Арсагера – фонд акций» на текущую дату, <br />
-                    СПФАнач – стоимость пая «Арсагера – фонд акций» на начальную дату, <br />
-                    СПИФтек – стоимость пая индексного фонда на текущую дату, <br />
-                    СПИФнач – стоимость пая индексного фонда на начальную дату. <br />
+              <div class="block block_40">
+                <div class="block block_16">
+                  <p class="text-medium">
+                    Альфа – разница между изменением стоимости пая «Арсагера – фонд акций» и индексного фонда с начала
+                    текущего года по дату расчета.
                   </p>
+                  <p>В качестве начальной даты для расчета альфы с начала 2024 года берется 29.12.2023 года.</p>
+
+                  <div class="block block_40 block_column-auto">
+                    <table class="table text-center">
+                      <tbody class="table__body">
+                        <tr class="table__row">
+                          <td class="table__cell">
+                            <span class="text-gray-dark text-medium">Дата расчета</span>
+                          </td>
+                          <td class="table__cell">
+                            <span class="text-gray-dark text-medium">Альфа</span>
+                          </td>
+                        </tr>
+                        <tr class="table__row">
+                          <td class="table__cell">
+                            <time datetime="2024-10-03">03.10.2024</time>
+                          </td>
+                          <td class="table__cell">0,37%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p>
+                      Расчет альфы производится в процентах по следующей формуле: <br />
+                      <span class="text-gray-dark text-medium">
+                        Альфа = (СП<sup>ФА</sup><sub>тек</sub>/СП<sup>ФА</sup><sub>нач</sub>) – (СП<sup>ИФ</sup
+                        ><sub>тек</sub>/СП<sup>ИФ</sup><sub>нач</sub>) </span
+                      >, где <br />
+                      СП<sup>ФА</sup><sub>тек</sub> – стоимость пая «Арсагера – фонд акций» на текущую дату, <br />
+                      СП<sup>ФА</sup><sub>нач</sub> – стоимость пая «Арсагера – фонд акций» на начальную дату, <br />
+                      СП<sup>ИФ</sup><sub>тек</sub> – стоимость пая индексного фонда на текущую дату, <br />
+                      СП<sup>ИФ</sup><sub>нач</sub> – стоимость пая индексного фонда на начальную дату. <br />
+                    </p>
+                  </div>
                 </div>
 
-                <h3 class="section__content-title text-gray-dark">Изменение альфы в 2024 году</h3>
-                <img src="/charts3.jpg" alt="" loading="lazy" />
-                <p>
-                  На графике приводится информация о том, как менялось значение альфы (оранжевая линия) на протяжении
-                  года, а также приводится информация о ежедневном изменении альфы (голубые столбики характеризуют
-                  положительное изменение, серые – отрицательное).
-                </p>
-                <p>
-                  В долгосрочном периоде мы стремимся превосходить результаты портфеля акций, повторяющего структуру
-                  индекса МосБиржи.
-                </p>
-                <p>
-                  В регулярных видеообзорах о работе фонда мы приводим информацию об агрегированных фундаментальных
-                  показателях портфеля фонда и индекса МосБиржи.
-                </p>
+                <div class="block block_16">
+                  <h3 class="block__title-small text-gray-dark">Изменение альфы в 2024 году</h3>
+                  <img src="/charts3.jpg" alt="" loading="lazy" />
+                </div>
 
-                <div class="product-page-benchmark__grid">
-                  <img src="/charts4.jpg" alt="" loading="lazy" />
-                  <div class="content">
-                    <p>
-                      Показатели рассчитываются исходя из текущих цен акций, их доли в портфеле фонда и в индексе
-                      МосБиржи, а также прогнозов по прибыли и балансовой стоимости компаний по итогам года.
-                    </p>
-                    <p>
-                      Приведенные выше данные могут давать общее представление о перспективности инвестиций в акции.
-                      Сравнение данных по портфелю и индексу дает представление о том, за счет каких фундаментальных
-                      показателей возможно получение результатов управления портфелем, превосходящих изменение индекса
-                      (подробнее об этом в материале «Слайд «Фундаментальные показатели портфеля фонда и индекса
-                      МосБиржи»).
-                    </p>
-                    <p>
-                      Информация об отклонении структуры портфеля фонда от отраслевой структуры индекса приводится в
-                      ежеквартальной отчетности о работе фонда и в материале «Отчет «Отраслевой анализ портфеля».
-                    </p>
+                <div class="block block_16">
+                  <p>
+                    На графике приводится информация о том, как менялось значение альфы (оранжевая линия) на протяжении
+                    года, а также приводится информация о ежедневном изменении альфы (голубые столбики характеризуют
+                    положительное изменение, серые – отрицательное).
+                  </p>
+                  <p>
+                    В долгосрочном периоде мы стремимся превосходить результаты портфеля акций, повторяющего структуру
+                    индекса МосБиржи.
+                  </p>
+                  <p>
+                    В регулярных видеообзорах о работе фонда мы приводим информацию об агрегированных фундаментальных
+                    показателях портфеля фонда и индекса МосБиржи.
+                  </p>
+
+                  <div class="block block_24 block_column-2">
+                    <img src="/charts4.jpg" alt="" loading="lazy" />
+                    <div class="block block_24">
+                      <p>
+                        Показатели рассчитываются исходя из текущих цен акций, их доли в портфеле фонда и в индексе
+                        МосБиржи, а также прогнозов по прибыли и балансовой стоимости компаний по итогам года.
+                      </p>
+                      <p>
+                        Приведенные выше данные могут давать общее представление о перспективности инвестиций в акции.
+                        Сравнение данных по портфелю и индексу дает представление о том, за счет каких фундаментальных
+                        показателей возможно получение результатов управления портфелем, превосходящих изменение индекса
+                        (подробнее об этом в материале «Слайд «Фундаментальные показатели портфеля фонда и индекса
+                        МосБиржи»).
+                      </p>
+                      <p>
+                        Информация об отклонении структуры портфеля фонда от отраслевой структуры индекса приводится в
+                        ежеквартальной отчетности о работе фонда и в материале «Отчет «Отраслевой анализ портфеля».
+                      </p>
+                    </div>
                   </div>
                 </div>
 
                 <div class="tabs" data-tabs>
                   <!-- Tab buttons start -->
-                  <ul class="tabs__buttons">
+                  <ul class="tabs__nav" data-tab-buttons>
                     <li>
-                      <button class="tabs__button is-active" type="button" data-tab="tab6">Изменение альфы</button>
+                      <a class="tabs__nav-button is-active" href="#accordion4-tab1" data-tab="accordion4-tab1"
+                        >Изменение альфы</a
+                      >
                     </li>
                     <li>
-                      <button class="tabs__button" type="button" data-tab="tab7">Альфа по итогам года</button>
+                      <a class="tabs__nav-button" href="#accordion4-tab2" data-tab="accordion4-tab2"
+                        >Альфа по итогам года</a
+                      >
                     </li>
                   </ul>
                   <!-- Tab buttons end -->
 
-                  <!-- Tab 6 start -->
-                  <div id="tab6" class="tabs__content is-active" data-tab-content>
+                  <!-- Tab 1 start -->
+                  <div id="accordion4-tab1" class="tabs__content is-active" data-tab-content>
                     <img src="/charts5.jpg" alt="" loading="lazy" />
                   </div>
-                  <!-- Tab 6 end -->
+                  <!-- Tab 1 end -->
 
-                  <!-- Tab 7 start -->
-                  <div id="tab7" class="tabs__content" data-tab-content>
+                  <!-- Tab 2 start -->
+                  <div id="accordion4-tab2" class="tabs__content" data-tab-content>
                     <img src="/charts6.jpg" alt="" loading="lazy" />
                   </div>
-                  <!-- Tab 7 end -->
+                  <!-- Tab 2 end -->
                 </div>
-              </section>
+              </div>
             </div>
-          </details>
-          <!-- Accordions item 4 end -->
+          </div>
+          <!-- Accordion 4 end -->
 
-          <!-- Accordion item 5 start -->
-          <details class="accordion accordion_bordered">
-            <summary class="accordion__summary">
-              <span class="accordion__summary-title">Состав и структура активов фонда</span>
+          <!-- Accordion 5 start -->
+          <div class="accordion accordion_bordered" id="accordion5" data-accordion>
+            <div class="accordion__header">
+              <a class="accordion__anchor" data-accordion-anchor href="#accordion5">Состав и структура активов фонда</a>
+              <span class="accordion__title">Состав и структура активов фонда</span>
 
-              <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+              <svg class="accordion__arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
                 <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
               </svg>
-            </summary>
+            </div>
 
             <div class="accordion__content" data-accordion-content>
-              <div class="table-scrollable" data-scrollable-table>
+              <div class="table-scroll" data-table-scroll>
                 <table class="fund-structure-table">
                   <thead class="fund-structure-table__head">
                     <tr class="fund-structure-table__row">
@@ -1487,159 +1555,181 @@
                 </table>
               </div>
             </div>
-          </details>
-          <!-- Accordions item 5 end -->
+          </div>
+          <!-- Accordion 5 end -->
 
-          <!-- Accordion item 6 start -->
-          <details class="accordion accordion_bordered">
-            <summary class="accordion__summary">
-              <span class="accordion__summary-title">Отчетность фонда</span>
+          <!-- Accordion 6 start -->
+          <div class="accordion accordion_bordered" id="accordion6" data-accordion>
+            <div class="accordion__header">
+              <a class="accordion__anchor" data-accordion-anchor href="#accordion6">Отчетность фонда</a>
+              <span class="accordion__title">Отчетность фонда</span>
 
               <!-- Accordion tab buttons start -->
-              <div class="accordion__summary-tabs">
-                <div class="accordion__summary-tabs-inner">
-                  <button class="accordion__summary-tab" type="button" data-tab="tab8">
+              <div class="accordion__tabs" data-accordion-tabs>
+                <div class="accordion__tabs-inner">
+                  <a class="accordion__tab" href="#accordion6-tab1" data-tab="accordion6-tab1">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Ежемесячные отчеты
-                  </button>
+                  </a>
 
-                  <button class="accordion__summary-tab" type="button" data-tab="tab9">
+                  <a class="accordion__tab" href="#accordion6-tab2" data-tab="accordion6-tab2">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Ежеквартальные отчеты
-                  </button>
+                  </a>
 
-                  <button class="accordion__summary-tab" type="button" data-tab="tab10">
+                  <a class="accordion__tab" href="#accordion6-tab3" data-tab="accordion6-tab3">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Основные показатели
-                  </button>
+                  </a>
                 </div>
               </div>
               <!-- Accordion tab buttons end -->
 
-              <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+              <svg class="accordion__arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
                 <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
               </svg>
-            </summary>
+            </div>
 
             <div class="accordion__content" data-accordion-content>
               <div class="tabs" data-tabs>
                 <!-- Tab buttons start -->
-                <ul class="tabs__buttons">
+                <ul class="tabs__nav" data-tab-buttons>
                   <li>
-                    <button class="tabs__button is-active" type="button" data-tab="tab8">Ежемесячные отчеты</button>
+                    <a class="tabs__nav-button is-active" href="#accordion6-tab1" data-tab="accordion6-tab1"
+                      >Ежемесячные отчеты</a
+                    >
                   </li>
                   <li>
-                    <button class="tabs__button" type="button" data-tab="tab9">Ежеквартальная отчетность</button>
+                    <a class="tabs__nav-button" href="#accordion6-tab2" data-tab="accordion6-tab2"
+                      >Ежеквартальные отчеты</a
+                    >
                   </li>
                   <li>
-                    <button class="tabs__button" type="button" data-tab="tab10">Основные показатели</button>
+                    <a class="tabs__nav-button" href="#accordion6-tab3" data-tab="accordion6-tab3"
+                      >Основные показатели</a
+                    >
                   </li>
                 </ul>
                 <!-- Tab buttons end -->
 
-                <!-- Tab 8 start -->
-                <div id="tab8" class="tabs__content is-active" data-tab-content>
-                  <section class="section">
-                    <h3 class="section__content-title text-gray-dark">
-                      Места фонда в рейтингах по доходности, изменение стоимости пая и сравнение с бенчмарком (индексом
-                      МосБиржи полной доходности) на 30.09.2024
-                    </h3>
-                    <div class="table-scrollable" data-scrollable-table>
-                      <table class="product-page-table-sticky table">
-                        <tbody class="table__body">
-                          <tr class="table__row">
-                            <th class="table__cell table__cell_sticky"></th>
-                            <th class="table__cell">Сначала года</th>
-                            <th class="table__cell">1 мес.</th>
-                            <th class="table__cell">3 мес.</th>
-                            <th class="table__cell">6 мес.</th>
-                            <th class="table__cell">1 год</th>
-                            <th class="table__cell">3 года</th>
-                            <th class="table__cell">5 лет</th>
-                            <th class="table__cell">10 лет</th>
-                            <th class="table__cell">с 30.06.2005</th>
-                          </tr>
-                          <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">
-                              место в рейтинге по доходности по данным investfunds.ru
-                            </td>
-                            <td class="table__cell text-center">28</td>
-                            <td class="table__cell text-center">41</td>
-                            <td class="table__cell text-center">10</td>
-                            <td class="table__cell text-center">18</td>
-                            <td class="table__cell text-center">28</td>
-                            <td class="table__cell text-center">10</td>
-                            <td class="table__cell text-center">11</td>
-                            <td class="table__cell text-center">5</td>
-                            <td class="table__cell text-center">2</td>
-                          </tr>
-                          <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">(среди всех открытых и биржевых ПИФов акций)</td>
-                            <td class="table__cell text-center">(82)</td>
-                            <td class="table__cell text-center">(94)</td>
-                            <td class="table__cell text-center">(89)</td>
-                            <td class="table__cell text-center">(87)</td>
-                            <td class="table__cell text-center">(79)</td>
-                            <td class="table__cell text-center">(75)</td>
-                            <td class="table__cell text-center">(60)</td>
-                            <td class="table__cell text-center">(55)</td>
-                            <td class="table__cell text-center">(25)</td>
-                          </tr>
-                          <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">изменение стоимости пая</td>
-                            <td class="table__cell text-center">-3,10%</td>
-                            <td class="table__cell text-center">7,50%</td>
-                            <td class="table__cell text-center">-5,74%</td>
-                            <td class="table__cell text-center">-5,74%</td>
-                            <td class="table__cell text-center">-1,15%</td>
-                            <td class="table__cell text-center">6,68%</td>
-                            <td class="table__cell text-center">75,35%</td>
-                            <td class="table__cell text-center">464,98%</td>
-                            <td class="table__cell text-center">1 427,51%</td>
-                          </tr>
-                          <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">изменение бенчмарка фонда (MCFTR)</td>
-                            <td class="table__cell text-center">-1,94%</td>
-                            <td class="table__cell text-center">8,09%</td>
-                            <td class="table__cell text-center">-6,16%</td>
-                            <td class="table__cell text-center">-9,66%</td>
-                            <td class="table__cell text-center">-1,09%</td>
-                            <td class="table__cell text-center">-11,39%</td>
-                            <td class="table__cell text-center">49,28%</td>
-                            <td class="table__cell text-center">284,18%</td>
-                            <td class="table__cell text-center">970,44%</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                <!-- Tab 1 start -->
+                <div id="accordion6-tab1" class="tabs__content is-active" data-tab-content>
+                  <div class="block block_40">
+                    <div class="block block_16">
+                      <h3 class="block__title-small text-gray-dark">
+                        Места фонда в рейтингах по доходности, изменение стоимости пая и сравнение с бенчмарком
+                        (индексом МосБиржи полной доходности) на 30.09.2024
+                      </h3>
+                      <div class="table-scroll" data-table-scroll>
+                        <table class="table table_product-fixed">
+                          <tbody class="table__body">
+                            <tr class="table__row">
+                              <th class="table__cell is-sticky"></th>
+                              <th class="table__cell">Сначала года</th>
+                              <th class="table__cell">1 мес.</th>
+                              <th class="table__cell">3 мес.</th>
+                              <th class="table__cell">6 мес.</th>
+                              <th class="table__cell">1 год</th>
+                              <th class="table__cell">3 года</th>
+                              <th class="table__cell">5 лет</th>
+                              <th class="table__cell">10 лет</th>
+                              <th class="table__cell">с 30.06.2005</th>
+                            </tr>
+                            <tr class="table__row">
+                              <td class="table__cell is-sticky">
+                                место в рейтинге по доходности по данным investfunds.ru
+                              </td>
+                              <td class="table__cell text-center">28</td>
+                              <td class="table__cell text-center">41</td>
+                              <td class="table__cell text-center">10</td>
+                              <td class="table__cell text-center">18</td>
+                              <td class="table__cell text-center">28</td>
+                              <td class="table__cell text-center">10</td>
+                              <td class="table__cell text-center">11</td>
+                              <td class="table__cell text-center">5</td>
+                              <td class="table__cell text-center">2</td>
+                            </tr>
+                            <tr class="table__row">
+                              <td class="table__cell is-sticky">(среди всех открытых и биржевых ПИФов акций)</td>
+                              <td class="table__cell text-center">(82)</td>
+                              <td class="table__cell text-center">(94)</td>
+                              <td class="table__cell text-center">(89)</td>
+                              <td class="table__cell text-center">(87)</td>
+                              <td class="table__cell text-center">(79)</td>
+                              <td class="table__cell text-center">(75)</td>
+                              <td class="table__cell text-center">(60)</td>
+                              <td class="table__cell text-center">(55)</td>
+                              <td class="table__cell text-center">(25)</td>
+                            </tr>
+                            <tr class="table__row">
+                              <td class="table__cell is-sticky">изменение стоимости пая</td>
+                              <td class="table__cell text-center">-3,10%</td>
+                              <td class="table__cell text-center">7,50%</td>
+                              <td class="table__cell text-center">-5,74%</td>
+                              <td class="table__cell text-center">-5,74%</td>
+                              <td class="table__cell text-center">-1,15%</td>
+                              <td class="table__cell text-center">6,68%</td>
+                              <td class="table__cell text-center">75,35%</td>
+                              <td class="table__cell text-center">464,98%</td>
+                              <td class="table__cell text-center">1 427,51%</td>
+                            </tr>
+                            <tr class="table__row">
+                              <td class="table__cell is-sticky">изменение бенчмарка фонда (MCFTR)</td>
+                              <td class="table__cell text-center">-1,94%</td>
+                              <td class="table__cell text-center">8,09%</td>
+                              <td class="table__cell text-center">-6,16%</td>
+                              <td class="table__cell text-center">-9,66%</td>
+                              <td class="table__cell text-center">-1,09%</td>
+                              <td class="table__cell text-center">-11,39%</td>
+                              <td class="table__cell text-center">49,28%</td>
+                              <td class="table__cell text-center">284,18%</td>
+                              <td class="table__cell text-center">970,44%</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
 
                     <div class="tabs" data-tabs>
-                      <ul class="tabs__buttons">
+                      <ul class="tabs__nav" data-tab-buttons>
                         <li>
-                          <button class="tabs__button is-active" type="button" data-tab="tab2024">2024</button>
+                          <a
+                            class="tabs__nav-button is-active"
+                            href="#accordion6-tab1-2024"
+                            data-tab="accordion6-tab1-2024"
+                            >2024</a
+                          >
                         </li>
                         <li>
-                          <button class="tabs__button" type="button" data-tab="tab2023">2023</button>
+                          <a class="tabs__nav-button" href="#accordion6-tab1-2023" data-tab="accordion6-tab1-2023"
+                            >2023</a
+                          >
                         </li>
                         <li>
-                          <button class="tabs__button" type="button" data-tab="tab2022">2022</button>
+                          <a class="tabs__nav-button" href="#accordion6-tab1-2022" data-tab="accordion6-tab1-2022"
+                            >2022</a
+                          >
                         </li>
                         <li>
-                          <button class="tabs__button" type="button" data-tab="tab2021">2021</button>
+                          <a class="tabs__nav-button" href="#accordion6-tab1-2021" data-tab="accordion6-tab1-2021"
+                            >2021</a
+                          >
                         </li>
                         <li>
-                          <button class="tabs__button" type="button" data-tab="tab2020">2020</button>
+                          <a class="tabs__nav-button" href="#accordion6-tab1-2020" data-tab="accordion6-tab1-2020"
+                            >2020</a
+                          >
                         </li>
                       </ul>
 
-                      <div id="tab2024" class="tabs__content is-active" data-tab-content>
-                        <ul class="files">
+                      <div id="accordion6-tab1-2024" class="tabs__content is-active" data-tab-content>
+                        <ul class="product-files">
                           <li>
                             <a class="file-link" href="#">
                               <svg class="file-link__icon" viewBox="0 0 48 57" width="48" height="57">
@@ -1741,85 +1831,107 @@
                           </li>
                         </ul>
                       </div>
+                      <div id="accordion6-tab1-2023" class="tabs__content" data-tab-content>2023</div>
+                      <div id="accordion6-tab1-2022" class="tabs__content" data-tab-content>2022</div>
+                      <div id="accordion6-tab1-2021" class="tabs__content" data-tab-content>2021</div>
+                      <div id="accordion6-tab1-2020" class="tabs__content" data-tab-content>2020</div>
                     </div>
-                  </section>
+                  </div>
                 </div>
-                <!-- Tab 8 end -->
+                <!-- Tab 1 end -->
 
-                <!-- Tab 9 start -->
-                <div id="tab9" class="tabs__content" data-tab-content>
-                  <section class="section">
-                    <h3 class="section__content-title text-gray-dark">Краткие итоги 2-го квартала 2024 года</h3>
-                    <ul>
-                      <li>изменение индекса МосБиржи полной доходности составило -3,56%;</li>
-                      <li>стоимость пая за квартал снизилась на 4,16%;</li>
-                      <li>СЧА фонда уменьшилась, наблюдался приток средств пайщиков;</li>
-                      <li>
-                        наибольшую долю в портфеле занимает отрасль «Добыча, переработка нефти и газа». На втором месте
-                        «Финансовый сектор», «Черная металлургия, добыча угля и железной руды» на третьем месте;
-                      </li>
-                      <li>
-                        уровень «диверсификации Арсагеры» портфеля находился в диапазоне 49,5%–52,0% (зависимость между
-                        уровнем диверсификации портфеля и его результатом представлена на графике «клин Арсагеры» на
-                        стр. 29).
-                      </li>
-                    </ul>
-                    <h3 class="section__content-title text-gray-dark">Интересная информация о фондовом рынке</h3>
-                    <p>
-                      Индекс МосБиржи полной доходности во 2 квартале снизился на 3,56% (с 7 582 до 7 312 пунктов), при
-                      этом в первой половине квартала рост индекса превышал 6%. Триггером к столь резкому снижению стало
-                      введение санкций против МосБиржи и, как следствие, риски вторичных санкций в отношении инвесторов
-                      из дружественных стран. Жесткая риторика Банка России в части ужесточения ДКП также вызвала
-                      падение цен на российские акции и облигации, усилился приток средств на депозиты (объем депозитов
-                      +2,8 трлн ₽ за квартал) и в фонды денежного рынка (аналог депозитов). Курс рубля укрепился на 7%
-                      (с 92,37 до 85,75 ₽ за долл. США), несмотря на ожидания по его резкому ослаблению после выборов
-                      Президента РФ и после отмены биржевых торгов из-за санкций против МосБиржи. Цены на нефть (-2,3% с
-                      86,95 до 84,94 долл. за баррель) и другие ключевые сырьевые товары менялись незначительно. В целом
-                      во втором квартале наблюдался существенный рост ВВП, промышленного производства и объемов
-                      кредитования, также росли реальные доходы населения. Уровень безработицы находится на минимальных
-                      значениях за всю историю наблюдений.
-                    </p>
-                    <p>
-                      В группе 6.1 лучший результат в наших портфелях у акций Сбербанка (+9%), основная причина хорошие
-                      результаты основной деятельности и высокая дивидендная доходность. Отрицательный результат у акций
-                      НОВАТЭКа (-18%) связан с усилением санкционного давления на СПГ-проекты компании. Обвальное
-                      падение котировок Газпрома (-26%) было вызвано отражением в отчетности потерь по европейскому
-                      направлению и решением об отказе от выплаты дивидендов.
-                    </p>
-                    <p>
-                      В группе 6.2 хорошие результаты основной деятельности и высокая дивидендная доходность обеспечили
-                      существенный рост акций Банка Санкт-Петербург (+32%), а высокие цены на алюминий положительно
-                      сказались на котировках акций Русала (+24%). Снижение стоимости акций ГК Самолет (-16%)
-                      происходило вопреки хорошим результатам основной деятельности и подготовки к проведению IPO
-                      дочерней компании (Самолет Плюс).
-                    </p>
-                    <p>
-                      В группе 6.3 результат лучше средней по группе (-7,2%) у акций НК РуссНефть (+2%). Результат хуже
-                      средней у акций М.Видео (-14%, объявлена допэмиссия) и ЧМК (-16%, слабая годовая отчетность).
-                    </p>
+                <!-- Tab 2 start -->
+                <div id="accordion6-tab2" class="tabs__content" data-tab-content>
+                  <div class="block block_40">
+                    <div class="block block_16">
+                      <h3 class="block__title-small text-gray-dark">Краткие итоги 2-го квартала 2024 года</h3>
+                      <ul>
+                        <li>изменение индекса МосБиржи полной доходности составило -3,56%;</li>
+                        <li>стоимость пая за квартал снизилась на 4,16%;</li>
+                        <li>СЧА фонда уменьшилась, наблюдался приток средств пайщиков;</li>
+                        <li>
+                          наибольшую долю в портфеле занимает отрасль «Добыча, переработка нефти и газа». На втором
+                          месте «Финансовый сектор», «Черная металлургия, добыча угля и железной руды» на третьем месте;
+                        </li>
+                        <li>
+                          уровень «диверсификации Арсагеры» портфеля находился в диапазоне 49,5%–52,0% (зависимость
+                          между уровнем диверсификации портфеля и его результатом представлена на графике «клин
+                          Арсагеры» на стр. 29).
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="block block_16">
+                      <h3 class="block__title-small text-gray-dark">Интересная информация о фондовом рынке</h3>
+                      <p>
+                        Индекс МосБиржи полной доходности во 2 квартале снизился на 3,56% (с 7 582 до 7 312 пунктов),
+                        при этом в первой половине квартала рост индекса превышал 6%. Триггером к столь резкому снижению
+                        стало введение санкций против МосБиржи и, как следствие, риски вторичных санкций в отношении
+                        инвесторов из дружественных стран. Жесткая риторика Банка России в части ужесточения ДКП также
+                        вызвала падение цен на российские акции и облигации, усилился приток средств на депозиты (объем
+                        депозитов +2,8 трлн ₽ за квартал) и в фонды денежного рынка (аналог депозитов). Курс рубля
+                        укрепился на 7% (с 92,37 до 85,75 ₽ за долл. США), несмотря на ожидания по его резкому
+                        ослаблению после выборов Президента РФ и после отмены биржевых торгов из-за санкций против
+                        МосБиржи. Цены на нефть (-2,3% с 86,95 до 84,94 долл. за баррель) и другие ключевые сырьевые
+                        товары менялись незначительно. В целом во втором квартале наблюдался существенный рост ВВП,
+                        промышленного производства и объемов кредитования, также росли реальные доходы населения.
+                        Уровень безработицы находится на минимальных значениях за всю историю наблюдений.
+                      </p>
+                      <p>
+                        В группе 6.1 лучший результат в наших портфелях у акций Сбербанка (+9%), основная причина
+                        хорошие результаты основной деятельности и высокая дивидендная доходность. Отрицательный
+                        результат у акций НОВАТЭКа (-18%) связан с усилением санкционного давления на СПГ-проекты
+                        компании. Обвальное падение котировок Газпрома (-26%) было вызвано отражением в отчетности
+                        потерь по европейскому направлению и решением об отказе от выплаты дивидендов.
+                      </p>
+                      <p>
+                        В группе 6.2 хорошие результаты основной деятельности и высокая дивидендная доходность
+                        обеспечили существенный рост акций Банка Санкт-Петербург (+32%), а высокие цены на алюминий
+                        положительно сказались на котировках акций Русала (+24%). Снижение стоимости акций ГК Самолет
+                        (-16%) происходило вопреки хорошим результатам основной деятельности и подготовки к проведению
+                        IPO дочерней компании (Самолет Плюс).
+                      </p>
+                      <p>
+                        В группе 6.3 результат лучше средней по группе (-7,2%) у акций НК РуссНефть (+2%). Результат
+                        хуже средней у акций М.Видео (-14%, объявлена допэмиссия) и ЧМК (-16%, слабая годовая
+                        отчетность).
+                      </p>
+                    </div>
 
                     <div class="tabs" data-tabs>
-                      <ul class="tabs__buttons">
+                      <ul class="tabs__nav" data-tab-buttons>
                         <li>
-                          <button class="tabs__button is-active" type="button" data-tab="tab2024-1">2024</button>
+                          <a
+                            class="tabs__nav-button is-active"
+                            href="#accordion6-tab2-2024"
+                            data-tab="accordion6-tab2-2024"
+                            >2024</a
+                          >
                         </li>
                         <li>
-                          <button class="tabs__button" type="button" data-tab="tab2023-1">2023</button>
+                          <a class="tabs__nav-button" href="#accordion6-tab2-2023" data-tab="accordion6-tab2-2023"
+                            >2023</a
+                          >
                         </li>
                         <li>
-                          <button class="tabs__button" type="button" data-tab="tab2022-1">2022</button>
+                          <a class="tabs__nav-button" href="#accordion6-tab2-2022" data-tab="accordion6-tab2-2022"
+                            >2022</a
+                          >
                         </li>
                         <li>
-                          <button class="tabs__button" type="button" data-tab="tab2021-1">2021</button>
+                          <a class="tabs__nav-button" href="#accordion6-tab2-2021" data-tab="accordion6-tab2-2021"
+                            >2021</a
+                          >
                         </li>
                         <li>
-                          <button class="tabs__button" type="button" data-tab="tab2020-1">2020</button>
+                          <a class="tabs__nav-button" href="#accordion6-tab2-2020" data-tab="accordion6-tab2-2020"
+                            >2020</a
+                          >
                         </li>
-                        <li></li>
                       </ul>
 
-                      <div id="tab2024-1" class="tabs__content is-active" data-tab-content>
-                        <ul class="files">
+                      <div id="accordion6-tab2-2024" class="tabs__content is-active" data-tab-content>
+                        <ul class="product-files">
                           <li>
                             <a class="file-link" href="#">
                               <svg class="file-link__icon" viewBox="0 0 48 57" width="48" height="57">
@@ -1866,21 +1978,24 @@
                           </li>
                         </ul>
                       </div>
+                      <div id="accordion6-tab2-2023" class="tabs__content" data-tab-content>2023</div>
+                      <div id="accordion6-tab2-2022" class="tabs__content" data-tab-content>2022</div>
+                      <div id="accordion6-tab2-2021" class="tabs__content" data-tab-content>2021</div>
+                      <div id="accordion6-tab2-2020" class="tabs__content" data-tab-content>2020</div>
                     </div>
-                  </section>
+                  </div>
                 </div>
-                <!-- Tab 9 end -->
+                <!-- Tab 2 end -->
 
-                <!-- Tab 10 start -->
-                <div id="tab10" class="tabs__content" data-tab-content>
-                  <!-- Content start -->
-                  <section class="section">
-                    <h3 class="section__content-title text-gray-dark">Основные показатели</h3>
-                    <div class="table-scrollable" data-scrollable-table>
-                      <table class="product-page-table-sticky table">
+                <!-- Tab 3 start -->
+                <div id="accordion6-tab3" class="tabs__content" data-tab-content>
+                  <div class="block block_16">
+                    <h3 class="block__title-small text-gray-dark">Основные показатели</h3>
+                    <div class="table-scroll" data-table-scroll>
+                      <table class="table table_product-fixed">
                         <tbody class="table__body">
                           <tr class="table__row">
-                            <th class="table__cell table__cell_sticky text-gray-dark text-medium">
+                            <th class="table__cell is-sticky text-gray-dark text-medium">
                               Показатели на дату(за период)
                             </th>
                             <th class="table__cell text-gray-dark text-medium">
@@ -1903,7 +2018,7 @@
                             </th>
                           </tr>
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">СЧА фонда, тыс. руб.</td>
+                            <td class="table__cell is-sticky">СЧА фонда, тыс. руб.</td>
                             <td class="table__cell text-center">14 672,85</td>
                             <td class="table__cell text-center">14 676,97</td>
                             <td class="table__cell text-center">14 656,00</td>
@@ -1912,7 +2027,7 @@
                             <td class="table__cell text-center">14 700,00</td>
                           </tr>
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">Расчетная стоимость пая, руб.*</td>
+                            <td class="table__cell is-sticky">Расчетная стоимость пая, руб.*</td>
                             <td class="table__cell text-center">14 672,78</td>
                             <td class="table__cell text-center">14 677,71</td>
                             <td class="table__cell text-center">14 656,00</td>
@@ -1921,7 +2036,7 @@
                             <td class="table__cell text-center">14 700,00</td>
                           </tr>
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">СЧА фонда, тыс. руб.</td>
+                            <td class="table__cell is-sticky">СЧА фонда, тыс. руб.</td>
                             <td class="table__cell text-center">14 672,93</td>
                             <td class="table__cell text-center">14 680,15</td>
                             <td class="table__cell text-center">14 660,00</td>
@@ -1930,7 +2045,7 @@
                             <td class="table__cell text-center">14 704,00</td>
                           </tr>
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">Количество паев, шт.</td>
+                            <td class="table__cell is-sticky">Количество паев, шт.</td>
                             <td class="table__cell text-center">14 672,52</td>
                             <td class="table__cell text-center">14 679,15</td>
                             <td class="table__cell text-center">14 658,00</td>
@@ -1939,9 +2054,7 @@
                             <td class="table__cell text-center">14 702,00</td>
                           </tr>
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">
-                              Количество счетов, открытых в реестре пайщиков
-                            </td>
+                            <td class="table__cell is-sticky">Количество счетов, открытых в реестре пайщиков</td>
                             <td class="table__cell text-center">14 672,43</td>
                             <td class="table__cell text-center">14 680,29</td>
                             <td class="table__cell text-center">14 658,00</td>
@@ -1950,7 +2063,7 @@
                             <td class="table__cell text-center">14 702,00</td>
                           </tr>
                           <tr class="table__row">
-                            <td class="table__cell table__cell_sticky">
+                            <td class="table__cell is-sticky">
                               Приток/отток денежных средств по итогам отчетного периода, тыс. руб.
                             </td>
                             <td class="table__cell text-center">14 672,43</td>
@@ -1963,105 +2076,115 @@
                         </tbody>
                       </table>
                     </div>
-                  </section>
-                  <!-- Content end -->
+                  </div>
                 </div>
-                <!-- Tab 10 end -->
+                <!-- Tab 3 end -->
               </div>
             </div>
-          </details>
-          <!-- Accordions item 6 end -->
+          </div>
+          <!-- Accordion 6 end -->
 
-          <!-- Accordion item 7 start -->
-          <details class="accordion accordion_bordered">
-            <summary class="accordion__summary">
-              <span class="accordion__summary-title">Официальные документы и отчетность</span>
+          <!-- Accordion 7 start -->
+          <div class="accordion accordion_bordered" id="accordion7" data-accordion>
+            <div class="accordion__header">
+              <a class="accordion__anchor" data-accordion-anchor href="#accordion7"
+                >Официальные документы и отчетность</a
+              >
+              <span class="accordion__title">Официальные документы и отчетность</span>
 
               <!-- Accordion tab buttons start -->
-              <div class="accordion__summary-tabs">
-                <div class="accordion__summary-tabs-inner">
-                  <button class="accordion__summary-tab" type="button" data-tab="tab11">
+              <div class="accordion__tabs" data-accordion-tabs>
+                <div class="accordion__tabs-inner">
+                  <a class="accordion__tab" href="#accordion7-tab1" data-tab="accordion7-tab1">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Общая информация
-                  </button>
+                  </a>
 
-                  <button class="accordion__summary-tab" type="button" data-tab="tab12">
+                  <a class="accordion__tab" href="#accordion7-tab2" data-tab="accordion7-tab2">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Ключевой информационный документ
-                  </button>
+                  </a>
 
-                  <button class="accordion__summary-tab" type="button" data-tab="tab13">
-                    <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
-                      <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
-                    </svg>
-                    Правила фонда
-                  </button>
-
-                  <button class="accordion__summary-tab" type="button" data-tab="tab14">
+                  <a class="accordion__tab" href="#accordion7-tab3" data-tab="accordion7-tab3">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Правила доверительного управления
-                  </button>
+                  </a>
 
-                  <button class="accordion__summary-tab" type="button" data-tab="tab15">
+                  <a class="accordion__tab" href="#accordion7-tab4" data-tab="accordion7-tab4">
                     <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
                       <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
                     </svg>
                     Правила определения СЧА
-                  </button>
+                  </a>
+
+                  <a class="accordion__tab" href="#accordion7-tab5" data-tab="accordion7-tab5">
+                    <svg viewBox="0 0 15 18" width="15" height="18" aria-hidden="true">
+                      <use href="/sprite.svg#triangle-right-icon" x="0" y="0"></use>
+                    </svg>
+                    Сообщения, связанные с деятельностью фонда
+                  </a>
                 </div>
               </div>
               <!-- Accordion tab buttons end -->
 
-              <svg class="accordion__summary-arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
+              <svg class="accordion__arrow" viewBox="0 0 31 11" width="31" height="11" aria-hidden="true">
                 <use href="/sprite.svg#arrow-down-icon-2" x="0" y="0"></use>
               </svg>
-            </summary>
+            </div>
 
             <div class="accordion__content" data-accordion-content>
-              <section class="section">
-                <p>
-                  На данной странице содержится информация об официальных документах фонда, которые должны раскрываться
-                  в соответствии с законодательством РФ.
-                </p>
-                <p>
-                  Вы можете <a class="link link_blue" href="#">подписаться</a> на рассылку документов, публикуемых в
-                  соответствии с требованиями Указания Банка России от 02.11.2020 г. № 5609-У.
-                </p>
+              <div class="block block_40">
+                <div class="block block_16">
+                  <p>
+                    На данной странице содержится информация об официальных документах фонда, которые должны
+                    раскрываться в соответствии с законодательством РФ.
+                  </p>
+                  <p>
+                    Вы можете <a class="link link_blue" href="#">подписаться</a> на рассылку документов, публикуемых в
+                    соответствии с требованиями Указания Банка России от 02.11.2020 г. № 5609-У.
+                  </p>
+                </div>
 
                 <div class="tabs" data-tabs>
                   <!-- Tab buttons start -->
-                  <ul class="tabs__buttons">
+                  <ul class="tabs__nav" data-tab-buttons>
                     <li>
-                      <button class="tabs__button is-active" type="button" data-tab="tab11">Общая информация</button>
+                      <a class="tabs__nav-button is-active" href="#accordion7-tab1" data-tab="accordion7-tab1"
+                        >Общая информация</a
+                      >
                     </li>
                     <li>
-                      <button class="tabs__button" type="button" data-tab="tab12">
-                        Ключевой информационный документ
-                      </button>
+                      <a class="tabs__nav-button" href="#accordion7-tab2" data-tab="accordion7-tab2"
+                        >Ключевой информационный документ</a
+                      >
                     </li>
                     <li>
-                      <button class="tabs__button" type="button" data-tab="tab13">Правила фонда</button>
+                      <a class="tabs__nav-button" href="#accordion7-tab3" data-tab="accordion7-tab3"
+                        >Правила доверительного управления</a
+                      >
                     </li>
                     <li>
-                      <button class="tabs__button" type="button" data-tab="tab14">
-                        Правила доверительного управления
-                      </button>
+                      <a class="tabs__nav-button" href="#accordion7-tab4" data-tab="accordion7-tab4"
+                        >Правила определения СЧА</a
+                      >
                     </li>
                     <li>
-                      <button class="tabs__button" type="button" data-tab="tab15">Правила определения СЧА</button>
+                      <a class="tabs__nav-button" href="#accordion7-tab5" data-tab="accordion7-tab5"
+                        >Сообщения, связанные с деятельностью фонда</a
+                      >
                     </li>
                   </ul>
                   <!-- Tab buttons end -->
 
-                  <!-- Tab 11 start -->
-                  <div id="tab11" class="tabs__content is-active" data-tab-content>
-                    <ul class="files files_two-columns">
+                  <!-- Tab 1 start -->
+                  <div id="accordion7-tab1" class="tabs__content is-active" data-tab-content>
+                    <ul class="product-files product-files_column-2">
                       <li>
                         <a class="file-link" href="#">
                           <svg class="file-link__icon" viewBox="0 0 48 57" width="48" height="57">
@@ -2154,29 +2277,36 @@
                       </li>
                     </ul>
                   </div>
-                  <!-- Tab 11 end -->
+                  <!-- Tab 1 end -->
 
-                  <!-- Tab 12 start -->
-                  <div id="tab12" class="tabs__content" data-tab-content>Ключевой информационный документ</div>
-                  <!-- Tab 12 end -->
+                  <!-- Tab 2 start -->
+                  <div id="accordion7-tab2" class="tabs__content" data-tab-content>
+                    Ключевой информационный документ
+                  </div>
+                  <!-- Tab 2 end -->
 
-                  <!-- Tab 13 start -->
-                  <div id="tab13" class="tabs__content" data-tab-content>Правила фонда</div>
-                  <!-- Tab 13 end -->
+                  <!-- Tab 3 start -->
+                  <div id="accordion7-tab3" class="tabs__content" data-tab-content>
+                    Правила доверительного управления
+                  </div>
+                  <!-- Tab 3 end -->
 
-                  <!-- Tab 14 start -->
-                  <div id="tab14" class="tabs__content" data-tab-content>Правила доверительного управления</div>
-                  <!-- Tab 14 end -->
+                  <!-- Tab 4 start -->
+                  <div id="accordion7-tab4" class="tabs__content" data-tab-content>Правила определения СЧА</div>
+                  <!-- Tab 4 end -->
 
-                  <!-- Tab 15 start -->
-                  <div id="tab15" class="tabs__content" data-tab-content>Правила определения СЧА</div>
-                  <!-- Tab 15 end -->
+                  <!-- Tab 5 start -->
+                  <div id="accordion7-tab5" class="tabs__content" data-tab-content>
+                    Сообщения, связанные с деятельностью фонда
+                  </div>
+                  <!-- Tab 5 end -->
                 </div>
-              </section>
+              </div>
             </div>
-          </details>
-          <!-- Accordions item 7 end -->
-        </section>
+          </div>
+          <!-- Accordion 7 end -->
+        </div>
+        <!-- Content end -->
       </div>
       <!-- Page container end -->
     </main>
@@ -2186,98 +2316,158 @@
     <footer class="footer">
   <div class="container">
     <div class="footer__top">
-      <div class="footer__wrap">
-        <div class="footer__info">
-          <a class="footer__logo" href="/public" aria-label="Перейти на главную страницу">
-            <img class="" src="/logo-icon.svg" alt="Арсагера логотип" loading="lazy" width="58" height="52" />
+      <div class="footer__main">
+        <div class="footer__brand">
+          <a class="footer__logo" href="/" aria-label="Перейти на главную страницу">
+            <img
+              class="footer__logo-image"
+              src="/logo-icon.svg"
+              alt="Логотип Арсагера"
+              loading="lazy"
+              width="58"
+              height="52"
+            />
           </a>
-          <div class="footer__info-text">
-            <p><span data-copyright-year>2025</span> © ПАО «УК «Арсагера»</p>
-            <p>Все права защищены законодательством РФ</p>
+          <div class="footer__copyright">
+            <p class="footer__copyright-text">
+              <span class="footer__copyright-year" data-copyright-year>2025</span>
+              © ПАО «УК «Арсагера»
+            </p>
+            <p class="footer__copyright-text">Все права защищены законодательством РФ</p>
           </div>
         </div>
+
         <div class="footer__social">
-        <!-- todo add social-->
+          <h3 class="footer__social-title">Мы в социальных сетях</h3>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="Telegram">
+                <svg class="social__icon" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
+                  <use href="/sprite.svg#telegram-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="YouTube">
+                <svg class="social__icon" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
+                  <use href="/sprite.svg#youtube-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="Дзен">
+                <svg class="social__icon" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
+                  <use href="/sprite.svg#social-network-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="ВКонтакте">
+                <svg class="social__icon" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
+                  <use href="/sprite.svg#vk-icon"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="Rutube">
+                <svg class="social__icon" viewBox="0 0 36 36" width="36" height="36" aria-hidden="true">
+                  <use href="/sprite.svg#rutube-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-        <a class="footer__link link link_gray weight-500" href="#">Меры защиты фондового рынка</a>
+
+        <a class="footer__protection-link link link_gray" href="#"> Меры защиты фондового рынка </a>
       </div>
-      <div class="footer__nav">
-        <ul class="footer__nav-list">
-          <li>
-            <a class="footer__link footer__link_main link link_gray" href="#">Клиентам</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">О компании</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Аналитика</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Лекции и видео</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Книга</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Статьи</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Блогофорум</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Ответы на вопросы</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Конкурсы и акции</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Раскрытие информации</a>
-          </li>
-        </ul>
-        <ul class="footer__nav-list">
-          <li>
-            <a class="footer__link footer__link_main link link_gray" href="#">Акционерам</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">О компании</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Рынок акций</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Об акционерах</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Совет Директоров и Правление</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Обратная связь по вопросам корпоративного управления</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Библиотека документов</a>
-          </li>
-        </ul>
-        <ul class="footer__nav-list">
-          <li>
-            <a class="footer__link footer__link_main link link_gray" href="#">Сотрудникам</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Организационная структура</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Права и обязанности</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Вознаграждение</a>
-          </li>
-          <li>
-            <a class="footer__link link link_gray" href="#">Вакансии</a>
-          </li>
-        </ul>
-      </div>
+
+      <nav class="footer__nav" aria-label="Дополнительная навигация">
+        <div class="footer__nav-column">
+          <h3 class="footer__nav-title">
+            <a class="footer__nav-main-link link link_gray" href="#">Клиентам</a>
+          </h3>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">О компании</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Аналитика</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Лекции и видео</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Книга</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Статьи</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Блогофорум</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Ответы на вопросы</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Конкурсы и акции</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Раскрытие информации</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-column">
+          <h3 class="footer__nav-title">
+            <a class="footer__nav-main-link link link_gray" href="#">Акционерам</a>
+          </h3>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">О компании</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Рынок акций</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Об акционерах</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Совет Директоров и Правление</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#"
+                >Обратная связь по вопросам корпоративного управления</a
+              >
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Библиотека документов</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-column">
+          <h3 class="footer__nav-title">
+            <a class="footer__nav-main-link link link_gray" href="#">Сотрудникам</a>
+          </h3>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Организационная структура</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Права и обязанности</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Вознаграждение</a>
+            </li>
+            <li class="footer__nav-item">
+              <a class="footer__nav-link link link_gray" href="#">Вакансии</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
 
-    <div class="footer__text">
+    <div class="footer__legal">
       <p>
         194021, Санкт-Петербург, ул. Шателена, д. 26, литер А помещ. 1-Н, БЦ «Ренессанс», 8-й этаж. Тел. +7(812)
         313-05-30 Стоимость инвестиционных паев может увеличиваться и уменьшаться, результаты инвестирования в прошлом
@@ -2301,403 +2491,401 @@
       </p>
     </div>
 
-    <div class="footer__policy">
-      <a class="link link_blue" href="#">Политика ПАО «УК «Арсагера» в отношении обработки персональных данных </a>
-      <a class="link link_blue" href="#">Политика конфиденциальности сайта ПАО «УК «Арсагера»</a>
+    <div class="footer__policies">
+      <a class="footer__policy-link link link_blue" href="#">
+        Политика ПАО «УК «Арсагера» в отношении обработки персональных данных
+      </a>
+      <a class="footer__policy-link link link_blue" href="#"> Политика конфиденциальности сайта ПАО «УК «Арсагера» </a>
     </div>
   </div>
 </footer>
 
     <!-- Footer block end -->
 
-    <!-- Modal contacts start -->
-    <!-- Modal contacts start -->
-<div class="modal is-hidden" id="modal-contacts" aria-hidden="true">
+    <!-- Modals start -->
+    <div class="modal is-hidden" id="modal-contacts" role="dialog" aria-modal="true">
   <div class="modal__backdrop" data-modal-button="modal-contacts"></div>
-  <div class="modal__box modal-contacts">
+  <div class="modal__box">
     <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-contacts">
-      <svg viewBox="0 0 39 38" width="39" height="38">
+      <svg viewBox="0 0 39 38" width="39" height="38" aria-hidden="true">
         <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
       </svg>
     </button>
-    <div class="modal-contacts__item">
-      <h2 class="modal-contacts__title">Написать</h2>
-      <div class="modal-contacts__chats">
-        <a class="link link_gray" href="#">
-          <svg viewBox="0 0 16 16" width="16" height="16">
-            <use href="/sprite.svg#headphones-icon-2" x="0" y="0"></use>
-          </svg>
-          <span class="link__text">Онлайн</span>
-        </a>
-        <a class="link link_gray" href="#">
-          <svg viewBox="0 0 16 16" width="16" height="16">
-            <use href="/sprite.svg#whats-app-icon-2" x="0" y="0"></use>
-          </svg>
-          <span class="link__text">Whatsapp</span>
-        </a>
-        <button class="link link_gray" type="button" data-modal-button="modal-feedback">
-          <svg viewBox="0 0 16 16" width="16" height="16">
-            <use href="/sprite.svg#mail-icon" x="0" y="0"></use>
-          </svg>
-          <span class="link__text">Обращение</span>
-        </button>
-        <a class="link link_gray" href="#">
-          <svg viewBox="0 0 16 16" width="16" height="16">
-            <use href="/sprite.svg#telegram-icon-2" x="0" y="0"></use>
-          </svg>
-          <span class="link__text">Telegram</span>
-        </a>
+    <div class="modal-contacts">
+      <div class="modal-contacts__item">
+        <h2 class="modal-contacts__title">Написать</h2>
+        <div class="modal-contacts__chats">
+          <a class="link link_gray" href="#">
+            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+              <use href="/sprite.svg#headphones-icon-2" x="0" y="0"></use>
+            </svg>
+            <span class="link__text">Онлайн</span>
+          </a>
+          <a class="link link_gray" href="#">
+            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+              <use href="/sprite.svg#whats-app-icon-2" x="0" y="0"></use>
+            </svg>
+            <span class="link__text">Whatsapp</span>
+          </a>
+          <button class="link link_gray" type="button" data-modal-button="modal-feedback">
+            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+              <use href="/sprite.svg#mail-icon" x="0" y="0"></use>
+            </svg>
+            <span class="link__text">Обращение</span>
+          </button>
+          <a class="link link_gray" href="#">
+            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+              <use href="/sprite.svg#telegram-icon-2" x="0" y="0"></use>
+            </svg>
+            <span class="link__text">Telegram</span>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="modal-contacts__item">
-      <h2 class="modal-contacts__title">Позвонить</h2>
-      <div class="modal-contacts__phones">
-        <a class="link link_gray" href="tel:+78123130530">
-          <svg viewBox="0 0 16 16" width="16" height="16">
-            <use href="/sprite.svg#phone-icon-2" x="0" y="0"></use>
-          </svg>
-          <span class="link__text">+7(812) 313-05-30</span>
-        </a>
-        <a class="link link_gray" href="tel:+79816827501">
-          <svg viewBox="0 0 16 16" width="16" height="16">
-            <use href="/sprite.svg#phone-icon-3" x="0" y="0"></use>
-          </svg>
-          <span class="link__text">+7 (981) 682-75-01</span>
-        </a>
-        <button class="link link_gray" data-modal-button="modal-callback">
-          <svg viewBox="0 0 18 16" width="18" height="16">
-            <use href="/sprite.svg#phone-icon-4" x="0" y="0"></use>
-          </svg>
-          <span class="link__text">Перезвонить Вам?</span>
-        </button>
+      <div class="modal-contacts__item">
+        <h2 class="modal-contacts__title">Позвонить</h2>
+        <div class="modal-contacts__phones">
+          <a class="link link_gray" href="tel:+78123130530">
+            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+              <use href="/sprite.svg#phone-icon-2" x="0" y="0"></use>
+            </svg>
+            <span class="link__text">+7(812) 313-05-30</span>
+          </a>
+          <a class="link link_gray" href="tel:+79816827501">
+            <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+              <use href="/sprite.svg#phone-icon-3" x="0" y="0"></use>
+            </svg>
+            <span class="link__text">+7 (981) 682-75-01</span>
+          </a>
+          <button class="link link_gray" data-modal-button="modal-callback">
+            <svg viewBox="0 0 18 16" width="18" height="16" aria-hidden="true">
+              <use href="/sprite.svg#phone-icon-4" x="0" y="0"></use>
+            </svg>
+            <span class="link__text">Перезвонить Вам?</span>
+          </button>
+        </div>
       </div>
-    </div>
-    <div class="modal-contacts__item">
-      <h2 class="modal-contacts__title">Почитать о нас</h2>
-      <ul class="social social_large">
-        <li class="social__item">
-          <a href="#" class="social__link" aria-label="vkontakte">
-            <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40">
-              <use href="/sprite.svg#vk-icon" x="0" y="0"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" aria-label="vkontakte">
-            <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40">
-              <use href="/sprite.svg#telegram-icon" x="0" y="0"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" aria-label="youtube">
-            <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40">
-              <use href="/sprite.svg#youtube-icon" x="0" y="0"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" aria-label="dzen">
-            <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40">
-              <use href="/sprite.svg#social-network-icon" x="0" y="0"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="#" class="social__link" aria-label="rutube">
-            <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40">
-              <use href="/sprite.svg#rutube-icon" x="0" y="0"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <div class="modal-contacts__item">
+        <h2 class="modal-contacts__title">Почитать о нас</h2>
+        <ul class="social social_large">
+          <li class="social__item">
+            <a href="#" class="social__link" aria-label="vk.com">
+              <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                <use href="/sprite.svg#vk-icon" x="0" y="0"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link" aria-label="telegram">
+              <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                <use href="/sprite.svg#telegram-icon" x="0" y="0"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link" aria-label="youtube">
+              <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                <use href="/sprite.svg#youtube-icon" x="0" y="0"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link" aria-label="dzen">
+              <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                <use href="/sprite.svg#social-network-icon" x="0" y="0"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link" aria-label="rutube">
+              <svg class="social__icon" viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+                <use href="/sprite.svg#rutube-icon" x="0" y="0"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- Modal contacts end -->
-
-<!-- Modal callback start -->
-<div class="modal is-hidden" id="modal-callback" aria-hidden="true">
+<div class="modal is-hidden" id="modal-callback" role="dialog" aria-modal="true">
   <div class="modal__backdrop" data-modal-button="modal-callback"></div>
-  <div class="modal__box modal-callback">
+
+  <div class="modal__box">
     <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-callback">
-      <svg viewBox="0 0 39 38" width="39" height="38">
+      <svg viewBox="0 0 39 38" width="39" height="38" aria-hidden="true">
         <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
       </svg>
     </button>
 
-    <form class="modal-callback__form" data-modal-form>
-      <div class="field">
-        <label class="field__label" for="name-callback">Представьтесь*</label>
-        <input class="field__input" type="text" id="name-callback" required />
+    <div class="modal-callback">
+      <form class="modal-callback__form" data-modal-form>
+        <label class="field">
+          <span class="field__label">Представьтесь*</span>
+          <input class="field__input" type="text" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Телефон*</span>
+          <input class="field__input" type="text" />
+        </label>
+        <label class="field">
+          <span class="field__label">Электронная почта*</span>
+          <input class="field__input" type="email" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Комментарий</span>
+          <textarea class="field__input"></textarea>
+        </label>
+        <label class="control">
+          <input class="control__input" type="checkbox" />
+          <span>Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span>
+        </label>
+        <div class="modal-callback__footer">
+          <p class="text-gray-medium2">* поля, обязательные к заполнению</p>
+          <button class="button button_orange button_full-width" type="submit">Отправить</button>
+        </div>
+      </form>
+
+      <div class="modal-callback__feedback is-hidden" data-modal-feedback>
+        <p>Ваше обращение отправлено!</p>
+        <p>Благодарим за обратную связь.</p>
       </div>
-      <div class="field">
-        <label class="field__label" for="phone-callback">Телефон*</label>
-        <input class="field__input" type="text" id="phone-callback" />
-      </div>
-      <div class="field">
-        <label class="field__label" for="email-callback">Электронная почта*</label>
-        <input class="field__input" type="email" id="email-callback" required />
-      </div>
-      <div class="field">
-        <label class="field__label" for="comment-callback">Комментарий</label>
-        <input class="field__input" type="text" id="comment-callback" />
-      </div>
-      <div class="control">
-        <input class="control__input" type="checkbox" name="control" id="control" />
-        <label for="control"
-          >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</label
-        >
-      </div>
-      <div class="modal-callback__submit">
-        <p class="field-hint">* поля, обязательные к заполнению</p>
-        <button class="button button_orange button_full-width" type="submit">Отправить</button>
-      </div>
-    </form>
-    <div class="modal-callback__feedback is-hidden" data-modal-feedback>
-      <p>Ваше обращение отправлено!</p>
-      <p>Благодарим за обратную связь.</p>
     </div>
   </div>
 </div>
 
-<!-- Modal callback end -->
-
-<!-- Modal feedback start -->
-<div class="modal is-hidden" id="modal-feedback" aria-hidden="true">
-  <div class="modal__backdrop" data-modal-button="modal-feedback"></div>
-  <div class="modal__box modal-feedback">
-    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-feedback">
-      <svg viewBox="0 0 39 38" width="39" height="38">
-        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
-      </svg>
-    </button>
-
-    <form class="modal-feedback__form" data-modal-form>
-      <h2 class="modal-feedback__title">Обратная связь</h2>
-      <div class="modal-feedback__text">
-        <p>Ваше мнение очень важно для нас!</p>
-        <p>
-          Если Вы хотите оставить сообщение, выберите в выпадающем списке «Оставить сообщение». Наши менеджеры свяжутся
-          с Вами в ближайшее время. 
-        </p>
-        <p>
-          Если Вы хотите оставить пожелание к работе нашей компании, пожаловаться или выразить благодарность, выберите в
-          выпадающем списке «Оставить пожелание» или «Пожаловаться», и Ваше обращение будет напрямую получено
-          Председателем Правления компании, а также Зам. Председателя Правления.
-        </p>
-        <p>
-          Указывайте, пожалуйста, актуальный адрес  электронной почты для того, чтобы мы смогли отправить Вам ответ.
-        </p>
-      </div>
-      <div class="field">
-        <label class="field__label" for="type-feedback">Представьтесь*</label>
-        <select class="field__input" id="type-feedback">
-          <option value="">Пожелание</option>
-          <option value="">Пожелание</option>
-          <option value="">Пожелание</option>
-          <option value="">Пожелание</option>
-        </select>
-      </div>
-      <div class="field">
-        <label class="field__label" for="name-feedback">Представьтесь*</label>
-        <input class="field__input" type="text" id="name-feedback" required />
-      </div>
-      <div class="field">
-        <label class="field__label" for="phone-feedback">Телефон*</label>
-        <input class="field__input" type="text" id="phone-feedback" />
-      </div>
-      <div class="field">
-        <label class="field__label" for="email-feedback">Электронная почта*</label>
-        <input class="field__input" type="email" id="email-feedback" required />
-      </div>
-      <div class="field">
-        <label class="field__label" for="comment-feedback">Сообщение*</label>
-        <textarea class="modal-feedback__textarea field__input" id="comment-feedback" required></textarea>
-      </div>
-      <div class="control">
-        <input class="control__input" type="checkbox" name="control" id="control-feedback" />
-        <label for="control-feedback"
-          >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</label
-        >
-      </div>
-      <div class="modal-feedback__submit">
-        <p class="field-hint">* поля, обязательные к заполнению</p>
-        <button class="modal-feedback__button button button_orange" type="submit">Отправить</button>
-      </div>
-    </form>
-    <div class="modal-callback__feedback is-hidden">
-      <p>Благодарим за обращение!</p>
-      <p>В ближайшее время сотрудники нашей компании свяжутся с Вами.</p>
-      <p>
-        Напоминаем, что компания работает по будним дням с 10 до 19:00. Если Вы заказали звонок в выходной или
-        праздничный день, то наш сотрудник свяжется с Вами в первый рабочий день.
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- Modal feedback end -->
-
-<!-- Modal search start -->
-<div class="modal is-hidden" id="modal-search" aria-hidden="true">
-  <div class="modal__backdrop" data-modal-button="modal-search"></div>
-  <div class="modal__box modal-search">
-    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-search">
-      <svg viewBox="0 0 39 38" width="39" height="38">
-        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
-      </svg>
-    </button>
-    <form class="modal-search__form">
-      <div class="field">
-        <label class="field__label visually-hidden" for="seacrh">Введите слово для поиска</label>
-        <input class="field__input" type="text" id="seacrh" placeholder="Введите слово для поиска" />
-      </div>
-    </form>
-  </div>
-</div>
-
-<!-- Modal search end -->
-
-<!-- Modal auth start -->
-<div class="modal is-hidden" id="modal-auth" aria-hidden="true">
+<div class="modal is-hidden" id="modal-auth" role="dialog" aria-modal="true">
   <div class="modal__backdrop" data-modal-button="modal-auth"></div>
-  <div class="modal__box modal-login">
+
+  <div class="modal__box">
     <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-auth">
-      <svg viewBox="0 0 39 38" width="39" height="38">
+      <svg viewBox="0 0 39 38" width="39" height="38" aria-hidden="true">
         <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
       </svg>
     </button>
 
-    <h2 class="modal-login__title">Авторизация на сайте</h2>
-    <form class="modal-login__form">
-      <div class="field">
-        <label class="field__label" for="email-auth">Электронная почта или логин</label>
-        <input class="field__input" type="email" id="email-auth" required />
-      </div>
-      <div class="field">
-        <label class="field__label" for="password-auth">Пароль</label>
-        <input class="field__input" type="password" id="password-auth" required />
-      </div>
-      <div class="modal-login__submit">
-        <button class="button button_orange button_full-width" type="submit">Войти</button>
-        <button class="modal-login__button link link_gray-dark" type="button" data-modal-button="modal-password">
-          Забыли пароль?
+    <div class="modal-auth">
+      <h2 class="modal-auth__title">Авторизация на сайте</h2>
+
+      <form class="modal-auth__form">
+        <label class="field">
+          <span class="field__label">Электронная почта или логин</span>
+          <input class="field__input" type="email" required />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Пароль</span>
+          <input class="field__input" type="password" required />
+        </label>
+
+        <div class="modal-auth__footer">
+          <button class="button button_orange button_full-width" type="submit">Войти</button>
+          <button class="modal-auth__button link link_gray-dark" type="button" data-modal-button="modal-password">
+            Забыли пароль?
+          </button>
+        </div>
+
+        <p>Фактом входа Вы даете согласие на получение, хранение и обработку персональных данных.</p>
+
+        <button class="button button_gray button_full-width" type="button" data-modal-button="modal-registration">
+          Зарегистрироваться
         </button>
-      </div>
-      <p class="modal-login__text">
-        Фактом входа Вы даете согласие на получение, хранение и обработку персональных данных.
-      </p>
-
-      <button class="button button_gray button_full-width" type="button" data-modal-button="modal-registration">
-        Зарегистрироваться
-      </button>
-    </form>
-  </div>
-</div>
-
-<!-- Modal auth end -->
-
-<!-- Modal password start -->
-<div class="modal is-hidden" id="modal-password" aria-hidden="true">
-  <div class="modal__backdrop" data-modal-button="modal-password"></div>
-  <div class="modal__box modal-login">
-    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-password">
-      <svg viewBox="0 0 39 38" width="39" height="38">
-        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
-      </svg>
-    </button>
-
-    <h2 class="modal-login__title">Восстановление пароля</h2>
-    <form class="modal-login__form">
-      <div class="field">
-        <label class="field__label" for="email-password">Электронная почта или логин</label>
-        <input class="field__input" type="email" id="email-password" required />
-      </div>
-      <div class="modal-login__code">
-        <div class="field">
-          <label class="field__label" for="code-password">Защитный код</label>
-          <input class="field__input" type="text" id="code-password" required />
-        </div>
-        <div class="modal-login__captcha">captcha</div>
-      </div>
-
-      <button class="button button_orange button_full-width" type="submit">Выслать пароль</button>
-    </form>
-  </div>
-</div>
-
-<!-- Modal password end -->
-
-<!-- Modal registration start -->
-<div class="modal is-hidden" id="modal-registration" aria-hidden="true">
-  <div class="modal__backdrop" data-modal-button="modal-registration"></div>
-  <div class="modal__box modal-login">
-    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-registration">
-      <svg viewBox="0 0 39 38" width="39" height="38">
-        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
-      </svg>
-    </button>
-
-    <form class="modal-login__form" data-modal-form>
-      <h2 class="modal-login__title">Регистрация на сайте</h2>
-      <div class="field">
-        <label class="field__label" for="login-registration"
-          >Логин (только латинские буквы и цифры, без пробелов)*</label
-        >
-        <input class="field__input" type="text" id="login-registration" required />
-      </div>
-      <div class="field">
-        <label class="field__label" for="password-registration">Пароль*</label>
-        <input class="field__input" type="password" id="password-registration" required />
-      </div>
-      <div class="field">
-        <label class="field__label" for="passwordConfirm-registration">Подтверждение пароля*</label>
-        <input class="field__input" type="password" id="passwordConfirm-registration" required />
-      </div>
-      <div class="field">
-        <label class="field__label" for="email-registration">Электронная почта или логин</label>
-        <input class="field__input" type="email" id="email-registration" required />
-      </div>
-      <div class="field">
-        <label class="field__label" for="name-registration">Имя*</label>
-        <input class="field__input" type="text" id="name-registration" required />
-      </div>
-      <div class="field">
-        <label class="field__label" for="lastName-registration">Фамилия</label>
-        <input class="field__input" type="text" id="lastName-registration" />
-      </div>
-      <div class="modal-login__code">
-        <div class="field">
-          <label class="field__label" for="code-registration">Защитный код</label>
-          <input class="field__input" type="text" id="code-registration" required />
-        </div>
-        <div class="modal-login__captcha">captcha</div>
-      </div>
-      <div class="control">
-        <input class="control__input" type="checkbox" name="control" id="control-registration" required />
-        <label for="control-registration"
-          >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</label
-        >
-      </div>
-
-      <button class="button button_orange button_full-width" type="submit">Зарегистрироваться</button>
-    </form>
-    <div class="modal-login__feedback is-hidden">
-      <h2 class="modal-login__title">Регистрация на сайте</h2>
-      <p class="modal-login__text">
-        В личном кабинете пользователя сайта arsagera.ru. Вы можете принять участие в акциях, проводимых компанией,
-        комментировать материалы, публикуемые на сайте
-      </p>
-      <a class="button button_orange button_full-width" href="#">Перейти в Профиль</a>
+      </form>
     </div>
   </div>
 </div>
 
-<!-- Modal registration end -->
+<div class="modal is-hidden" id="modal-registration" role="dialog" aria-modal="true">
+  <div class="modal__backdrop" data-modal-button="modal-registration"></div>
+  <div class="modal__box">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-registration">
+      <svg viewBox="0 0 39 38" width="39" height="38" aria-hidden="true">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
 
-    <!-- Modal contacts end -->
-
+    <div class="modal-registration">
+      <h2 class="modal-registration__title">Регистрация на сайте</h2>
+
+      <form class="modal-registration__form" data-modal-form>
+        <label class="field">
+          <span class="field__label">Логин (только латинские буквы и цифры, без пробелов)*</span>
+          <input class="field__input" type="text" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Пароль*</span>
+          <input class="field__input" type="password" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Подтверждение пароля*</span>
+          <input class="field__input" type="password" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Электронная почта или логин</span>
+          <input class="field__input" type="email" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Имя*</span>
+          <input class="field__input" type="text" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Фамилия</span>
+          <input class="field__input" type="text" />
+        </label>
+        <div class="modal-registration__code">
+          <label class="field">
+            <span class="field__label">Защитный код</span>
+            <input class="field__input" type="text" required />
+          </label>
+          <div class="modal-registration__captcha">captcha</div>
+        </div>
+        <label class="control">
+          <input class="control__input" type="checkbox" required />
+          <span>Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span>
+        </label>
+
+        <button class="button button_orange button_full-width" type="submit">Зарегистрироваться</button>
+      </form>
+
+      <div class="modal-registration__feedback is-hidden">
+        <p>
+          В личном кабинете пользователя сайта <a class="link link_gray" href="#">arsagera.ru</a>. Вы можете принять
+          участие в <a class="link link_gray" href="#">акциях</a>, проводимых компанией, комментировать материалы,
+          публикуемые на сайте
+        </p>
+        <a class="button button_orange button_full-width" href="#">Перейти в Профиль</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal is-hidden" id="modal-password" role="dialog" aria-modal="true">
+  <div class="modal__backdrop" data-modal-button="modal-password"></div>
+  <div class="modal__box">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-password">
+      <svg viewBox="0 0 39 38" width="39" height="38" aria-hidden="true">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+
+    <div class="modal-password">
+      <h2 class="modal-password__title">Восстановление пароля</h2>
+
+      <form class="modal-password__form">
+        <label class="field">
+          <span class="field__label">Электронная почта</span>
+          <input class="field__input" type="email" required />
+        </label>
+        <div class="modal-password__code">
+          <label class="field">
+            <span class="field__label">Защитный код</span>
+            <input class="field__input" type="text" required />
+          </label>
+          <div class="modal-password__captcha">captcha</div>
+        </div>
+
+        <button class="button button_orange button_full-width" type="submit">Выслать пароль</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal is-hidden" id="modal-search" role="dialog" aria-modal="true">
+  <div class="modal__backdrop" data-modal-button="modal-search"></div>
+  <div class="modal__box">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-search">
+      <svg viewBox="0 0 39 38" width="39" height="38" aria-hidden="true">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+
+    <div class="modal-search">
+      <form class="modal-search__form">
+        <div class="field">
+          <label class="field__label visually-hidden" for="seacrh">Введите слово для поиска</label>
+          <input class="field__input" type="text" id="seacrh" placeholder="Введите слово для поиска" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal is-hidden" id="modal-feedback" role="dialog" aria-modal="true">
+  <div class="modal__backdrop" data-modal-button="modal-feedback"></div>
+  <div class="modal__box">
+    <button class="modal__close-button" type="button" aria-label="закрыть окно" data-modal-button="modal-feedback">
+      <svg viewBox="0 0 39 38" width="39" height="38" aria-hidden="true">
+        <use href="/sprite.svg#cross-icon" x="0" y="0"></use>
+      </svg>
+    </button>
+
+    <div class="modal-feedback">
+      <form class="modal-feedback__form" data-modal-form>
+        <h2 class="modal-feedback__title">Обратная связь</h2>
+        <div class="modal-feedback__text">
+          <p>Ваше мнение очень важно для нас!</p>
+          <p>
+            Если Вы хотите оставить сообщение, выберите в выпадающем списке «Оставить сообщение». Наши менеджеры
+            свяжутся с Вами в ближайшее время.
+          </p>
+          <p>
+            Если Вы хотите оставить пожелание к работе нашей компании, пожаловаться или выразить благодарность, выберите
+            в выпадающем списке «Оставить пожелание» или «Пожаловаться», и Ваше обращение будет напрямую получено
+            Председателем Правления компании, а также Зам. Председателя Правления.
+          </p>
+          <p>
+            Указывайте, пожалуйста, актуальный адрес электронной почты для того, чтобы мы смогли отправить Вам ответ.
+          </p>
+        </div>
+        <label class="field">
+          <span class="field__label">Представьтесь*</span>
+          <select class="field__input" required>
+            <option value="">Пожелание</option>
+            <option value="">Пожелание</option>
+            <option value="">Пожелание</option>
+            <option value="">Пожелание</option>
+          </select>
+        </label>
+        <label class="field">
+          <span class="field__label">Представьтесь*</span>
+          <input class="field__input" type="text" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Телефон*</span>
+          <input class="field__input" type="number" />
+        </label>
+        <label class="field">
+          <span class="field__label">Электронная почта*</span>
+          <input class="field__input" type="email" required />
+        </label>
+        <label class="field">
+          <span class="field__label">Сообщение*</span>
+          <textarea class="modal-feedback__textarea field__input" required></textarea>
+        </label>
+        <label class="control">
+          <input class="control__input" type="checkbox" />
+          <span>Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span>
+        </label>
+        <div class="modal-feedback__footer">
+          <p class="text-gray-medium2">* поля, обязательные к заполнению</p>
+          <button class="modal-feedback__button button button_orange" type="submit">Отправить</button>
+        </div>
+      </form>
+
+      <div class="modal-feedback__feedback is-hidden">
+        <p>Благодарим за обращение!</p>
+        <p>В ближайшее время сотрудники нашей компании свяжутся с Вами.</p>
+        <p>
+          Напоминаем, что компания работает по будним дням с 10 до 19:00. Если Вы заказали звонок в выходной или
+          праздничный день, то наш сотрудник свяжется с Вами в первый рабочий день.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Modals end -->
+
   </body>
 </html>

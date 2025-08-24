@@ -1,0 +1,1 @@
+import{c as s,u as a,p as e}from"./utils-BrGEwKc5.js";function i(){document.addEventListener("click",r=>{const t=r.target.closest("[data-accordion-anchor]");if(!t)return;const c=t.closest("[data-accordion]");if(!c)return;s(c),c.classList.toggle("is-active");const o=t.getAttribute("href");o&&o.startsWith("#")&&a(o)}),e()}export{i as a};
