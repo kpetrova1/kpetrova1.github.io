@@ -1,1 +1,0 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";import"./default-B31wzApy.js";import{p as o}from"./poll-YHTWgEGy.js";import{a,b as t}from"./accordionSimple-Epi37AEC.js";document.addEventListener("DOMContentLoaded",function(){o(),a(),t("[data-accordion-container]","[data-accordion-button]")});

@@ -1,1 +1,0 @@
-import"./modulepreload-polyfill-B5Qt9EMX.js";import"./default-B31wzApy.js";import{a as o}from"./accordion-Zv8bo0fZ.js";import"./utils-BrGEwKc5.js";document.addEventListener("DOMContentLoaded",function(){o()});

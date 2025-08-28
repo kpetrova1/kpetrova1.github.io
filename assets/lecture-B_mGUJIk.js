@@ -1,1 +1,0 @@
-import"./default-DMm93GeC.js";import{p as o}from"./poll-YHTWgEGy.js";import{a,b as t}from"./autoResizeTextareas-BPjsHoBE.js";document.addEventListener("DOMContentLoaded",function(){o(),a(),t("[data-accordion-container]","[data-accordion-button]")});

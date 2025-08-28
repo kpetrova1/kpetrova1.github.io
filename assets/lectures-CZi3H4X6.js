@@ -1,1 +1,0 @@
-import"./default-DrMMfiV1.js";import{p as e}from"./poll-YHTWgEGy.js";import{f as o}from"./filterMobile-DKe0SKHV.js";function n(){document.querySelectorAll("[data-sort-button]").forEach(t=>{t.addEventListener("click",s=>{t.querySelector("svg").classList.toggle("is-inverted")})})}document.addEventListener("DOMContentLoaded",function(){e(),n(),o()});

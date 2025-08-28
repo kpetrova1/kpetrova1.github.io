@@ -9,12 +9,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/assets/site-BwHFeIBa.webmanifest" />
     <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
-    <script type="module" crossorigin src="/assets/account-promo-D858vEte.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/default-DrMMfiV1.js">
+    <script type="module" crossorigin src="/assets/account-promo-016CYM1Y.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/default-Nx0e8aJ-.js">
     <link rel="modulepreload" crossorigin href="/assets/sideMobileMenu-CuBhBwt2.js">
     <link rel="modulepreload" crossorigin href="/assets/utils-BrGEwKc5.js">
     <link rel="modulepreload" crossorigin href="/assets/tabs-DVtkJby_.js">
-    <link rel="stylesheet" crossorigin href="/assets/account-promo-py5Rr17V.css">
+    <link rel="stylesheet" crossorigin href="/assets/account-promo-C5FumWXI.css">
   </head>
   <body>
     <!-- Top-bar block start -->
@@ -52,7 +52,12 @@
 
       <!-- Действия -->
       <div class="top-bar__actions">
-        <a class="button button_blue button_full-width" href="#"> Стать клиентом </a>
+        <a class="top-bar__action button button_blue button_full-width" href="#">
+          <svg class="top-bar__action-mobile-show" viewBox="0 0 34 27" width="34" height="27" aria-hidden="true">
+            <use href="/sprite.svg#suitcase-icon"></use>
+          </svg>
+          <span class="top-bar__action-mobile-hide">Стать клиентом</span>
+        </a>
 
         <div class="top-bar__auth">
           <button
@@ -655,13 +660,15 @@
           <span class="field__label">Комментарий</span>
           <textarea class="field__input"></textarea>
         </label>
-        <label class="control">
-          <input class="control__input" type="checkbox" />
-          <span>Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span>
+        <label class="option">
+          <input class="option__input" type="checkbox" />
+          <span class="option__label"
+            >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span
+          >
         </label>
         <div class="modal-callback__footer">
           <p class="text-gray-medium2">* поля, обязательные к заполнению</p>
-          <button class="button button_orange button_full-width" type="submit">Отправить</button>
+          <button class="button button_orange button_full-width button_large" type="submit">Отправить</button>
         </div>
       </form>
 
@@ -698,7 +705,7 @@
         </label>
 
         <div class="modal-auth__footer">
-          <button class="button button_orange button_full-width" type="submit">Войти</button>
+          <button class="button button_orange button_full-width button_large" type="submit">Войти</button>
           <button class="modal-auth__button link link_gray-dark" type="button" data-modal-button="modal-password">
             Забыли пароль?
           </button>
@@ -706,7 +713,11 @@
 
         <p>Фактом входа Вы даете согласие на получение, хранение и обработку персональных данных.</p>
 
-        <button class="button button_gray button_full-width" type="button" data-modal-button="modal-registration">
+        <button
+          class="button button_gray button_full-width button_large"
+          type="button"
+          data-modal-button="modal-registration"
+        >
           Зарегистрироваться
         </button>
       </form>
@@ -758,12 +769,17 @@
           </label>
           <div class="modal-registration__captcha">captcha</div>
         </div>
-        <label class="control">
-          <input class="control__input" type="checkbox" required />
-          <span>Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span>
+        <label class="option">
+          <input class="option__input" type="checkbox" required />
+          <span class="option__label"
+            >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span
+          >
         </label>
 
-        <button class="button button_orange button_full-width" type="submit">Зарегистрироваться</button>
+        <div class="modal-registration__footer">
+          <p class="text-gray-medium2">* поля, обязательные к заполнению</p>
+          <button class="button button_orange button_full-width button_large" type="submit">Зарегистрироваться</button>
+        </div>
       </form>
 
       <div class="modal-registration__feedback is-hidden">
@@ -803,7 +819,7 @@
           <div class="modal-password__captcha">captcha</div>
         </div>
 
-        <button class="button button_orange button_full-width" type="submit">Выслать пароль</button>
+        <button class="button button_orange button_full-width button_large" type="submit">Выслать пароль</button>
       </form>
     </div>
   </div>
@@ -881,13 +897,15 @@
           <span class="field__label">Сообщение*</span>
           <textarea class="modal-feedback__textarea field__input" required></textarea>
         </label>
-        <label class="control">
-          <input class="control__input" type="checkbox" />
-          <span>Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span>
+        <label class="option">
+          <input class="option__input" type="checkbox" />
+          <span class="option__label"
+            >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span
+          >
         </label>
         <div class="modal-feedback__footer">
           <p class="text-gray-medium2">* поля, обязательные к заполнению</p>
-          <button class="modal-feedback__button button button_orange" type="submit">Отправить</button>
+          <button class="modal-feedback__button button button_orange button_large" type="submit">Отправить</button>
         </div>
       </form>
 

@@ -1,1 +1,0 @@
-import"./default-DrMMfiV1.js";import{a as o}from"./accordion-Zv8bo0fZ.js";import{t}from"./tabs-DVtkJby_.js";import"./utils-BrGEwKc5.js";document.addEventListener("DOMContentLoaded",function(){t(),o()});

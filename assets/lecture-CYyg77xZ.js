@@ -1,1 +1,0 @@
-import"./default-DrMMfiV1.js";import{p as o}from"./poll-YHTWgEGy.js";import{a,b as t}from"./accordionSimple-Epi37AEC.js";document.addEventListener("DOMContentLoaded",function(){o(),a(),t("[data-accordion-container]","[data-accordion-button]")});
