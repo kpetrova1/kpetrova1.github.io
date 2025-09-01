@@ -1,0 +1,1 @@
+import"./default-Nx0e8aJ-.js";import{s as o}from"./sideMobileMenu-CuBhBwt2.js";import{a as t}from"./accordion-TRVzEruI.js";import{t as i}from"./tabs-ChtpCBOU.js";import"./utils-DJjwivv4.js";document.addEventListener("DOMContentLoaded",function(){o(),t(),i()});
