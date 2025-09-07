@@ -9,12 +9,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/assets/site-BwHFeIBa.webmanifest" />
     <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
-    <script type="module" crossorigin src="/assets/book-DY4ORm01.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/default-CYauWS4G.js">
-    <link rel="modulepreload" crossorigin href="/assets/utils-DJjwivv4.js">
-    <link rel="modulepreload" crossorigin href="/assets/tabs-ChtpCBOU.js">
-    <link rel="modulepreload" crossorigin href="/assets/accordionSimple-Epi37AEC.js">
-    <link rel="stylesheet" crossorigin href="/assets/book-CeSMr05f.css">
+    <script type="module" crossorigin src="/assets/book-DmWMzZYi.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/default-K9NZ8jMF.js">
+    <link rel="modulepreload" crossorigin href="/assets/utils-DWZA1s4G.js">
+    <link rel="modulepreload" crossorigin href="/assets/tabs-DR9W3UpW.js">
+    <link rel="modulepreload" crossorigin href="/assets/createTooltip-G-T4o4bm.js">
+    <link rel="stylesheet" crossorigin href="/assets/book-B-se94tg.css">
   </head>
   <body>
     <!-- Top-bar block start -->
@@ -169,7 +169,7 @@
 
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link nav__link_home is-active" href="/">
+              <a class="nav__link nav__link_home is-active" href="/src/pages/">
                 <svg class="nav__home-icon" viewBox="0 0 31 30" width="31" height="30" aria-hidden="true">
                   <use href="/sprite.svg#home-icon"></use>
                 </svg>
@@ -178,7 +178,7 @@
             </li>
 
             <li class="nav__item">
-              <a class="nav__link" href="#" aria-expanded="false" data-about-link>
+              <a class="nav__link" href="/src/pages/about" aria-expanded="false" data-about-link>
                 О компании
                 <svg class="nav__dropdown-icon" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
                   <use href="/sprite.svg#arrow-down-icon"></use>
@@ -191,14 +191,14 @@
               </ul>
             </li>
 
-            <li class="nav__item"><a class="nav__link" href="#">Аналитика</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Лекции и видео</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Книга</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Статьи</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Блогофорум</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Ответы на вопросы</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Конкурсы и акции</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Раскрытие информации</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/reports">Аналитика</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/lectures">Лекции и видео</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/book">Книга</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/articles">Статьи</a></li>
+            <li class="nav__item"><a class="nav__link" href="https://bf.arsagera.ru/">Блогофорум</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/faq">Ответы на вопросы</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/news-article">Конкурсы и акции</a></li>
+            <li class="nav__item"><a class="nav__link" href="/src/pages/log">Раскрытие информации</a></li>
           </ul>
         </div>
       </nav>
@@ -912,6 +912,22 @@
   </ul>
   <!-- Comments list start -->
 </section>
+<!-- Form comment template start -->
+<template data-comment-template>
+  <form action="#" class="comments__form">
+    <label class="field">
+      <textarea
+        name=""
+        rows="1"
+        class="field__input"
+        placeholder="Введите текст комментария"
+        data-comment-textarea
+      ></textarea>
+    </label>
+    <button class="button button_orange" type="submit">Опубликовать</button>
+  </form>
+</template>
+<!-- Form comment template end -->
 
               </div>
               <!-- Tab 2 end -->
