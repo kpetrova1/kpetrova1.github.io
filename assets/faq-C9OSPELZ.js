@@ -1,0 +1,1 @@
+import"./default-K9NZ8jMF.js";import{a as o}from"./accordion-Bd3_MeRh.js";import{t}from"./tabs-BW8O4D8Q.js";import"./utils-DWZA1s4G.js";document.addEventListener("DOMContentLoaded",function(){t(),o()});
