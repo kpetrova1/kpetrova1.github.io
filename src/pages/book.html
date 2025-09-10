@@ -9,12 +9,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/assets/site-BwHFeIBa.webmanifest" />
     <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
-    <script type="module" crossorigin src="/assets/book-DJEXqM7T.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/default-K9NZ8jMF.js">
-    <link rel="modulepreload" crossorigin href="/assets/utils-DWZA1s4G.js">
-    <link rel="modulepreload" crossorigin href="/assets/tabs-BW8O4D8Q.js">
+    <script type="module" crossorigin src="/assets/book-DSJa3dfm.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/default-CL2ixcRT.js">
+    <link rel="modulepreload" crossorigin href="/assets/utils-B7JEhPRY.js">
+    <link rel="modulepreload" crossorigin href="/assets/tabs-BnvDZ1L1.js">
     <link rel="modulepreload" crossorigin href="/assets/createTooltip-G-T4o4bm.js">
-    <link rel="stylesheet" crossorigin href="/assets/book-B-se94tg.css">
+    <link rel="stylesheet" crossorigin href="/assets/book-BLGyTKK1.css">
   </head>
   <body>
     <!-- Top-bar block start -->
@@ -59,7 +59,8 @@
           <span class="top-bar__action-mobile-hide">Стать клиентом</span>
         </a>
 
-        <div class="top-bar__auth">
+        <!-- удалить класс is-auth и добавить is-logout если пользователь разлогинился -->
+        <div class="top-bar__auth is-auth">
           <button
             class="top-bar__auth-toggle button button_orange button_full-width"
             type="button"
@@ -67,20 +68,35 @@
             aria-controls="auth-dropdown"
             data-auth-toggle
           >
-            Войти
+            <span class="is-logout">Войти</span>
+            <span class="top-bar__auth-name is-auth">Анастасия</span>
             <svg class="top-bar__auth-arrow" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
               <use href="/sprite.svg#arrow-down-icon"></use>
             </svg>
           </button>
 
           <ul class="top-bar__auth-dropdown" id="auth-dropdown" aria-hidden="true" role="menu">
-            <li class="top-bar__auth-item" role="none">
+            <li class="top-bar__auth-item is-logout" role="none">
               <button class="top-bar__auth-option" type="button" role="menuitem" data-modal-button="modal-auth">
                 На сайт
               </button>
             </li>
-            <li class="top-bar__auth-item" role="none">
-              <a class="top-bar__auth-option" href="#" role="menuitem"> В Личный кабинет </a>
+            <li class="top-bar__auth-item is-logout" role="none">
+              <a class="top-bar__auth-option" href="#" role="menuitem">В Личный кабинет</a>
+            </li>
+            <li class="top-bar__auth-item is-auth" role="none">
+              <a class="top-bar__auth-option" href="#" role="menuitem">Настройки</a>
+            </li>
+            <li class="top-bar__auth-item is-auth" role="none">
+              <a class="top-bar__auth-option" href="#" role="menuitem">ДУ</a>
+            </li>
+            <li class="top-bar__auth-item is-auth" role="none">
+              <a class="top-bar__auth-option" href="#" role="menuitem">Участие в акциях</a>
+            </li>
+            <li class="top-bar__auth-item is-auth" role="none">
+              <button class="top-bar__auth-option" type="button" role="menuitem" data-modal-button="modal-auth">
+                Выход
+              </button>
             </li>
           </ul>
         </div>
@@ -178,7 +194,7 @@
             </li>
 
             <li class="nav__item">
-              <a class="nav__link" href="/src/pages/about" aria-expanded="false" data-about-link>
+              <a class="nav__link" href="/src/pages/about" aria-expanded="false" data-menu-dropdown-link>
                 О компании
                 <svg class="nav__dropdown-icon" viewBox="0 0 23 10" width="23" height="10" aria-hidden="true">
                   <use href="/sprite.svg#arrow-down-icon"></use>
@@ -272,7 +288,7 @@
                     </svg>
                     <span class="file-link__info">
                       <span class="text-blue">Скачать PDF</span>
-                      <span class="text-gray-tech">Загрузок: 647 359</span>
+                      <span class="text-gray-tech">Загрузок: <span class="text-nowrap">647 359</span></span>
                       <span class="text-gray-tech">12,1 Мб</span>
                     </span>
                   </a>
@@ -284,7 +300,7 @@
                     </svg>
                     <span class="file-link__info">
                       <span class="text-blue">Скачать EPUB</span>
-                      <span class="text-gray-tech">Загрузок: 647 359</span>
+                      <span class="text-gray-tech">Загрузок: <span class="text-nowrap">647 359</span></span>
                       <span class="text-gray-tech">27,1 МБ</span>
                     </span>
                   </a>
@@ -296,7 +312,7 @@
                     </svg>
                     <span class="file-link__info">
                       <span class="text-blue">Скачать FB2</span>
-                      <span class="text-gray-tech">Загрузок: 647 359</span>
+                      <span class="text-gray-tech">Загрузок: <span class="text-nowrap">647 359</span></span>
                       <span class="text-gray-tech">48,3 Мб</span>
                     </span>
                   </a>
@@ -308,7 +324,7 @@
                     </svg>
                     <span class="file-link__info">
                       <span class="text-blue">Скачать DOC</span>
-                      <span class="text-gray-tech">Загрузок: 647 359</span>
+                      <span class="text-gray-tech">Загрузок: <span class="text-nowrap">647 359</span></span>
                       <span class="text-gray-tech">47,3 МБ</span>
                     </span>
                   </a>
@@ -320,7 +336,7 @@
                     </svg>
                     <span class="file-link__info">
                       <span class="text-blue">Скачать МАКЕТ</span>
-                      <span class="text-gray-tech">Загрузок: 647 359</span>
+                      <span class="text-gray-tech">Загрузок: <span class="text-nowrap">647 359</span></span>
                       <span class="text-gray-tech">12,1 Мб</span>
                     </span>
                   </a>
@@ -444,7 +460,7 @@
                         <use href="/sprite.svg#pdf-icon" x="0" y="0"></use>
                       </svg>
                       <span class="file-link__info">
-                        <span>Загрузок: 647 359</span>
+                        <span>Загрузок: <span class="text-nowrap">647 359</span></span>
                         <span class="text-gray-tech">PDF, 12,1 Мб</span>
                       </span>
                     </a>
@@ -455,7 +471,7 @@
                         <use href="/sprite.svg#fb2-icon" x="0" y="0"></use>
                       </svg>
                       <span class="file-link__info">
-                        <span>Загрузок: 647 359</span>
+                        <span>Загрузок: <span class="text-nowrap">647 359</span></span>
                         <span class="text-gray-tech">PDF, 12,1 Мб</span>
                       </span>
                     </a>
@@ -466,7 +482,7 @@
                         <use href="/sprite.svg#epub-icon" x="0" y="0"></use>
                       </svg>
                       <span class="file-link__info">
-                        <span>Загрузок: 647 359</span>
+                        <span>Загрузок: <span class="text-nowrap">647 359</span></span>
                         <span class="text-gray-tech">PDF, 12,1 Мб</span>
                       </span>
                     </a>
