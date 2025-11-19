@@ -9,12 +9,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/assets/site-BwHFeIBa.webmanifest" />
     <title>УК «Арсагера» Управляющая компания «Арсагера». Управление капиталом. ПИФ, ЗПИФ, ИДУ</title>
-    <script type="module" crossorigin src="/assets/faq-DsYOUNyU.js"></script>
+    <script type="module" crossorigin src="/assets/faq-BusLihoz.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/default-Bu-N4BzJ.js">
     <link rel="modulepreload" crossorigin href="/assets/utils-B7JEhPRY.js">
     <link rel="modulepreload" crossorigin href="/assets/accordion-Di3Qdcco.js">
     <link rel="modulepreload" crossorigin href="/assets/tabs-BnvDZ1L1.js">
-    <link rel="stylesheet" crossorigin href="/assets/faq-CMfNCS0B.css">
+    <link rel="stylesheet" crossorigin href="/assets/faq-rtB8Uxkq.css">
   </head>
   <body>
     <!-- Top-bar block start -->
@@ -259,14 +259,14 @@
         <div class="block block_40">
           <div class="tabs" data-tabs>
             <!-- Tab buttons start -->
-            <ul class="tabs__nav" data-tab-buttons>
-              <li>
+            <div class="tabs__nav" data-tab-buttons>
+              <div>
                 <a class="tabs__nav-button is-active" href="#tab1" data-tab="tab1">По продуктам компании</a>
-              </li>
-              <li>
+              </div>
+              <div>
                 <a class="tabs__nav-button" href="#tab2" data-tab="tab2">Об инвестировании</a>
-              </li>
-            </ul>
+              </div>
+            </div>
             <!-- Tab buttons end -->
 
             <!-- Tab 1 start -->
@@ -737,31 +737,35 @@
     <div class="modal-question">
       <h2 class="modal-question__title">Вопрос на сайт</h2>
 
-      <form class="modal-question__form">
+      <form class="modal-question__form" data-modal-faq-form>
         <label class="field">
           <span class="field__label">Представьтесь, пожалуйста*</span>
-          <input class="field__input" type="text" required />
+          <input class="field__input" type="text" name="name" required>
         </label>
+
         <label class="field">
           <span class="field__label">Электронная почта или логин</span>
-          <input class="field__input" type="email" required />
+          <input class="field__input" type="email" name="email" required>
         </label>
+
         <label class="field">
           <span class="field__label">Задайте Ваш вопрос*</span>
-          <textarea class="modal-question__textarea field__input" required></textarea>
+          <textarea class="modal-question__textarea field__input" name="question" required></textarea>
         </label>
+
         <div class="modal-question__code">
           <label class="field">
             <span class="field__label">Защитный код</span>
-            <input class="field__input" type="text" required />
+            <input class="field__input" type="text" name="g-recaptcha-response" required>
           </label>
           <div class="modal-question__captcha">captcha</div>
         </div>
+
         <label class="option">
-          <input class="option__input" type="checkbox" required />
-          <span class="option__label"
-            >Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных</span
-          >
+          <input class="option__input" type="checkbox" name="consent" required>
+          <span class="option__label">
+      Я даю согласие на <a class="link link_blue" href="#">обработку</a> персональных данных
+    </span>
         </label>
 
         <div class="modal-question__footer">
@@ -769,6 +773,7 @@
           <button class="button button_orange button_full-width button_large" type="submit">Отправить вопрос</button>
         </div>
       </form>
+
     </div>
   </div>
 </div>
